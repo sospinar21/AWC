@@ -1,0 +1,20 @@
+# AWC
+
+### Project team:
+
+Stephanie Ospina [GitHub](https://github.com/sospinar21) 
+ 
+
+### Our design:
+
+
+## Set Up
+
+* Clone this project
+
+* Run `npm install` from the root directory
+
+* Run `npm start` and visit localhost:3000 in your browser
+
+* Run tests with `npm test`
+# AWC
