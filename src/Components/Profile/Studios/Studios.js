@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export class Suggestions extends Component {
+export class Studios extends Component {
   
 
 
@@ -15,8 +15,8 @@ export class Suggestions extends Component {
   }
 }
 
-export const mapStateToProps = () => {}
+export const mapStateToProps = {}
 
 export const mapDispatchToProps = () => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Suggestions)
+export default connect(mapStateToProps, mapDispatchToProps)(Studios)

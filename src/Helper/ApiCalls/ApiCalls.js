@@ -1,6 +1,5 @@
 import { eventsApiKey, yelpKey } from '../../apikey';
 import React, {Component} from 'react';
-const yelp = require('yelp-fusion')
 
 class ApiCalls extends Component {
   constructor(){
@@ -15,21 +14,34 @@ class ApiCalls extends Component {
   } 
 
   fetchStudios = async () => {
-    const client = yelp.client(yelpKey);
-    
-    const searchRequest = {
-      term:'dance studios',
-      location: 'denver'
-    }; 
-    
-    const response = await client.search(searchRequest);
-    const first = response.jsonBody.businesses[0];
-    const data = JSON.stringify(first, null, 4)
+    const url = `https://api.yelp.com/v3/businesses/search?location=80202&categories=dancestudio`;
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + yelpKey
+      },
+    })
+    const data = await response.json();
     console.log(data)
-    // const data = await response.json();
-  }
+  } 
 
-
+//   fetchStudios = () => {
+//   console.log(yelpKey);
+//   //const url = `https://api.yelp.com/v3/businesses/search?location=80202&categories=dancestudio`;
+//   const url = `https://api.qbott.io/repo`;
+//   var xhttp= new XMLHttpRequest;
+  
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4) {
+//      console.log(this.responseText);
+//     }
+//   };
+//   xhttp.open("GET", url, true);
+//   console.log(yelpKey);
+//   //xhttp.setRequestHeader('Authorization', 'Bearer ' + yelpKey);
+//   xhttp.send();
+//   }
 }
 
 export default ApiCalls;
