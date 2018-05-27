@@ -12,10 +12,8 @@ export class Studios extends Component {
   }
 
 fetchStudios = async () => {
-  console.log(this.props);
   let api = new ApiCalls();
   const suggestedStudios = await api.fetchStudios();
-  console.log('after in Studios',this.props)
   await this.props.addStudios(suggestedStudios);
 
 }
@@ -61,8 +59,7 @@ render () {
 
 export const mapStateToProps = (state) => {
   return ({
-    suggestedStudios: state.suggestedStudios,
-    suggestedEvents: state.suggestedEvents
+    suggestedStudios: state.suggestedStudios
   });
 };
 

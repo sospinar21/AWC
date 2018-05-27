@@ -6,6 +6,7 @@ import Events from '../Events/Events';
 import { NavBar } from '../../Home/NavBar/NavBar';
 import Studios from '../Studios/Studios';
 import './Suggestions.css';
+import Videos from '../Videos/Videos';
 
 export class Suggestions extends Component {
   
@@ -29,6 +30,7 @@ export class Suggestions extends Component {
         </div>
         <Events />
         <Studios />
+        <Videos />
       </div>
     )
   }
