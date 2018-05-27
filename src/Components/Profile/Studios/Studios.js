@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls'
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+// import 
+import './Studios.css'
 
 export class Studios extends Component {
   
@@ -10,6 +12,7 @@ export class Studios extends Component {
   render () {
     return(
       <div>
+
       </div>
     )
   }

@@ -21,10 +21,15 @@
 a {
   text-decoration: none;
   color: black;
-  font-size: 2.5vh;
-  font-weight: 500;
+  font-weight: 600;
   margin: 5vh;
-  padding: 2vh; }
+  padding: 2vh;
+  font-size: 2.7vh;
+  letter-spacing: 1px; }
+
+a:hover {
+  background-color: palevioletred;
+  color: white; }
 
 .logo {
   font-family: 'Poiret One', cursive; }

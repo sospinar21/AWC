@@ -1,5 +1,3 @@
-import { eventsApiKey, yelpKey } from '../../apikey';
-import DataCleaner from '../DataCleaner/DataCleaner'
 import React, {Component} from 'react';
 
 class ApiCalls extends Component {
@@ -8,12 +6,10 @@ class ApiCalls extends Component {
   }
 
   fetchEvents = async () => {
-    const dataCleaner = new DataCleaner()
-    const url = `https://www.eventbriteapi.com/v3/events/search/?q=dance&location.address=denver&token=${eventsApiKey}`;
+    const url = `https://api.awc.dance/events?city=vermont`;
     const response = await fetch(url)
     const data= await response.json();
-    const events = await dataCleaner.cleanEventsData(data.events) 
-    return events
+    return data;
   } 
 
   fetchStudios = () => {
@@ -25,6 +21,12 @@ class ApiCalls extends Component {
       }
     }).then( response => response.json() )
       .then( data => console.log(data) )   
+  }
+
+  fetchStudios= () => {
+      var url = 'https://api.awc.dance/youtubevideos'
+      fetch(url).then(response => response.json())
+      .then(data => {console.log(data)})
   }
 }
 

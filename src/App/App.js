@@ -6,6 +6,7 @@ import { Suggestions } from '../Components/Profile/Suggestions/Suggestions';
 import { NewsFeed } from '../Components/Profile/NewsFeed/NewsFeed';
 import { Main } from '../Components/Home/Main/Main'
 import { Route } from 'react-router-dom'
+import { Stidios } from '../Components/Profile/Studios/Studios'
 
 class App extends Component {
   constructor () {
@@ -20,7 +21,7 @@ class App extends Component {
      <button onClick = {() => api.fetchStudios()}/>
        <Route exact path='/' component={Main} />
        <Route path='/profile' component={Profile} /> 
-       <Route path='/suggestions' component={Suggestions} />
+       <Route path='/suggestions' component={Suggestions} />                   
        <Route path='/newsfeed' component={NewsFeed} />
                  
      </div>

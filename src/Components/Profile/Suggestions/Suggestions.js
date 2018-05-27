@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Events from '../Events/Events';
 import { NavBar } from '../../Home/NavBar/NavBar';
@@ -17,14 +18,14 @@ export class Suggestions extends Component {
         <NavBar />
         <h1>Our Community</h1>
         <div className='suggestions-menu'>
-          <div className='studio-small-box box'>
+          <NavLink to='suggestions/studios' className='studio-small-box box'>
             <div className='studio-btn'/>
             <h3>Studios</h3>
-          </div>
-          <div className='event-small-box box'>
+          </NavLink>
+          <NavLink to='suggestions/events' className='event-small-box box'>
             <div className='events-btn'/>
             <h3>Events</h3>            
-          </div>
+          </NavLink>
         </div>
         <Events />
         <Studios />

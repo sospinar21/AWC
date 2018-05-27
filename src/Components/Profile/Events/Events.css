@@ -57,7 +57,7 @@
   margin: 9vh;
   width: 40%;
   padding: 5vh;
-  color: white;
+  color: white !important;
   background-color: #0000008a; }
   .main-banner-text h1 {
     font-size: 5vh;
