@@ -1,0 +1,30 @@
+.navBar {
+  height: 10vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 5vh; }
+
+.active {
+  border-bottom: #cc1292; }
+
+.logo {
+  flex: 20;
+  font-size: 6vh;
+  color: palevioletred; }
+
+.menu {
+  flex: 15;
+  line-height: 10vh;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5vh;
+  font-weight: 500;
+  margin: 5vh;
+  padding: 2vh; }
+
+.logo {
+  font-family: 'Poiret One', cursive; }

@@ -1,4 +1,5 @@
 import { eventsApiKey, yelpKey } from '../../apikey';
+import DataCleaner from '../DataCleaner/DataCleaner'
 import React, {Component} from 'react';
 
 class ApiCalls extends Component {
@@ -7,41 +8,24 @@ class ApiCalls extends Component {
   }
 
   fetchEvents = async () => {
+    const dataCleaner = new DataCleaner()
     const url = `https://www.eventbriteapi.com/v3/events/search/?q=dance&location.address=denver&token=${eventsApiKey}`;
     const response = await fetch(url)
     const data= await response.json();
-    console.log(data)
+    const events = await dataCleaner.cleanEventsData(data.events) 
+    return events
   } 
 
-  fetchStudios = async () => {
-    const url = `https://api.yelp.com/v3/businesses/search?location=80202&categories=dancestudio`;
-    const response = await fetch(url, {
+  fetchStudios = () => {
+    const url = `https://api.awc.dance/?city=80202`;
+    fetch(url, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
-        'Authorization': 'Bearer ' + yelpKey
-      },
-    })
-    const data = await response.json();
-    console.log(data)
-  } 
-
-//   fetchStudios = () => {
-//   console.log(yelpKey);
-//   //const url = `https://api.yelp.com/v3/businesses/search?location=80202&categories=dancestudio`;
-//   const url = `https://api.qbott.io/repo`;
-//   var xhttp= new XMLHttpRequest;
-  
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4) {
-//      console.log(this.responseText);
-//     }
-//   };
-//   xhttp.open("GET", url, true);
-//   console.log(yelpKey);
-//   //xhttp.setRequestHeader('Authorization', 'Bearer ' + yelpKey);
-//   xhttp.send();
-//   }
+      }
+    }).then( response => response.json() )
+      .then( data => console.log(data) )   
+  }
 }
 
 export default ApiCalls;

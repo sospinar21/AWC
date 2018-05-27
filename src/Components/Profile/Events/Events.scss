@@ -1,0 +1,84 @@
+.main-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5vh auto 5vh;
+  width: 100%;
+  background-position-y: -10vh;
+  height: 45vh;
+  background-image: url('https://2.bp.blogspot.com/-yE3M4nNXZ58/WMbInF32VBI/AAAAAAAACeA/uiXXIXrIvbYPD4CaaGC6tGDR7eWPtdTlgCLcB/s1600/Dido%2Bimage%2Bfor%2BFB.jpg')
+}
+
+.box2 {
+  border-radius: 3px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.05);
+  border-image: initial;
+}
+
+.suggEvent-cards {
+  width: 20%;
+  margin: 2.3vh;
+  height: 15vh;
+  overflow-y: hidden;
+  height: 35vh;
+  border-radius: 5%;
+
+  img {
+    width: 100%;
+    margin-bottom: 1vh;
+  }
+
+  h4 {
+    font-size: 2.3vh;
+    margin: 1.5vh auto;
+    color: purple;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    letter-spacing: .3px;
+    font-family: 'Lato', sans-serif;
+    font-weight: inherit;
+    color: dimgrey;
+    ine-height: 1.5;
+    
+  }
+}
+
+.cards-container {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+.description {
+  margin-top: 1vh;
+  overflow-y: hidden;
+}
+
+.black-bgn {
+  width: 80%;
+  height: inherit;
+  background-color: #00000045;
+  position: absolute;
+  z-index: 2;
+}
+
+.main-banner-text{
+  z-index: 4;
+  margin: 9vh;
+  width: 40%;
+  padding: 5vh;
+  color: white;
+  background-color: #0000008a;
+
+  h1 {
+    font-size: 5vh;
+    margin: 1vh
+  }
+
+  h2 {
+    font-size: 4vh    
+  }
+}

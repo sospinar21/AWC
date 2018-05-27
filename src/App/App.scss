@@ -1,3 +1,10 @@
-App {
+.App {
   font-family: 'Lato', sans-serif;
+  width: 80vw;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, a, li, p {
+  font-family: 'Poiret One', cursive;    
+  margin: auto; 
 }

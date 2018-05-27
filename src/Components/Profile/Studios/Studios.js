@@ -15,8 +15,8 @@ export class Studios extends Component {
   }
 }
 
-export const mapStateToProps = {}
+// export const mapStateToProps = {}
 
-export const mapDispatchToProps = () => ({})
+// export const mapDispatchToProps = () => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Studios)
+// export default connect(mapStateToProps, mapDispatchToProps)(Studios)
