@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Events from '../Events/Events';
 import { NavBar } from '../../Home/NavBar/NavBar';
-import {Studios} from '../Studios/Studios';
+import Studios from '../Studios/Studios';
 import './Suggestions.css';
 
 export class Suggestions extends Component {

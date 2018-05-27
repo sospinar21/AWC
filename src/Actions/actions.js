@@ -1,4 +1,9 @@
 export const addEvents = (eventsData) => ({
   type: 'ADD_EVENTS',
   eventsData
-})
+});
+
+export const addStudios = (studiosData) => ({
+  type: 'ADD_STUDIOS',
+  studiosData
+});

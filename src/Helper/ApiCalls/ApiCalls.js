@@ -14,19 +14,20 @@ class ApiCalls extends Component {
 
   fetchStudios = () => {
     const url = `https://api.awc.dance/?city=80202`;
-    fetch(url, {
+    return fetch(url, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
       }
     }).then( response => response.json() )
-      .then( data => console.log(data) )   
+      .then( data => data )   
   }
 
-  fetchStudios= () => {
-      var url = 'https://api.awc.dance/youtubevideos'
-      fetch(url).then(response => response.json())
-      .then(data => {console.log(data)})
+  fetchVideos= async () => {
+    var url = 'https://api.awc.dance/youtubevideos'
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
   }
 }
 

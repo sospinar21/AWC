@@ -21,6 +21,7 @@ export class Events extends Component {
   }
 
   displayEvents = () => {
+    console.log('this is events',this.props)
     const events = this.props.suggestedEvents.map(suggEvent => {
       if (suggEvent.logo){
         var img = suggEvent.logo.url
