@@ -66,6 +66,14 @@
     font-size: 4vh; }
 
 .events-small-box {
-  height: 5vh;
+  height: 6vh;
   width: 100%;
-  background-color: black; }
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  overflow: hidden; }
+  .events-small-box img {
+    height: 70%;
+    margin-right: 1vh; }
+  .events-small-box h4 {
+    margin: 0; }

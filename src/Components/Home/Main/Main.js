@@ -22,6 +22,8 @@ export class Main extends Component {
           </div>
           <div className='side-container'>
             <div className='events-small'>
+              <h3> Events </h3>
+              <br/>
               <Events />
             </div>
             <div className='studios-small'>

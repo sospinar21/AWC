@@ -26,11 +26,11 @@ $flex : flex;
   width: 100%;
   height: 90vh;
   display: flex;
+  background-color: #8080801f;
 }
 
 .side-container {
   width: 30%;
-  background-color: red;
   height: 90vh;
 }
 
@@ -40,10 +40,12 @@ $flex : flex;
 }
 
 .events-small {
-  width: 100%;
-  background-color: #3a2121;
   height: 25vh;
+  overflow: scroll;
+  padding: 2vh;
+  background-color: white;
 }
+
 
 .studios-small {
   width: 100%;
