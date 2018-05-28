@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: auto;
 }
 
@@ -8,8 +8,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, a, li, p {
-  font-family: 'Poiret One', cursive;
-  margin: auto; 
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  font-weight: unset;
+  color: gray;
 }
 
 .material-icons {
