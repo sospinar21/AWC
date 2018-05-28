@@ -43,28 +43,54 @@ export class Events extends Component {
     return events;
   }
 
+  eventsInMain = () => {
+    const events = this.props.suggestedEvents.map(suggEvent => {
+      if (suggEvent.logo){
+        var img = suggEvent.logo.url
+      } else {
+        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-'
+      } 
+      return (
+        <div key={suggEvent.id} className='events-small-box'>
+          <img src={img} />
+          <h4>{suggEvent.name}</h4>
+        </div>
+      )
+    })
+    return events;
+  }
+
   render () {
     if (this.props.suggestedEvents.length) {
+    //   return (
+    //     <div>
+    //       <h1>Popular Events</h1>          
+    //       <div className='main-banner box2'> 
+    //         <div className='black-bng'/>
+    //         <div className = 'main-banner-text'>
+    //           <h1>10th Anniversary</h1>
+    //           <h2>Learn More</h2>
+    //         </div>
+    //       </div>
+    //       <h1>Local Events</h1>
+    //       <div className='cards-container'>
+    //         {this.displayEvents()}
+    //       </div>
+    //     </div>
+    //   )
+    // }
+    // else {
       return (
-        <div>
-          <h1>Popular Events</h1>          
-          <div className='main-banner box2'> 
-            <div className='black-bng'/>
-            <div className = 'main-banner-text'>
-              <h1>10th Anniversary</h1>
-              <h2>Learn More</h2>
-            </div>
-          </div>
-          <h1>Local Events</h1>
-          <div className='cards-container'>
-            {this.displayEvents()}
+        <div> 
+          <div className='cards-container-small'>
+            {this.eventsInMain()}
           </div>
         </div>
       )
     }
     else {
       return (
-        <h1>nadieata</h1>
+        <h1>Loading </h1>
       )
     }
   }

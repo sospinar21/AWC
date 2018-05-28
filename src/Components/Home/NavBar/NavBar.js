@@ -9,13 +9,22 @@ export class NavBar extends Component {
   render () {
     return(
       <div className='navBar'>
-        <div className='logo'>
-        AWC Dance
+        <div className='logo-box'>
+          <h1 className='logo'>AWC</h1>
         </div> 
         <div className='menu'>
-          <NavLink to='/community'>Community</NavLink> 
-          <NavLink to='/recommendations'>Recommended</NavLink> 
-          <NavLink to='/profile'>Profile</NavLink>
+          <div className = 'li'>
+            <i className='material-icons'>account_circle</i>
+            <NavLink to='/profile'>Profile</NavLink>
+          </div>
+          <div className = 'li'>
+            <i className='material-icons'>group</i>
+            <NavLink to='/community'>Community</NavLink>
+          </div>
+          <div className = 'li'>
+            <i className='material-icons'>whatshot</i> 
+            <NavLink to='/recommendations'>Recommended</NavLink> 
+          </div>
         </div>         
       </div>
     )

@@ -1,8 +1,25 @@
 .App {
   font-family: 'Lato', sans-serif;
-  width: 80vw;
   margin: auto; }
+
+body {
+  margin: 0; }
 
 h1, h2, h3, h4, h5, a, li, p {
   font-family: 'Poiret One', cursive;
   margin: auto; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 27px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #b62d4e;
+  line-height: 8vh; }

@@ -1,35 +1,50 @@
 .navBar {
-  height: 10vh;
-  width: 80vw;
-  display: flex;
+  position: absolute;
+  border: 1px solid #a58f8fb5;
+  -webkit-box-shadow: 2px 2px 2px #70809094;
+  box-shadow: 2px 2px 2px #70809094;
+  height: 90vh;
+  width: 15vw;
+  display: -ms-flexbox;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 0 auto 5vh; }
+  background: black;
+  z-index: 10; }
 
 .active {
   border-bottom: #cc1292; }
 
 .logo {
-  flex: 20;
+  flex: 20 1;
   font-size: 6vh;
-  color: palevioletred; }
+  color: white;
+  font-family: 'Poiret One', cursive;
+  text-shadow: 2px 2px 2px #091d09; }
 
 .menu {
-  flex: 15;
-  line-height: 10vh;
-  text-align: center; }
+  margin: auto;
+  flex: 15 1;
+  line-height: 8vh; }
 
 a {
+  display: block;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 600;
-  margin: 5vh;
-  padding: 2vh;
   font-size: 2.7vh;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin-left: 2vh; }
 
 a:hover {
   background-color: palevioletred;
   color: white; }
 
-.logo {
-  font-family: 'Poiret One', cursive; }
+.logo-box {
+  text-align: center;
+  padding-top: 2vh;
+  margin-bottom: 3vh; }
+
+.li {
+  width: 80%;
+  display: flex;
+  margin: auto; }

@@ -64,3 +64,8 @@
     margin: 1vh; }
   .main-banner-text h2 {
     font-size: 4vh; }
+
+.events-small-box {
+  height: 5vh;
+  width: 100%;
+  background-color: black; }

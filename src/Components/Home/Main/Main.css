@@ -1,0 +1,42 @@
+.suggestions-menu {
+  display: flex;
+  width: 53%;
+  margin: 4vh auto;
+  justify-content: space-between;
+  background-color: #dcdcdc57; }
+
+.box {
+  background-color: #fffffffc;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-image: initial;
+  border-radius: 3px;
+  padding: 0px;
+  overflow: hidden; }
+
+.news-feed {
+  width: 100%;
+  height: 90vh;
+  display: flex; }
+
+.side-container {
+  width: 30%;
+  background-color: red;
+  height: 90vh; }
+
+.forum {
+  width: 70%;
+  height: 90vh; }
+
+.events-small {
+  width: 100%;
+  background-color: #3a2121;
+  height: 25vh; }
+
+.studios-small {
+  width: 100%;
+  background-color: #1c56c4;
+  height: 30vh; }
