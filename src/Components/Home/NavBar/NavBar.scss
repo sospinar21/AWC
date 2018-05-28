@@ -1,14 +1,12 @@
 .navBar {
-  position: absolute;
-  border: 1px solid #a58f8fb5;
   -webkit-box-shadow: 2px 2px 2px #70809094;
   box-shadow: 2px 2px 2px #70809094;
-  height: 90vh;
-  width: 15vw;
+  height: 78vh;
+  width: 17vw;
   display: -ms-flexbox;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: black;
+  background: #1b0202;
   z-index: 10;
 }
 
@@ -35,7 +33,7 @@ a {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 2.7vh;
+  font-size: 2.1vh;
   letter-spacing: 1px;
   margin-left:2vh; 
 }

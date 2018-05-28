@@ -21,7 +21,7 @@ fetchVideos = async () => {
 displayVideos = () => {
   const videos = this.props.suggestedVideos.map(video => {
     return (
-      <div key={video.id.videoId} className=''>
+      <div key={video.id.videoId} className='video-card'>
         <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} />
       </div>
     );
@@ -35,7 +35,7 @@ render () {
 
   if (this.props.suggestedVideos.length) {
     return (
-      <div className='cards-container'>
+      <div className='videos-main'>
         {this.displayVideos()}
       </div>
     )

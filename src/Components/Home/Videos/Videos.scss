@@ -1,0 +1,13 @@
+.videos-main {
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    overflow-x: scroll;
+    margin-top: 2vh;
+}
+
+.video-card {
+  margin: 0 1vh;
+}

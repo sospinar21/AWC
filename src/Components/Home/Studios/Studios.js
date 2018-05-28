@@ -38,21 +38,29 @@ displayStudios = () => {
   return studios;
 }
 
+studiosInMain = () => {
+
+}
+
 
 render () {
 
   if (this.props.suggestedStudios.length) {
-    return (
-      <div className='cards-container'>
-        {this.displayStudios()}
-      </div>
-    )
+  //   return (
+  //     <div className='cards-container'>
+  //       {this.displayStudios()}
+  //     </div>
+  //   )
       
-  }
-  else {
-  return (
-    <h1>nadieata</h1>
-  );
+  // }
+  // else {
+    return (
+      <div className='map'></div>
+    );
+  } else {
+    return (
+      <h1>Loading </h1>
+    );
   }
 }
 }

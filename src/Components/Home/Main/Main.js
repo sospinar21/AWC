@@ -1,24 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Events from '../Events/Events'
+import Events from '../Events/Events';
 import { NavBar } from '../../Home/NavBar/NavBar';
 import Studios from '../Studios/Studios';
 import './Main.css';
 import Videos from '../Videos/Videos';
-import Music from '../Music/Music'
+import Music from '../Music/Music';
+import { Community } from '../Community/Community';
 
 export class Main extends Component {
   
   
   render () {
-    console.log(this.props)
+    console.log(this.props);
     return (
       <div>
-        <NavBar />
         <div className='news-feed'>
-          <div className='forum'> 
+          <div className='navBar-forum'>
+            <NavBar />
+            <div className='forum'>
+              <div className='location'>
+                <input
+                  placeholder='city'
+                  className='city=input'
+                /> 
+              </div>  
+              <Community />
+            </div>
           </div>
           <div className='side-container'>
             <div className='events-small'>
@@ -27,25 +37,28 @@ export class Main extends Component {
               <Events />
             </div>
             <div className='studios-small'>
-              {/* <Studios /> */}
+              <h3> Studios </h3>
+              <Studios />
             </div>
           </div> 
         </div>
-        {/* <Videos /> */}
-        <Music />
+        <div className='videos-small'>
+          <Videos />
+        </div>
+        {/* <Music /> */}
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = (state) => {
   return ({
     suggestedEvents: state.suggestedEvents
-  })
-}
+  });
+};
 
 export const mapDispatchToProps = dispatch => ({
   
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main)
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

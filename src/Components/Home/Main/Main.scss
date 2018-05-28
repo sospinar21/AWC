@@ -1,4 +1,5 @@
 $flex : flex;
+$shadow: -2px -2px 3px lightgrey;
 
 .suggestions-menu {
   display: flex;
@@ -24,31 +25,74 @@ $flex : flex;
 
 .news-feed {
   width: 100%;
-  height: 90vh;
+  height: 77vh;
   display: flex;
   background-color: #8080801f;
 }
 
 .side-container {
-  width: 30%;
-  height: 90vh;
+  width: 28%;
+  height: 77vh;
+  box-shadow: $shadow;
+  
 }
 
 .forum {
-  width: 70%;
-  height: 90vh;
+  width: 100%;
+  height: 77vh;
+  background-color: white;
+  box-shadow: $shadow;  
 }
 
 .events-small {
-  height: 25vh;
+  height: 40vh;
   overflow: scroll;
   padding: 2vh;
   background-color: white;
+  margin: 1.3vh;
+  box-sizing: border-box;
 }
 
 
 .studios-small {
+  background-color: white;  
+  margin: 1.3vh;
+  height: 33vh;
+  padding: 1vh;
+  box-sizing: border-box;
+}
+
+.videos-small {
+  margin-left: 15vw;
+  background-color: #f0f0f0;
+  padding: 1vh;
+  margin: 1vh;
+  box-shadow: $shadow;      
+}
+
+.location {
+  display: flex;
   width: 100%;
-  background-color: #1c56c4;
-  height: 30vh;
+  height: 7vh;
+  padding: 1vh;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #c5c5c53b;
+  box-shadow: $shadow;
+
+  input {
+    font-size: 2vh;
+    border: 1px solid #dcdcdc;
+    margin: auto;
+    padding: 0.7vh;
+    width: 30%;
+    margin-left: 0vh;
+    font-family: 'Poiret One', cursive;
+}
+}
+
+
+.navBar-forum {
+  width: 72%;
+  display: flex;
 }
