@@ -22,7 +22,7 @@ describe('events', () => {
       status: 200,
       json: () => Promise.resolve({data: {}})
     }));
-    events = mount(<Events {...mockProps} /> , { disableLifecycleMethods: true })
+    events = mount(<Events {...mockProps} /> )
 
   })
 
@@ -32,14 +32,46 @@ describe('events', () => {
   })
 
   describe('componentDidMount', () => {
+    it('calls fetchEvents', () => {
 
+      events.instance().componentDidMount()
+      events.instance().fetchEvents = jest.fn()
+      expect(events.instance().fetchEvents).toHaveBeenCalled()
+    })
   })
 
   describe('fetchEvents', () => {
+
+    it('calls window.fetch with the correct params', () => {
+      events.instance().fetchEvents()
+      expect(window.fetch).toHaveBeenCalledWith('https://api.awc.dance/events?city=denver')
+    })
+
+    it('calls props.addEvents', () => {
+
+      events.instance().fetchEvents()
+      expect(mockProps.addEvents).toHaveBeenCalledWith({"data": {}})
+    })
     
   })
 
   describe('displayEvents', () => {
+
+    it('shows a default image if the event doesnt have one', () => {
+
+      const mockProps2 = {
+        suggestedEvents: [{date:{utc:'today'}}],
+        addEvents: jest.fn()
+      }
+
+      events = mount(<Events {...mockProps2} /> )
+
+      events.instance().displayEvents()
+      
+      const logo = events.find('img')
+
+      expect(logo.props('src').value).toEqual(undefined)
+    })
     
   })
 
