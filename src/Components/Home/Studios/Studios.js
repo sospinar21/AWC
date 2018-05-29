@@ -46,17 +46,12 @@ studiosInMain = () => {
 render () {
 
   if (this.props.suggestedStudios.length) {
-  //   return (
-  //     <div className='cards-container'>
-  //       {this.displayStudios()}
-  //     </div>
-  //   )
-      
-  // }
-  // else {
     return (
-      <div className='map'></div>
-    );
+      <div className='cards-container'>
+        {this.displayStudios()}
+      </div>
+    )
+
   } else {
     return (
       <h1>Loading </h1>

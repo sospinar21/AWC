@@ -26,9 +26,9 @@ export class Main extends Component {
                   placeholder='city'
                   className='city=input'
                 />
-                <a className='active'>Community</a> 
-                <a>Studios</a> 
-                <a>Events</a> 
+                <NavLink to = '/community' className='active'>Community</NavLink> 
+                <NavLink to='/studios'>Studios</NavLink> 
+                <NavLink to='/events'>Events</NavLink> 
               </div>  
               <Community />
             </div>
@@ -41,7 +41,7 @@ export class Main extends Component {
             </div>
             <div className='studios-small'>
               <h3> Studios </h3>
-              <Studios />
+              <div className='map'></div>
             </div>
           </div> 
         </div>
