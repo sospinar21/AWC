@@ -81,6 +81,28 @@ describe('events', () => {
 
   describe('mapStateToProps', () => {
     
+    let mockDispatch;
+    let suggestedEvents;
+    let mappedProps
+
+    beforeEach(() => {
+
+      mockDispatch = jest.fn();
+      mappedProps = mapDispatchToProps(mockDispatch);
+    })
+
+    it('should call dispatch with the correct params', () => {
+      
+      const eventsData = {id: 1, title:'workshop'}      
+      const mockAction = {
+        type: 'ADD_EVENTS',
+        eventsData
+      };
+
+      mappedProps.addEvents(eventsData);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    })
+    
   })
 
   describe('mapDispatchtoProps', () => {
