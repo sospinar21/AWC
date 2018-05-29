@@ -1,0 +1,2598 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`community matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Community />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="post"
+>
+          <div
+                    className="post-img"
+          />
+          <div
+                    className="post-description"
+          >
+                    <h3>
+                              @Stephanie
+                    </h3>
+                    <div
+                              className="text-description"
+                    >
+                              <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                              </p>
+                    </div>
+                    <div
+                              className="likes"
+                    >
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_up_alt
+                              </i>
+                              <i
+                                        className="material-icons icon"
+                              >
+                                        thumb_down_alt
+                              </i>
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "post-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "4",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "5",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="post-img"
+/>,
+            <div
+              className="post-description"
+>
+              <h3>
+                            @Stephanie
+              </h3>
+              <div
+                            className="text-description"
+              >
+                            <p>
+                                          Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                            </p>
+              </div>
+              <div
+                            className="likes"
+              >
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_up_alt
+                            </i>
+                            <i
+                                          className="material-icons icon"
+                            >
+                                          thumb_down_alt
+                            </i>
+              </div>
+</div>,
+          ],
+          "className": "post",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "post-img",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  @Stephanie
+</h3>,
+                <div
+                  className="text-description"
+>
+                  <p>
+                                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                  </p>
+</div>,
+                <div
+                  className="likes"
+>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_up_alt
+                  </i>
+                  <i
+                                    className="material-icons icon"
+                  >
+                                    thumb_down_alt
+                  </i>
+</div>,
+              ],
+              "className": "post-description",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "@Stephanie",
+                },
+                "ref": null,
+                "rendered": "@Stephanie",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                  "className": "text-description",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  },
+                  "ref": null,
+                  "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_up_alt
+</i>,
+                    <i
+                      className="material-icons icon"
+>
+                      thumb_down_alt
+</i>,
+                  ],
+                  "className": "likes",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_up_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_up_alt",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "thumb_down_alt",
+                      "className": "material-icons icon",
+                    },
+                    "ref": null,
+                    "rendered": "thumb_down_alt",
+                    "type": "i",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="post"
+>
+            <div
+                        className="post-img"
+            />
+            <div
+                        className="post-description"
+            >
+                        <h3>
+                                    @Stephanie
+                        </h3>
+                        <div
+                                    className="text-description"
+                        >
+                                    <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                    </p>
+                        </div>
+                        <div
+                                    className="likes"
+                        >
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_up_alt
+                                    </i>
+                                    <i
+                                                className="material-icons icon"
+                                    >
+                                                thumb_down_alt
+                                    </i>
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "post-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "4",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "5",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="post-img"
+/>,
+              <div
+                className="post-description"
+>
+                <h3>
+                                @Stephanie
+                </h3>
+                <div
+                                className="text-description"
+                >
+                                <p>
+                                                Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                                </p>
+                </div>
+                <div
+                                className="likes"
+                >
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_up_alt
+                                </i>
+                                <i
+                                                className="material-icons icon"
+                                >
+                                                thumb_down_alt
+                                </i>
+                </div>
+</div>,
+            ],
+            "className": "post",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "post-img",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    @Stephanie
+</h3>,
+                  <div
+                    className="text-description"
+>
+                    <p>
+                                        Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+                    </p>
+</div>,
+                  <div
+                    className="likes"
+>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_up_alt
+                    </i>
+                    <i
+                                        className="material-icons icon"
+                    >
+                                        thumb_down_alt
+                    </i>
+</div>,
+                ],
+                "className": "post-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "@Stephanie",
+                  },
+                  "ref": null,
+                  "rendered": "@Stephanie",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.
+</p>,
+                    "className": "text-description",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    },
+                    "ref": null,
+                    "rendered": "Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_up_alt
+</i>,
+                      <i
+                        className="material-icons icon"
+>
+                        thumb_down_alt
+</i>,
+                    ],
+                    "className": "likes",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_up_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_up_alt",
+                      "type": "i",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "thumb_down_alt",
+                        "className": "material-icons icon",
+                      },
+                      "ref": null,
+                      "rendered": "thumb_down_alt",
+                      "type": "i",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

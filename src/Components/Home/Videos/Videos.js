@@ -3,6 +3,7 @@ import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
 import { addVideos } from '../../../Actions/actions';
 import './Videos.css';
+import PropTypes from 'prop-types';
 
 export class Videos extends Component {
 

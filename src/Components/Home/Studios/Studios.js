@@ -3,6 +3,8 @@ import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
 import { addStudios } from '../../../Actions/actions';
 import './Studios.css';
+import PropTypes from 'prop-types';
+
 
 export class Studios extends Component {
 
@@ -70,4 +72,10 @@ export const mapDispatchToProps = dispatch => ({
   addStudios: (studiosData) => dispatch(addStudios(studiosData)) 
   
 });
+
+Studios.propTypes = {
+  suggestedStudios: PropTypes.array,
+  addStudios: PropTypes.func
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(Studios);

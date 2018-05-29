@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import './Community.css'
+import React, { Component } from 'react';
+import './Community.css';
 
 export class Community extends Component {
   
   displayForum = () => {
-    const arrp = [1,2,3,4,5,6]
+    const arrp = [1, 2, 3, 4, 5, 6];
     const posts = arrp.map((post, index) => {
       return (
         <div className='post' key={index}>
@@ -21,18 +21,18 @@ export class Community extends Component {
             </div>
           </div>
         </div>
-      )
-    })
-    return posts
+      );
+    });
+    return posts;
   }
 
 
   render () {
-    return(
+    return (
       <div className='post-container'>
         {this.displayForum()}
       </div>
-    )
+    );
   }
 }
 

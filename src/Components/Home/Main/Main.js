@@ -12,7 +12,7 @@ import { Community } from '../Community/Community';
 
 export class Main extends Component {
 
-  
+
   
   
   render () {
@@ -65,5 +65,9 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = dispatch => ({
   
 });
+
+Main.propTypes = {
+  suggestedEvents: PropTypes.array,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

@@ -1,31 +1,32 @@
-import React, { Component } from 'react'
-import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls'
+import React, { Component } from 'react';
+import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
-import { addEvents } from '../../../Actions/actions'
-import './Events.css'
+import { addEvents } from '../../../Actions/actions';
+import PropTypes from 'prop-types';
+import './Events.css';
 
 export class Events extends Component {
   constructor () {
-    super ()
+    super();
     
   }
 
   componentDidMount() {
-    this.fetchEvents()
+    this.fetchEvents();
   }
   
   fetchEvents = async () => {
-    let api = new ApiCalls()
-    const suggestedEvents = await api.fetchEvents()
-    await this.props.addEvents(suggestedEvents)
+    let api = new ApiCalls();
+    const suggestedEvents = await api.fetchEvents();
+    await this.props.addEvents(suggestedEvents);
   }
 
   displayEvents = () => {
     const events = this.props.suggestedEvents.map(suggEvent => {
       if (suggEvent.logo){
-        var img = suggEvent.logo.url
+        var img = suggEvent.logo.url;
       } else {
-        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-'
+        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       }
       return (
         <div key={suggEvent.id} className='suggEvent-cards'>
@@ -38,25 +39,25 @@ export class Events extends Component {
             </div>
           </div>   
         </div>
-      )
-    })
+      );
+    });
     return events;
   }
 
   eventsInMain = () => {
     const events = this.props.suggestedEvents.map(suggEvent => {
       if (suggEvent.logo){
-        var img = suggEvent.logo.url
+        var img = suggEvent.logo.url;
       } else {
-        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-'
+        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       } 
       return (
         <div key={suggEvent.id} className='events-small-box'>
           <img src={img} />
           <h4>{suggEvent.name}</h4>
         </div>
-      )
-    })
+      );
+    });
     return events;
   }
 
@@ -86,12 +87,11 @@ export class Events extends Component {
             {this.eventsInMain()}
           </div>
         </div>
-      )
-    }
-    else {
+      );
+    } else {
       return (
         <h1>Loading </h1>
-      )
+      );
     }
   }
 }
@@ -99,12 +99,17 @@ export class Events extends Component {
 export const mapStateToProps = (state) => {
   return ({
     suggestedEvents: state.suggestedEvents
-  })
-}
+  });
+};
 
 export const mapDispatchToProps = dispatch => ({
   addEvents: (eventsData) => dispatch(addEvents(eventsData)) 
   
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Events)
+Events.propTypes = {
+  suggestedEvents: PropTypes.array,
+  addEvents: PropTypes.func
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Events);
