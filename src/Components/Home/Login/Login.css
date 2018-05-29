@@ -22,6 +22,9 @@
     box-sizing: border-box;
     height: 6vh;
     font-size: 1.5vh; }
+  .forms h1 {
+    font-family: 'Poiret One', cursive;
+    font-weight: 600; }
   .forms button {
     background-color: purple;
     color: white;

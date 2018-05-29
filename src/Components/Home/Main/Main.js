@@ -25,7 +25,10 @@ export class Main extends Component {
                 <input
                   placeholder='city'
                   className='city=input'
-                /> 
+                />
+                <a>Studios</a> 
+                <a>Events</a> 
+                <a></a> 
               </div>  
               <Community />
             </div>

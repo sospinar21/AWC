@@ -15,7 +15,7 @@ export class NavBar extends Component {
         <div className='menu'>
           <div className = 'li'>
             <i className='material-icons'>account_circle</i>
-            <NavLink to='/profile'>Profile</NavLink>
+            <NavLink to='/login'>SignUp/ LogIn</NavLink>
           </div>
           <div className = 'li'>
             <i className='material-icons'>group</i>
