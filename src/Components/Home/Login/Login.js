@@ -2,14 +2,29 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Login.css';
-import { signUp } from '../../../Helper/Users/Users'
+import { signUp, 
+  logIn, 
+  updateUserInfo, 
+  confirmRegistration, 
+  changePassword,
+  forgotPassword,
+  userSignout,
+  rememberDevice
+ } from '../../../Helper/Users/Users'
 
 export class Login extends Component {
+
+  componentDidMount() {
+  }
   
   userSignUp = (e) => {
-    console.log(signUp)
     e.preventDefault()
     signUp()
+  }
+
+  userSignIn = (e) => {
+    e.preventDefault()
+    logIn()
   }
   
   render () {
@@ -56,7 +71,9 @@ export class Login extends Component {
                 type='password'
                 placeholder='Password'
                 className='password-si'/>
-              <button className='login'>Log In</button>              
+              <button 
+                onClick={(e) => this.userSignIn(e)}              
+                className='login'>Log In</button>              
             </form>
           </div>
         </div>

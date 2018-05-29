@@ -89,8 +89,21 @@ $shadow: -2px -2px 3px lightgrey;
     margin-left: 0vh;
     font-family: 'Poiret One', cursive;
 }
+
+a {
+  color: #b62d4d
 }
 
+a:hover {
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+}
+}
+
+.active {
+  border-bottom:2px solid pink;
+}
 
 .navBar-forum {
   width: 72%;
