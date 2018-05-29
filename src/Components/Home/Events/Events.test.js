@@ -30,4 +30,28 @@ describe('events', () => {
   it('matches snapshot', () => {
     expect(events).toMatchSnapshot();
   })
+
+  describe('componentDidMount', () => {
+
+  })
+
+  describe('fetchEvents', () => {
+    
+  })
+
+  describe('displayEvents', () => {
+    
+  })
+
+  describe('eventsinMain', () => {
+    
+  })
+
+  describe('mapStateToProps', () => {
+    
+  })
+
+  describe('mapDispatchtoProps', () => {
+    
+  })
 })
