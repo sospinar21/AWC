@@ -23,8 +23,10 @@ fetchStudios = async () => {
 displayStudios = () => {
   const studios = this.props.suggestedStudios.map(studio => {
     return (
-      <div key={studio.id} className='suggEvent-cards'>
-        <img src={studio.image} />
+      <div key={studio.id} className='suggStudio-cards'>
+        <div className='img-box'>
+          <img className='studio-img' src={studio.image} />
+        </div>
         <div className='text-container'>
           <h4>{studio.title}</h4>
           <b>{studio.reviews}</b>
@@ -49,7 +51,7 @@ render () {
 
   if (this.props.suggestedStudios.length) {
     return (
-      <div className='cards-container'>
+      <div className='studiocards-container'>
         {this.displayStudios()}
       </div>
     )

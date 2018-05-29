@@ -6,7 +6,7 @@ class ApiCalls extends Component {
   }
 
   fetchEvents = async () => {
-    const url = `https://api.awc.dance/events?city=vermont`;
+    const url = `https://api.awc.dance/events?city=denver`;
     const response = await fetch(url)
     const data= await response.json();
     return data;

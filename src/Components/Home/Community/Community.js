@@ -13,7 +13,7 @@ export class Community extends Component {
           <div className='post-description'>
             <h3>@Stephanie</h3>
             <div className='text-description'> 
-              <p>Belly dance is primarily a torso-driven dance, with an emphasis on articulations of the hips.</p>
+              <p>“And those who were seen dancing were thought to be insane by those who could not hear the music.” </p>
             </div>
             <div className='likes'>
               <i className="material-icons icon">thumb_up_alt</i>

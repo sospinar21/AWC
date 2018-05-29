@@ -4,3 +4,25 @@
   height: 90%;
   width: 100%;
   margin-top: 1vh; }
+
+.img-box {
+  height: 15vh;
+  width: 100%;
+  padding: 2vh;
+  overflow: hidden; }
+
+.suggStudio-cards {
+  margin: 2vh;
+  height: 30vh;
+  width: 20%;
+  text-align: center; }
+  .suggStudio-cards .studio-img {
+    width: inherit; }
+  .suggStudio-cards .text-container {
+    line-height: 2; }
+
+.studiocards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto; }
