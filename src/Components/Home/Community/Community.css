@@ -15,7 +15,7 @@
   display: flex; }
 
 .post-img {
-  width: 90%;
+  width: 20%;
   height: 100%;
   background-image: url("../../../assets/event.png");
   background-size: cover; }
@@ -23,10 +23,14 @@
     width: 100%;
     height: 100%; }
 
+.post-description h3 {
+  margin: 1vh;
+  color: #b62d4c; }
+
 .text-description {
   margin: 0 2vh;
   font-size: 1.8vh;
-  height: 70%;
+  height: 40%;
   overflow: scroll; }
   .text-description p {
     letter-spacing: .35px;

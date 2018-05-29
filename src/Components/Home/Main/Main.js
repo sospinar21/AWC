@@ -11,6 +11,8 @@ import Music from '../Music/Music';
 import { Community } from '../Community/Community';
 
 export class Main extends Component {
+
+  
   
   
   render () {
