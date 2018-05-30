@@ -115,20 +115,22 @@ $shadow: -2px -2px 3px lightgrey;
   box-shadow: 3px 3px 5px lightgrey;
 
   input {
-    font-size: 1.5vh;
-    border: 1px solid #dcdcdc;
-    margin: auto;
+    border: none;
+    padding: 10px 15px;	
+    font-size: 1.6vh;
     width: 50%;
-    margin-left: 0vh;
-    background-color: #ffffff;
-    padding: 0.8vh;
-    font-family: 'Roboto', sans-serif;
+    color: black;
+    outline: none;
+    line-height: 1.5;
+}
 
-    .submit-location {
-      width: 20%;
-      padding: 0.8vh;
-      font-family: 'Roboto', sans-serif;
-    }
+.submit-location {
+  color: white;
+  background-color: #b62d4d;
+  width: 20%;
+  padding: 0.8vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6vh;
 }
 
 a {
@@ -160,4 +162,5 @@ a:hover {
 
 form {
   width: 60%;
+  display: flex;
 }
