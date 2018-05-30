@@ -22,15 +22,12 @@ render () {
 
     return (
       <div>
-        <div className='news-feed'>
-          <div className='navBar-forum'>
+        <div className='entertainment'>
+          <div className='navBar-entert'>
             <NavBar />
-            <div className='forum'>
-              
-            </div> 
-          </div>
-          <div className='sidebar'>
-            <Videos />
+            <div className='videos'>
+              <Videos />
+            </div>
           </div>
         </div>
       </div>

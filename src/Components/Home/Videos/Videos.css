@@ -1,5 +1,42 @@
 .videos-main {
-  margin: 2vh auto; }
+  display: flex; }
 
 .video-card {
   margin: 1vh 15%; }
+
+.selectedVideo {
+  width: 80%;
+  padding-top: 8vh;
+  text-align: center; }
+
+iframe {
+  height: 460px;
+  width: 840px; }
+
+.videosidebar {
+  width: 30%;
+  height: 99vh;
+  background-color: white;
+  overflow: scroll;
+  -webkit-box-shadow: 1px 4px 11px lightgrey;
+  box-shadow: 1px 4px 11px lightgrey; }
+
+.video-description {
+  text-align: left;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 2vh auto;
+  background-color: #a9a9a91c;
+  padding: 4vh;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px #d3d3d394; }
+  .video-description h3 {
+    font-size: 30px;
+    color: black; }
+  .video-description .icons {
+    display: flex;
+    margin-top: 5vh; }
+  .video-description .icon-vid {
+    font-size: 4vh;
+    margin: 0 1vh; }
