@@ -17,7 +17,9 @@ export class Main extends Component {
 
     this.state = {
       locations: [],
-      selectedLocation: ''
+      selectedLocation: '',
+      communityActive:true,
+      studiosActive: false
     };
   }
 
@@ -44,12 +46,39 @@ selectedLocation = () => {
   console.log('here')
 }
 
+makeStudioActive = () => {
+  this.setState({
+    communityActive: false,
+    studiosActive: true
+  })
+}
+
+makeCommunityActive = () => {
+    this.setState({
+      communityActive: true,
+      studiosActive: false
+    })
+}
+
+renderCommunityOrStudios = () => {
+  if (this.state.communityActive){
+    return(
+      <Community />
+    )
+  } else {
+    return (
+      <Studios />
+    )
+  }
+}
+
 render () {
   const suggestions = this.state.locations.map((suggestion, index) => {
     return (
       <option key={index} value={suggestion}/>
     );
   });
+
 
   return (
     <div>
@@ -61,7 +90,7 @@ render () {
               <input
                 list='locations'
                 onChange={(e) => this.updateState(e)}
-                placeholder='city'
+                placeholder='Start typing your City'
                 className='city-input'
               />
               <datalist 
@@ -70,11 +99,15 @@ render () {
                 {suggestions}
               </datalist>
               <div className='btns'>
-                <NavLink to = '/community' className='active'>Community</NavLink> 
-                <NavLink to='/studios'>Studios</NavLink> 
+                <button 
+                  onClick={() => this.makeCommunityActive()}
+                  className='active'>Posts</button> 
+                <button
+                  onClick={() => this.makeStudioActive()}
+                >Studios</button> 
               </div>
             </div>  
-            <Community />
+            {this.renderCommunityOrStudios()}
           </div>
         </div>
         <div className='side-container'>

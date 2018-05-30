@@ -11,6 +11,7 @@ import { signUp,
   userSignout,
   rememberDevice
  } from '../../../Helper/Users/Users'
+  import { NavBar } from '../NavBar/NavBar'
 
 export class Login extends Component {
 
@@ -30,6 +31,7 @@ export class Login extends Component {
   render () {
     return (
       <div className='si-su'>
+      <NavBar />
         <div className='website'/> 
         <div className='forms'>
           <div className='signup-box'>

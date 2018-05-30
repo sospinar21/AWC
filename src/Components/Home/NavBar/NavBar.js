@@ -15,15 +15,15 @@ export class NavBar extends Component {
         <div className='menu'>
           <div className = 'li'>
             <i className='material-icons'>account_circle</i>
-            <NavLink to='/login'>SignUp/ LogIn</NavLink>
+            <NavLink to='/signin'>SignUp/ LogIn</NavLink>
           </div>
           <div className = 'li'>
             <i className='material-icons'>group</i>
-            <NavLink to='/community'>Community</NavLink>
+            <NavLink to='/'>Community</NavLink>
           </div>
           <div className = 'li'>
             <i className='material-icons'>whatshot</i> 
-            <NavLink to='/recommendations'>Recommended</NavLink> 
+            <NavLink to='/recommendations'>Entertaiment</NavLink> 
           </div>
         </div>         
       </div>

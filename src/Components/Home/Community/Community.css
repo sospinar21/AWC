@@ -32,12 +32,14 @@
 .text-description {
   margin: 0 2vh;
   font-size: 1.8vh;
-  overflow-y: scroll; }
+  overflow-y: hidden;
+  height: 5vh; }
   .text-description p {
     letter-spacing: .35px;
     line-height: 1.2; }
 
 .likes {
+  margin-top: -2vh;
   text-align: right; }
 
 .icon {
