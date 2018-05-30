@@ -67,9 +67,16 @@ $shadow: -2px -2px 3px lightgrey;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 1.4;
+  box-shadow: 3px 3px 5px lightgrey;
 
-  h3 {
-    color: white;
+  a {
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+  }
+
+  a:hover {
+    color: #f19db0;
+    cursor: pointer;
   }
 }
 
@@ -128,9 +135,8 @@ a {
 }
 
 a:hover {
-  color: rgb(133, 89, 89);
+  color: #f19db0;
   cursor: pointer;
-  background-color: transparent;
 }
 }
 

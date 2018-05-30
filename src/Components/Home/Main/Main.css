@@ -53,9 +53,14 @@
   background-color: #232b37;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  line-height: 1.4; }
-  .titleFix h3 {
-    color: white; }
+  line-height: 1.4;
+  box-shadow: 3px 3px 5px lightgrey; }
+  .titleFix a {
+    color: white;
+    font-weight: 200; }
+  .titleFix a:hover {
+    color: #f19db0;
+    cursor: pointer; }
 
 .studios-small {
   overflow-x: hidden;
@@ -100,9 +105,8 @@
     color: white;
     font-weight: 200; }
   .location a:hover {
-    color: #855959;
-    cursor: pointer;
-    background-color: transparent; }
+    color: #f19db0;
+    cursor: pointer; }
 
 .navBar-forum {
   width: 75%;

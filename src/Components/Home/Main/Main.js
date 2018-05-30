@@ -54,22 +54,14 @@ makeStudioActive = () => {
 }
 
 makeCommunityActive = () => {
-    this.setState({
-      communityActive: true,
-      studiosActive: false
-    })
+  this.setState({
+    communityActive: true,
+    studiosActive: false
+  })
 }
 
 renderCommunityOrStudios = () => {
-  if (this.state.communityActive){
-    return(
-      <Community />
-    )
-  } else {
-    return (
-      <Studios />
-    )
-  }
+  return this.state.communityActive ? <Community /> : <Studios />
 }
 
 render () {
@@ -99,12 +91,12 @@ render () {
                 {suggestions}
               </datalist>
               <div className='btns'>
-                <button 
+                <a
                   onClick={() => this.makeCommunityActive()}
-                  className='active'>Posts</button> 
-                <button
+                  className='active'>Posts</a> 
+                <a
                   onClick={() => this.makeStudioActive()}
-                >Studios</button> 
+                >Studios</a> 
               </div>
             </div>  
             {this.renderCommunityOrStudios()}
@@ -112,14 +104,14 @@ render () {
         </div>
         <div className='side-container'>
           <div className='titleFix'>
-            <h3>Events </h3>
+            <a>Events </a>
           </div>
           <div className='events-small'>
             <br/>
             <Events />
           </div>
           <div className='titleFix'>
-            <h3>Music </h3>
+            <a>Music </a>
           </div>
           <div className='studios-small'>
             <div className='map'></div>

@@ -6,8 +6,7 @@ import { Main } from '../Components/Home/Main/Main';
 import { Route } from 'react-router-dom';
 import Login from '../Components/Home/Login/Login';
 import { Community } from '../Components/Home/Community/Community';
-import Studios from '../Components/Home/Studios/Studios';
-import Events from '../Components/Home/Events/Events';
+import Entertainment from '../Components/Home/Entertainment/Entertainment'
 
 class App extends Component {
   constructor () {
@@ -23,8 +22,7 @@ class App extends Component {
         <Route path='/profile' component={Profile} /> 
         <Route path='/signin' component={Login} />
         <Route path='/community' component={Community} />
-        <Route path='/studios' component={Studios} />                         
-        <Route path='/events' component={Events} />                                                               
+        <Route path='/entertainment' component={Entertainment} />                         
       </div>
     );
   }
