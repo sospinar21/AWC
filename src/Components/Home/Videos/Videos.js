@@ -27,6 +27,7 @@ fetchVideos = async () => {
 }
 
 displaySelectedVideo = (id, title) => {
+  console.log(title)
  if (id){
   this.setState({
     selectedVideo: id,
@@ -41,7 +42,7 @@ displayVideos = () => {
     const title = video.snippet.title;
     const videoId = video.id.videoId;
     return (
-      <div onClick={() => this.displaySelectedVideo(videoId, )} key={videoId} className='video-card'>
+      <div onClick={() => this.displaySelectedVideo(videoId, title)} key={videoId} className='video-card'>
         <img src={snippet} />
       </div>
     );
@@ -52,8 +53,8 @@ displayVideos = () => {
 
 
 render () {
-  const selectedVideo = this.state.selectedVideo.length ? this.state.selectedVideo : 'JxCPiZZyxZU'
-  const selectedTitle = this.state.selectedTitle.length ? this.state.selectedVideo : 'BUM BUM TAM TAM - J Balvin & Future Dance | Matt Steffanina ft Chachi Gonzales'
+  const selectedVideo = this.state.selectedVideo.length ? this.state.selectedVideo : 'Kl5B6MBAntI'
+  const selectedTitle = this.state.selectedTitle.length ? this.state.selectedTitle: 'ED SHEERAN - Shape Of You | Kyle Hanagami Choreography'
 
   if (this.props.suggestedVideos.length) {
     return (
@@ -65,8 +66,10 @@ render () {
           <div className='video-description'>
             <h3>{selectedTitle}</h3>
             <div className='icons'>
-              <i className="material-icons icon-vid">thumb_up_alt</i>
-              <i className="material-icons icon-vid">thumb_down_alt</i>
+              <i className="material-icons icon-vid">thumb_up_alt</i> 
+              <p>0</p>
+              <i className="material-icons icon-vid">thumb_down_alt</i> 
+              <p>0</p>
             </div>
           </div>
         </div>

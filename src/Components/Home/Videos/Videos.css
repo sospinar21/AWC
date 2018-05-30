@@ -36,7 +36,7 @@ iframe {
     color: black; }
   .video-description .icons {
     display: flex;
-    margin-top: 5vh; }
+    width: 25%; }
   .video-description .icon-vid {
     font-size: 4vh;
     margin: 0 1vh; }
