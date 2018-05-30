@@ -12,12 +12,14 @@ export class Events extends Component {
   }
 
   componentDidMount() {
-    this.fetchEvents();
+    const city = this.props.selectedLocation;
+    const selectedLocation = city.length ? city : 'usa'
+    this.fetchEvents(selectedLocation);
   }
   
-  fetchEvents = async () => {
+  fetchEvents = async (city) => {
     let api = new ApiCalls();
-    const suggestedEvents = await api.fetchEvents();
+    const suggestedEvents = await api.fetchEvents(city);
     await this.props.addEvents(suggestedEvents);
   }
 
@@ -63,24 +65,6 @@ export class Events extends Component {
 
   render () {
     if (this.props.suggestedEvents.length) {
-    //   return (
-    //     <div>
-    //       <h1>Popular Events</h1>          
-    //       <div className='main-banner box2'> 
-    //         <div className='black-bng'/>
-    //         <div className = 'main-banner-text'>
-    //           <h1>10th Anniversary</h1>
-    //           <h2>Learn More</h2>
-    //         </div>
-    //       </div>
-    //       <h1>Local Events</h1>
-    //       <div className='cards-container'>
-    //         {this.displayEvents()}
-    //       </div>
-    //     </div>
-    //   )
-    // }
-    // else {
       return (
         <div> 
           <div className='cards-container-small'>
@@ -98,7 +82,8 @@ export class Events extends Component {
 
 export const mapStateToProps = (state) => {
   return ({
-    suggestedEvents: state.suggestedEvents
+    suggestedEvents: state.suggestedEvents,
+    selectedLocation: state.location
   });
 };
 
@@ -109,7 +94,8 @@ export const mapDispatchToProps = dispatch => ({
 
 Events.propTypes = {
   suggestedEvents: PropTypes.array,
-  addEvents: PropTypes.func
+  addEvents: PropTypes.func,
+  selectedLocation: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Events);
