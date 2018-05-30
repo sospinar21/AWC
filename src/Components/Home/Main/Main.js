@@ -25,7 +25,9 @@ export class Main extends Component {
 
 updateState = (e) => {
   const userInput = e.target.value;
+  this.setState({selectedLocation:userInput})
   this.fetchLocation(userInput);
+  console.log(this.state.selectedLocation)
 }
 
 fetchLocation = async (userInput) => {
@@ -53,7 +55,6 @@ makeStudioActive = () => {
   })
 }
 
-
 renderCommunityOrStudios = () => {
   return this.state.communityActive ? <Community /> : <Studios />
 }
@@ -61,7 +62,9 @@ renderCommunityOrStudios = () => {
 render () {
   const suggestions = this.state.locations.map((suggestion, index) => {
     return (
-      <option key={index} value={suggestion}/>
+      <option 
+        onClick = {() => this.selectedLocation()}
+        key={index} value={suggestion}/>
     );
   });
 
@@ -73,14 +76,16 @@ render () {
           <NavBar />
           <div className='forum'>
             <div className='location'>
-              <input
-                list='locations'
-                onChange={(e) => this.updateState(e)}
-                placeholder='Start typing your City'
-                className='city-input'
-              />
+              <form>
+                <input
+                  type='text'
+                  list='locations'
+                  onChange={(e) => this.updateState(e)}
+                  placeholder='Start typing your City'
+                  className='city-input'
+                />
+              </form>
               <datalist 
-                onClick = {this.selectedLocation()}
                 id='locations'>
                 {suggestions}
               </datalist>
