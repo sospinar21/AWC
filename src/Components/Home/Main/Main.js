@@ -81,7 +81,7 @@ render () {
             <Events />
           </div>
           <div className='titleFix'>
-            <h3>Studios </h3>
+            <h3>Music </h3>
           </div>
           <div className='studios-small'>
             <div className='map'></div>
