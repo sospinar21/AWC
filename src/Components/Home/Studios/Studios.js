@@ -10,14 +10,15 @@ export class Studios extends Component {
 
 
   componentDidMount() {
-    this.fetchStudios();
+    const city = this.props.selectedLocation;
+    const selectedLocation = city.length ? city : 'usa'
+    this.fetchStudios(selectedLocation);
   }
 
-fetchStudios = async () => {
+fetchStudios = async (city) => {
   let api = new ApiCalls();
-  const suggestedStudios = await api.fetchStudios();
+  const suggestedStudios = await api.fetchStudios(city);
   await this.props.addStudios(suggestedStudios);
-
 }
 
 displayStudios = () => {
@@ -66,7 +67,8 @@ render () {
 
 export const mapStateToProps = (state) => {
   return ({
-    suggestedStudios: state.suggestedStudios
+    suggestedStudios: state.suggestedStudios,
+    selectedLocation: state.location
   });
 };
 
@@ -77,7 +79,7 @@ export const mapDispatchToProps = dispatch => ({
 
 Studios.propTypes = {
   suggestedStudios: PropTypes.array,
-  addStudios: PropTypes.func
+  addStudios: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Studios);

@@ -12,8 +12,8 @@ class ApiCalls extends Component {
     return data;
   } 
 
-  fetchStudios = () => {
-    const url = `https://api.awc.dance/?city=80202`;
+  fetchStudios = (city) => {
+    const url = `https://api.awc.dance/?city=${city}`;
     return fetch(url, {
       method: 'GET',
       headers: {
