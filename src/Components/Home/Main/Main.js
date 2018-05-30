@@ -81,7 +81,7 @@ render () {
           <NavBar />
           <div className='forum'>
             <div className='location'>
-              <form>
+              <form className='location-form'>
                 <input
                   type='text'
                   list='locations'

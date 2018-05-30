@@ -35,7 +35,7 @@ export class Login extends Component {
         <div className='website'/> 
         <div className='forms'>
           <div className='signup-box'>
-            <h1>AWC Dance </h1>
+            <h1>AWC </h1>
             <button>Log in with Facebook </button>
             <button>Log in with Google </button>              
             <form className='form' autoComplete='on'>
