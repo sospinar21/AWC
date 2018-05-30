@@ -12,3 +12,8 @@ export const addVideos = (videosData) => ({
   type: 'ADD_VIDEOS',
   videosData
 });
+
+export const addLocation = (location) => ({
+  type: 'ADD_LOCATION',
+  location
+})

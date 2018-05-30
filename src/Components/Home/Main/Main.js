@@ -10,6 +10,7 @@ import Videos from '../Videos/Videos';
 import Music from '../Music/Music';
 import { Community } from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
+import { addLocation } from '../../../Actions/actions'
 
 export class Main extends Component {
   constructor() {
@@ -17,7 +18,7 @@ export class Main extends Component {
 
     this.state = {
       locations: [],
-      selectedLocation: '',
+      selectedLocation:'',
       communityActive:true,
       studiosActive: false
     };
@@ -27,7 +28,6 @@ updateState = (e) => {
   const userInput = e.target.value;
   this.setState({selectedLocation:userInput})
   this.fetchLocation(userInput);
-  console.log(this.state.selectedLocation)
 }
 
 fetchLocation = async (userInput) => {
@@ -44,8 +44,9 @@ displaySuggestions = (suggestions) => {
   } 
 }
 
-selectedLocation = () => {
-  console.log('here')
+selectedLocation = (e) => {
+  e.preventDefault()
+  this.props.addLocation(this.state.selectedLocation)
 }
 
 makeStudioActive = () => {
@@ -68,7 +69,6 @@ render () {
     );
   });
 
-
   return (
     <div>
       <div className='news-feed'>
@@ -80,10 +80,13 @@ render () {
                 <input
                   type='text'
                   list='locations'
-                  onChange={(e) => this.updateState(e)}
+                  onInput={(e) => this.updateState(e)}
                   placeholder='Start typing your City'
                   className='city-input'
                 />
+                <button 
+                  className='submit-location'
+                  onClick = {(e) => this.selectedLocation(e)}>Search</button>
               </form>
               <datalist 
                 id='locations'>
@@ -128,16 +131,18 @@ render () {
 
 export const mapStateToProps = (state) => {
   return ({
-    suggestedEvents: state.suggestedEvents
+    suggestedEvents: state.suggestedEvents,
+    selectedLocation: state.location
   });
 };
 
 export const mapDispatchToProps = dispatch => ({
-  
+  addLocation: (location) => dispatch(addLocation(location))
 });
 
 Main.propTypes = {
-  suggestedEvents: PropTypes.array
+  suggestedEvents: PropTypes.array,
+  addLocation: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ApiCalls from '../Helper/ApiCalls/ApiCalls';
 import { Profile } from '../Components/Profile/Profile/Profile';
-import { Main } from '../Components/Home/Main/Main';
+import Main from '../Components/Home/Main/Main';
 import { Route } from 'react-router-dom';
 import Login from '../Components/Home/Login/Login';
 import { Community } from '../Components/Home/Community/Community';

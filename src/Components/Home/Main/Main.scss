@@ -118,13 +118,16 @@ $shadow: -2px -2px 3px lightgrey;
     font-size: 1.5vh;
     border: 1px solid #dcdcdc;
     margin: auto;
-    width: 80%;
+    width: 50%;
     margin-left: 0vh;
     background-color: #ffffff;
     padding: 0.8vh;
     font-family: 'Roboto', sans-serif;
-    .location ::placeholder {
-      color: white;
+
+    .submit-location {
+      width: 20%;
+      padding: 0.8vh;
+      font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -156,5 +159,5 @@ a:hover {
 }
 
 form {
-  width: 50%;
+  width: 60%;
 }

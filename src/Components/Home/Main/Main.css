@@ -94,13 +94,15 @@
     font-size: 1.5vh;
     border: 1px solid #dcdcdc;
     margin: auto;
-    width: 80%;
+    width: 50%;
     margin-left: 0vh;
     background-color: #ffffff;
     padding: 0.8vh;
     font-family: 'Roboto', sans-serif; }
-    .location input .location ::placeholder {
-      color: white; }
+    .location input .submit-location {
+      width: 20%;
+      padding: 0.8vh;
+      font-family: 'Roboto', sans-serif; }
   .location a {
     color: white;
     font-weight: 200; }
@@ -120,4 +122,4 @@
   width: 30%; }
 
 form {
-  width: 50%; }
+  width: 60%; }
