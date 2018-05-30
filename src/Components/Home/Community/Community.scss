@@ -8,7 +8,7 @@
   width: 90%;
   background-color: #f9f9f9;
   margin: auto;
-  height: 15vh;
+  height: 13vh;
   margin: 2vh auto;
   box-shadow: 0px 1px 2px lightgrey;
   padding: 1.5vh;
@@ -31,6 +31,8 @@
 .post-description {
 
   h3 {
+    font-size: 1.7vh;
+    margin: 1vh;
     margin: 1vh;
     color: #b62d4c;
   }
@@ -39,8 +41,7 @@
 .text-description {
   margin: 0 2vh;
   font-size: 1.8vh;
-  height: 40%;
-  overflow: scroll;
+  overflow-y: scroll;
 
   p {
     letter-spacing: .35px;

@@ -73,17 +73,17 @@ render () {
           </div>
         </div>
         <div className='side-container'>
+          <div className='titleFix'>
+            <h3>Events </h3>
+          </div>
           <div className='events-small'>
-            <div className='titleFix'>
-              <h3>Events </h3>
-            </div>
             <br/>
             <Events />
           </div>
+          <div className='titleFix'>
+            <h3>Studios </h3>
+          </div>
           <div className='studios-small'>
-            <div className='titleFix'>
-              <h3>Studios </h3>
-            </div>
             <div className='map'></div>
           </div>
         </div> 
