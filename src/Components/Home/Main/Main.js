@@ -10,7 +10,7 @@ import Videos from '../Videos/Videos';
 import Music from '../Music/Music';
 import { Community } from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
-import { addLocation } from '../../../Actions/actions'
+import { addLocation, addEvents } from '../../../Actions/actions'
 
 export class Main extends Component {
   constructor() {
@@ -44,9 +44,12 @@ displaySuggestions = (suggestions) => {
   } 
 }
 
-selectedLocation = (e) => {
+selectedLocation = async (e) => {
   e.preventDefault()
+  const api = new ApiCalls()
   this.props.addLocation(this.state.selectedLocation)
+  const suggestedEvents = await api.fetchEvents(this.state.selectedLocation)
+  this.props.addEvents(suggestedEvents)
 }
 
 makeStudioActive = () => {
@@ -137,7 +140,8 @@ export const mapStateToProps = (state) => {
 };
 
 export const mapDispatchToProps = dispatch => ({
-  addLocation: (location) => dispatch(addLocation(location))
+  addLocation: (location) => dispatch(addLocation(location)),
+  addEvents: (eventsData) => dispatch(addEvents(eventsData)) 
 });
 
 Main.propTypes = {
