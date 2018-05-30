@@ -55,19 +55,19 @@ render () {
           <NavBar />
           <div className='forum'>
             <div className='location'>
-              <form>
-                <input
-                  list='locations'
-                  onChange={(e) => this.updateState(e)}
-                  placeholder='city'
-                  className='city=input'
-                />
-                <datalist id='locations'>
-                  {suggestions}
-                </datalist>
-              </form>
-              <NavLink to = '/community' className='active'>Community</NavLink> 
-              <NavLink to='/studios'>Studios</NavLink> 
+              <input
+                list='locations'
+                onChange={(e) => this.updateState(e)}
+                placeholder='city'
+                className='city=input'
+              />
+              <datalist id='locations'>
+                {suggestions}
+              </datalist>
+              <div className='btns'>
+                <NavLink to = '/community' className='active'>Community</NavLink> 
+                <NavLink to='/studios'>Studios</NavLink> 
+              </div>
             </div>  
             <Community />
           </div>
@@ -75,14 +75,14 @@ render () {
         <div className='side-container'>
           <div className='events-small'>
             <div className='titleFix'>
-              <h3> Events </h3>
+              <h3>Events </h3>
             </div>
             <br/>
             <Events />
           </div>
           <div className='studios-small'>
             <div className='titleFix'>
-              <h3> Studios </h3>
+              <h3>Studios </h3>
             </div>
             <div className='map'></div>
           </div>

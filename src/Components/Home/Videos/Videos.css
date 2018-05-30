@@ -5,7 +5,7 @@
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   overflow-x: scroll;
-  margin-top: 2vh; }
+  margin: 2vh auto; }
 
 .video-card {
   margin: 0 1vh; }

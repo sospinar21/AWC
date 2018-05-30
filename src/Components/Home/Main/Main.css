@@ -28,38 +28,49 @@
 
 .forum {
   width: 100%;
-  height: 78vh;
+  height: 76vh;
+  margin: 0 auto;
   background-color: white;
-  box-shadow: -2px -2px 3px lightgrey; }
+  -webkit-box-shadow: 3px 3px 5px lightgrey;
+  box-shadow: 2px 2px 2px lightgrey; }
 
 .events-small {
+  overflow-x: hidden;
   height: 40vh;
   overflow: scroll;
-  padding: 2vh;
+  padding: 0vh 2vh;
   background-color: white;
   margin: 1.3vh;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  box-shadow: 3px 3px 5px lightgrey; }
   .events-small h3 {
     color: #232b37; }
 
 .titleFix {
-  width: 25%;
+  padding-top: 2vh;
+  width: 25.1%;
   height: 5vh;
-  background-color: white; }
+  background-color: white;
+  position: fixed; }
 
 .studios-small {
+  overflow-x: hidden;
   background-color: white;
   margin: 1.3vh;
   height: 33vh;
-  padding: 1vh;
-  box-sizing: border-box; }
+  padding: 0 2vh;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 5px lightgrey; }
+  .studios-small h3 {
+    color: #232b37; }
 
 .videos-small {
-  margin-left: 15vw;
-  background-color: #f0f0f0;
-  padding: 1vh;
-  margin: 1vh;
-  box-shadow: -2px -2px 3px lightgrey; }
+  background-color: #ffffff;
+  overflow-x: scroll;
+  width: 90%;
+  margin-left: 10%;
+  -webkit-box-shadow: 3px 3px 5px lightgrey;
+  box-shadow: 2px 0px 8px lightgrey; }
 
 .location {
   display: flex;
@@ -68,8 +79,8 @@
   padding: 1vh 0 1vh 5%;
   box-sizing: border-box;
   text-align: center;
-  background-color: #c5c5c53b;
-  box-shadow: -2px -2px 3px lightgrey; }
+  background-color: #232b37;
+  box-shadow: 3px 3px 5px lightgrey; }
   .location input {
     font-size: 2vh;
     border: 1px solid #dcdcdc;
@@ -77,9 +88,12 @@
     padding: 0.7vh;
     width: 30%;
     margin-left: 0vh;
-    font-family: 'Poiret One', cursive; }
+    font-family: 'Poiret One', cursive;
+    background-color: #922e48; }
+    .location input ::placeholder {
+      color: white; }
   .location a {
-    color: black; }
+    color: white; }
   .location a:hover {
     color: black;
     cursor: pointer;
@@ -91,3 +105,10 @@
 .navBar-forum {
   width: 73%;
   display: flex; }
+
+.btns {
+  justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2vh;
+  width: 30%; }

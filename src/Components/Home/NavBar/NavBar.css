@@ -1,7 +1,7 @@
 .navBar {
   -webkit-box-shadow: 2px 2px 2px #70809094;
   box-shadow: 1px -3px 1px #d8d8d894;
-  height: 78vh;
+  height: 100vh;
   width: 17vw;
   display: -ms-flexbox;
   -ms-flex-pack: justify;

@@ -37,18 +37,22 @@ $shadow: -2px -2px 3px lightgrey;
 
 .forum {
   width: 100%;
-  height: 78vh;
+  height: 76vh;
+  margin: 0 auto;
   background-color: white;
-  box-shadow: $shadow;  
+  -webkit-box-shadow: 3px 3px 5px lightgrey;
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
 .events-small {
+  overflow-x: hidden;
   height: 40vh;
   overflow: scroll;
-  padding: 2vh;
+  padding: 0vh 2vh;
   background-color: white;
   margin: 1.3vh;
   box-sizing: border-box;
+  box-shadow: 3px 3px 5px lightgrey;
 
   h3{
     color:#232b37;
@@ -56,26 +60,35 @@ $shadow: -2px -2px 3px lightgrey;
 }
 
 .titleFix {
-  width: 25%;
+  padding-top: 2vh;
+  width: 25.1%;
   height: 5vh;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
+  position: fixed;
 }
 
 
 .studios-small {
+  overflow-x: hidden;
   background-color: white;  
   margin: 1.3vh;
   height: 33vh;
-  padding: 1vh;
+  padding: 0 2vh;
   box-sizing: border-box;
+  box-shadow: 3px 3px 5px lightgrey;
+
+  h3{
+    color:#232b37;
+  }
 }
 
 .videos-small {
-  margin-left: 15vw;
-  background-color: #f0f0f0;
-  padding: 1vh;
-  margin: 1vh;
-  box-shadow: $shadow;      
+  background-color: #ffffff;
+  overflow-x: scroll;
+  width: 90%;
+  margin-left: 10%;
+  -webkit-box-shadow: 3px 3px 5px lightgrey;
+  box-shadow: 2px 0px 8px lightgrey;     
 }
 
 .location {
@@ -85,8 +98,8 @@ $shadow: -2px -2px 3px lightgrey;
   padding: 1vh 0 1vh 5%;
   box-sizing: border-box;
   text-align: center;
-  background-color: #c5c5c53b;
-  box-shadow: $shadow;
+  background-color: #232b37;
+  box-shadow: 3px 3px 5px lightgrey;
 
   input {
     font-size: 2vh;
@@ -96,10 +109,15 @@ $shadow: -2px -2px 3px lightgrey;
     width: 30%;
     margin-left: 0vh;
     font-family: 'Poiret One', cursive;
+    background-color: #922e48;
+
+    ::placeholder {
+      color: white;
+    }
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 a:hover {
@@ -116,4 +134,12 @@ a:hover {
 .navBar-forum {
   width: 73%;
   display: flex;
+}
+
+.btns{
+  justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 2vh;
+    width: 30%;
 }
