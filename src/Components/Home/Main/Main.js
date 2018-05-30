@@ -9,41 +9,45 @@ import './Main.css';
 import Videos from '../Videos/Videos';
 import Music from '../Music/Music';
 import { Community } from '../Community/Community';
+import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 
 export class Main extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      location: ''
-    }
+      locations: []
+    };
   }
 
 updateState = (e) => {
-  const userInput = e.target.value
-  this.setState({
-    location: userInput
-  })
-  console.log(this.state)
+  const userInput = e.target.value;
+  this.fetchLocation(userInput);
 }
 
-fetchLocation = async (e) => {
-  e.preventDefault()
-  try {
-  const location = this.state.location
-  const url = 'https://api.awc.dance/autocomplete'
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data)
-  } catch (error) {
-    console.log(error)
-  }
+fetchLocation = async (userInput) => {
+  const api = new ApiCalls();
+  const location = userInput;
+  const suggestions = await api.fetchGoogle(location);
+  await this.displaySuggestions(suggestions);
+    
 }
 
+displaySuggestions = (suggestions) => {
+  if (suggestions){  
+    this.setState({locations:suggestions})
+    console.log(this.state)
+  } 
+}
 
-  
-  
 render () {
+
+  const suggestions = this.state.locations.map((suggestion, index) => {
+    return (
+      <option key={index} value={suggestion}/>
+    );
+  });
+
   return (
     <div>
       <div className='news-feed'>
@@ -53,15 +57,17 @@ render () {
             <div className='location'>
               <form>
                 <input
+                  list='locations'
                   onChange={(e) => this.updateState(e)}
                   placeholder='city'
                   className='city=input'
                 />
-                <button onClick={(e)=> this.fetchLocation(e)}/>
+                <datalist id='locations'>
+                  {suggestions}
+                </datalist>
               </form>
               <NavLink to = '/community' className='active'>Community</NavLink> 
               <NavLink to='/studios'>Studios</NavLink> 
-              <NavLink to='/events'>Events</NavLink> 
             </div>  
             <Community />
           </div>
@@ -102,7 +108,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Main.propTypes = {
-  suggestedEvents: PropTypes.array,
+  suggestedEvents: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
