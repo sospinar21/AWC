@@ -19,16 +19,16 @@
 
 .news-feed {
   width: 100%;
-  height: 78vh;
+  height: 99vh;
   display: flex;
-  background-color: #8080801f; }
+  background-color: #f3dfdf1f; }
 
 .side-container {
   width: 25%; }
 
 .forum {
   width: 100%;
-  height: 76vh;
+  height: 99vh;
   margin: 0 18px;
   background-color: white;
   -webkit-box-shadow: 3px 3px 5px lightgrey;
@@ -36,7 +36,7 @@
 
 .events-small {
   overflow-x: hidden;
-  height: 35vh;
+  height: 50vh;
   overflow: scroll;
   padding: 0vh 2vh;
   background-color: white;
@@ -48,8 +48,8 @@
 
 .titleFix {
   padding: 1.4vh;
-  margin: 1vh 1.23vh 1.23vh 0;
-  height: 5vh;
+  margin: 0vh 1.23vh 1.23vh 0;
+  height: 7vh;
   background-color: #232b37;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -60,7 +60,7 @@
   overflow-x: hidden;
   background-color: white;
   margin: 1.3vh 1.3vh 1.3vh 0;
-  height: 26vh;
+  height: 31vh;
   padding: 0 2vh;
   box-sizing: border-box;
   box-shadow: 3px 3px 5px lightgrey; }
@@ -93,7 +93,7 @@
     margin-left: 0vh;
     font-family: 'Poiret One', cursive;
     background-color: #922e48; }
-    .location input ::placeholder {
+    .location input .location ::placeholder {
       color: white; }
   .location a {
     color: white; }

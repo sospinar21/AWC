@@ -16,7 +16,8 @@ export class Main extends Component {
     super();
 
     this.state = {
-      locations: []
+      locations: [],
+      selectedLocation: ''
     };
   }
 
@@ -36,12 +37,14 @@ fetchLocation = async (userInput) => {
 displaySuggestions = (suggestions) => {
   if (suggestions){  
     this.setState({locations:suggestions})
-    console.log(this.state)
   } 
 }
 
-render () {
+selectedLocation = () => {
+  console.log('here')
+}
 
+render () {
   const suggestions = this.state.locations.map((suggestion, index) => {
     return (
       <option key={index} value={suggestion}/>
@@ -59,9 +62,11 @@ render () {
                 list='locations'
                 onChange={(e) => this.updateState(e)}
                 placeholder='city'
-                className='city=input'
+                className='city-input'
               />
-              <datalist id='locations'>
+              <datalist 
+                onClick = {this.selectedLocation()}
+                id='locations'>
                 {suggestions}
               </datalist>
               <div className='btns'>
@@ -88,9 +93,9 @@ render () {
           </div>
         </div> 
       </div>
-      <div className='videos-small'>
+      {/* <div className='videos-small'>
         <Videos />
-      </div>
+      </div> */}
       {/* <Music /> */}
     </div>
   );
