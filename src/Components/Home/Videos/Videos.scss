@@ -3,13 +3,24 @@
 }
 
 .video-card {
-  margin: 1vh 15%;
+  margin: 1.5vh 0%;
+  display: flex;
+
+  img {
+   height: 14vh;
+  }
 }
 
 .selectedVideo {
-  width: 80%;
+  width: 75%;
   padding-top: 8vh;
   text-align: center;
+}
+
+.title-box {
+  width: 30%;
+  padding: 1vh;
+  overflow: hidden;
 }
 
 iframe {

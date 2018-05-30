@@ -44,6 +44,9 @@ displayVideos = () => {
     return (
       <div onClick={() => this.displaySelectedVideo(videoId, title)} key={videoId} className='video-card'>
         <img src={snippet} />
+        <div className='title-box'>
+          <h4>{title} </h4>
+        </div>
       </div>
     );
   });
