@@ -1,12 +1,12 @@
 .navBar {
   -webkit-box-shadow: 2px 2px 2px #70809094;
-  box-shadow: 2px 2px 2px #70809094;
+  box-shadow: 1px -3px 1px #d8d8d894;
   height: 78vh;
   width: 17vw;
   display: -ms-flexbox;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: #1b0202;
+  background-color: #222b37;
   z-index: 10;
 }
 
@@ -15,11 +15,13 @@
 }
 
 .logo {
+  font-weight: 1000;
+  -ms-flex: 20 1;
   flex: 20 1;
   font-size: 6vh;
-  color: white;
+  color: #ffffff;
   font-family: 'Poiret One', cursive;
-  text-shadow: 2px 2px 2px #091d09;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .menu {
@@ -31,7 +33,7 @@
 a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 2.1vh;
   letter-spacing: 1px;

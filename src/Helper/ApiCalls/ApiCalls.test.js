@@ -10,4 +10,25 @@ describe('app', () => {
     let apiCalls = shallow(<ApiCalls />, { disableLifecycleMethods: true })
     expect(apiCalls).toMatchSnapshot();
   })
+
+  describe('fetchEvents', () => {
+
+    it('', () => {
+
+    })
+  })
+
+  describe('fetchStudios', () => {
+
+    it('', () => {
+      
+    })
+  })
+
+  describe('fetchVideos', () => {
+
+    it('', () => {
+      
+    })
+  })
 })
