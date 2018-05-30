@@ -16,8 +16,8 @@
 }
 
 .selectedVideo {
-  width: 75%;
-  padding-top: 15vh;
+  width: 70%;
+  padding-top: 5vh;
   text-align: center;
 }
 
@@ -25,11 +25,15 @@
   width: 30%;
   padding: 1vh;
   overflow: hidden;
+
+  h4{
+    font-size: 15px;
+  }
 }
 
 iframe {
-  height: 460px;
-  width: 840px;
+  height: 55vh;
+  width: 80%;
 }
 
 .videosidebar {
