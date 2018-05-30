@@ -48,17 +48,11 @@ selectedLocation = () => {
 
 makeStudioActive = () => {
   this.setState({
-    communityActive: false,
-    studiosActive: true
+    communityActive: !this.state.communityActive,
+    studiosActive: !this.state.studiosActive
   })
 }
 
-makeCommunityActive = () => {
-  this.setState({
-    communityActive: true,
-    studiosActive: false
-  })
-}
 
 renderCommunityOrStudios = () => {
   return this.state.communityActive ? <Community /> : <Studios />
@@ -92,7 +86,7 @@ render () {
               </datalist>
               <div className='btns'>
                 <a
-                  onClick={() => this.makeCommunityActive()}
+                  onClick={() => this.makeStudioActive()}
                   className='active'>Posts</a> 
                 <a
                   onClick={() => this.makeStudioActive()}

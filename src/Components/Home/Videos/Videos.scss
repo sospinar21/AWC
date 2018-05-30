@@ -9,11 +9,15 @@
   img {
    height: 14vh;
   }
+
+  :hover {
+    cursor: pointer;
+  }
 }
 
 .selectedVideo {
   width: 75%;
-  padding-top: 8vh;
+  padding-top: 15vh;
   text-align: center;
 }
 
@@ -29,6 +33,7 @@ iframe {
 }
 
 .videosidebar {
+  padding-top: 5vh;
   width: 30%;
   height: 99vh;
   background-color: white;
@@ -67,4 +72,31 @@ iframe {
     margin: 0 1vh;
   }
 
+}
+
+.video-menu {
+  display: flex;
+  width: 100%;
+  height: 5.5vh;
+  padding: 1vh 0 1vh 5%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #232b37;
+  box-shadow: 3px 3px 5px lightgrey;
+  position: fixed;
+
+  input {
+    font-size: 1.5vh;
+    border: 1px solid #dcdcdc;
+    margin: auto;
+    width: 30%;
+    margin-left: 0vh;
+    background-color: #ffffff;
+    padding: 0.8vh;
+    font-family: 'Roboto', sans-serif;
+
+    .location ::placeholder {
+      color: white;
+    }
+}
 }

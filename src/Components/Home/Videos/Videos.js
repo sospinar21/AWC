@@ -62,7 +62,12 @@ render () {
   if (this.props.suggestedVideos.length) {
     return (
       <div className='videos-main'>
-        <div className='selectedVideo'> 
+        <div className='video-menu'> 
+          <input 
+            placeholder='Search categories'
+          />
+        </div> 
+        <div className='selectedVideo'>
           <div key={selectedVideo} className='video-display'>
             <iframe src={`https://www.youtube.com/embed/${selectedVideo}`} />
           </div>
