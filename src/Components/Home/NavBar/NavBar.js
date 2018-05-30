@@ -23,7 +23,7 @@ export class NavBar extends Component {
           </div>
           <div className = 'li'>
             <i className='material-icons'>whatshot</i> 
-            <NavLink to='/entertainment'>Entertaiment</NavLink> 
+            <NavLink to='/entertainment'>Entertainment</NavLink> 
           </div>
         </div>         
       </div>

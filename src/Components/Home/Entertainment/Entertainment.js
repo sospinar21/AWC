@@ -29,6 +29,9 @@ render () {
               
             </div> 
           </div>
+          <div className='sidebar'>
+            <Videos />
+          </div>
         </div>
       </div>
     );

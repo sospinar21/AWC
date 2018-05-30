@@ -1,0 +1,6 @@
+.sidebar {
+  width: 24%;
+  height: 99vh;
+  background-color: white;
+  overflow: scroll;
+  box-shadow: 1px 4px 11px lightgrey; }
