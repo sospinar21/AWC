@@ -24,6 +24,7 @@ fetchStudios = async (city) => {
 
 displayStudios = () => {
   const studios = this.props.suggestedStudios.map(studio => {
+    console.log(studio)
     return (
       <div key={studio.id} className='suggStudio-cards'>
         <div className='main-info'>
@@ -33,14 +34,13 @@ displayStudios = () => {
           <div className='description-container'>
             <div className='text-container'>
               <h4>{studio.title}</h4>
-              <b>{studio.reviews}</b>
+              <i class="material-icons">favorite</i><b>{studio.rating}</b>
             </div>
           </div>
         </div>  
         <div className='description'>
-          <p>{studio.location.address1}</p>
-          <p>{studio.location.address2}</p>
-          <p>{studio.location.address3}</p>
+          <p>{studio.location.display_address[0]}</p>
+          <p>{studio.location.display_address[1]}</p>          
           <p>{studio.phone}</p>              
         </div>
       </div>
@@ -60,8 +60,10 @@ render () {
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
-        <div className='map'>
+        <div className='selected-studio'>
           <ReactGoogleMaps />
+          <div className='b-description'>
+          </div>
         </div>
         <div className ='studios'>
           {this.displayStudios()}
