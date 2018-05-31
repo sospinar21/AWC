@@ -1,18 +1,27 @@
 .img-box {
   height: 15vh;
-  width: 100%;
-  padding: 2vh;
+  width: 25%;
   overflow: hidden; }
 
 .suggStudio-cards {
   margin: 2vh;
-  height: 30vh;
-  width: 20%;
+  padding: 2vh;
+  display: flex;
+  background-color: #cea2a2;
   text-align: center; }
   .suggStudio-cards .studio-img {
-    width: inherit; }
+    width: 100%;
+    height: auto; }
+  .suggStudio-cards h4 {
+    font-size: 27px;
+    color: black; }
   .suggStudio-cards .text-container {
-    line-height: 2; }
+    line-height: 2;
+    padding: 0 5vh;
+    box-sizing: border-box;
+    text-align: left; }
+  .suggStudio-cards b {
+    font-size: 3vh; }
 
 .studiocards-container {
   display: flex;
@@ -23,3 +32,14 @@
 .map {
   height: 100%;
   width: 100%; }
+
+.studios {
+  height: 46vh;
+  overflow-y: scroll; }
+
+.description-container {
+  display: flex; }
+
+.main-info {
+  display: flex;
+  width: 62.5%; }

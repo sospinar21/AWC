@@ -1,22 +1,24 @@
 .img-box {
   height: 15vh;
-  width: 100%;
-  padding: 2vh;
+  width: 25%;
   overflow: hidden;
 }
 
 .suggStudio-cards {
   margin: 2vh;
-  height: 30vh;
-  width: 20%;
+  padding: 2vh;
+  display: flex;
+  background-color: rgb(206, 162, 162);
   text-align: center;
   
   .studio-img {
-    width: inherit;
+    width: 100%;
+    height: auto;
   }
 
   h4 {
-
+    font-size: 27px;
+    color: black;
   }
 
   p{
@@ -25,7 +27,14 @@
 
   .text-container {
     line-height: 2;
+    padding: 0 5vh;
+    box-sizing: border-box;
+    text-align: left;
   }
+
+  b{
+    font-size: 3vh;
+  } 
 }
 
 .studiocards-container{
@@ -39,4 +48,18 @@
 .map {
     height: 100%;
     width: 100%;
+}
+
+.studios {
+  height: 46vh;
+  overflow-y: scroll;
+}
+
+.description-container {
+  display: flex
+}
+
+.main-info {
+  display: flex;
+  width: 62.5%;
 }

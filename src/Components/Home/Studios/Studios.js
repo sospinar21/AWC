@@ -26,17 +26,21 @@ displayStudios = () => {
   const studios = this.props.suggestedStudios.map(studio => {
     return (
       <div key={studio.id} className='suggStudio-cards'>
-        <div className='img-box'>
-          <img className='studio-img' src={studio.image} />
-        </div>
-        <div className='text-container'>
-          <h4>{studio.title}</h4>
-          <b>{studio.reviews}</b>
-          <div className='description'>
-            <p>{studio.location.address1}</p>
-            <p>{studio.phone}</p>              
+        <div className='main-info'>
+          <div className='img-box'>
+            <img className='studio-img' src={studio.image} />
           </div>
-        </div>   
+          <div className='description-container'>
+            <div className='text-container'>
+              <h4>{studio.title}</h4>
+              <b>{studio.reviews}</b>
+            </div>
+          </div>
+        </div>  
+        <div className='description'>
+          <p>{studio.location.address1}</p>
+          <p>{studio.phone}</p>              
+        </div>
       </div>
     );
   });
@@ -57,7 +61,9 @@ render () {
         <div className='map'>
           <ReactGoogleMaps />
         </div>
-        {/* {this.displayStudios()} */}
+        <div className ='studios'>
+          {this.displayStudios()}
+        </div>
       </div>
     )
 
