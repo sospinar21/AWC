@@ -3,6 +3,7 @@ import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
 import { addStudios } from '../../../Actions/actions';
 import './Studios.css';
+import ReactGoogleMaps from '../Map'
 import PropTypes from 'prop-types';
 
 
@@ -53,7 +54,8 @@ render () {
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
-        {this.displayStudios()}
+        <ReactGoogleMaps />
+        {/* {this.displayStudios()} */}
       </div>
     )
 

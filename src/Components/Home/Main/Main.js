@@ -128,7 +128,7 @@ render () {
             <a>Music </a>
           </div>
           <div className='studios-small'>
-            <div className='map'></div>
+            <Studios />
           </div>
         </div> 
       </div>
