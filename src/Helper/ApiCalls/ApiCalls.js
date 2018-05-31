@@ -38,6 +38,14 @@ class ApiCalls extends Component {
 
     return data;
   }
+
+  fetchSingleStudio = async (studioId) => {
+    const url = `https://api.awc.dance/single-studio?id=${studioId}`;
+    const response = await fetch(url);
+    const data = await response.json();
+
+    return data;
+  }
 }
 
 export default ApiCalls;
