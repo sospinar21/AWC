@@ -3,7 +3,7 @@ import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
 import { addStudios } from '../../../Actions/actions';
 import './Studios.css';
-import ReactGoogleMaps from '../Map'
+import ReactGoogleMaps from '../Map/Map'
 import PropTypes from 'prop-types';
 
 
