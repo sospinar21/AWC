@@ -39,6 +39,8 @@ displayStudios = () => {
         </div>  
         <div className='description'>
           <p>{studio.location.address1}</p>
+          <p>{studio.location.address2}</p>
+          <p>{studio.location.address3}</p>
           <p>{studio.phone}</p>              
         </div>
       </div>

@@ -1,14 +1,16 @@
 .img-box {
   height: 15vh;
-  width: 25%;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 12vw; }
 
 .suggStudio-cards {
   margin: 2vh;
   padding: 2vh;
+  display: -ms-flexbox;
   display: flex;
-  background-color: #cea2a2;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 5px lightgrey;
+  box-shadow: 0px 0px 9px lightgrey; }
   .suggStudio-cards .studio-img {
     width: 100%;
     height: auto; }
@@ -42,4 +44,13 @@
 
 .main-info {
   display: flex;
-  width: 62.5%; }
+  width: 80.5%; }
+
+.description {
+  font-size: 2vh;
+  margin-top: 1vh;
+  overflow-y: hidden;
+  line-height: 2;
+  color: #b62d4c; }
+  .description p {
+    color: #b62d4c; }
