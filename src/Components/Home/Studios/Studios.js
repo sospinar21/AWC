@@ -54,7 +54,9 @@ render () {
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
-        <ReactGoogleMaps />
+        <div className='map'>
+          <ReactGoogleMaps />
+        </div>
         {/* {this.displayStudios()} */}
       </div>
     )

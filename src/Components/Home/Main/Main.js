@@ -128,7 +128,7 @@ render () {
             <a>Music </a>
           </div>
           <div className='studios-small'>
-            <Studios />
+            <div className='music'></div>
           </div>
         </div> 
       </div>
