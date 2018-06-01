@@ -1,7 +1,8 @@
 import _ from "lodash";
 import React from "react";
 import { compose, withProps } from "recompose";
-import { key } from '../../../apikey'
+import { key } from '../../../apikey';
+import { connect } from 'react-redux';
 import {
   withScriptjs,
   withGoogleMap,
@@ -9,10 +10,10 @@ import {
   Marker
 } from "react-google-maps";
 
-const MyMapComponent = compose(
+ const MyMapComponent = compose(
   withProps({
     googleMapURL:
-      `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry,drawing,places`,
+    `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px`, width: `800px`}} />,
     mapElement: <div style={{ height: `100%` }} />
@@ -25,10 +26,10 @@ const MyMapComponent = compose(
   </GoogleMap>
 ));
 
-const enhance = _.identity;
+export const mapStateToProps = (state) => {
+  return ({
 
-const ReactGoogleMaps = () => [
-  <MyMapComponent key="map" />
-];
+  });
+};
 
-export default enhance(ReactGoogleMaps);
+export default connect(mapStateToProps)(MyMapComponent);

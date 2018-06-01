@@ -17,3 +17,8 @@ export const addLocation = (location) => ({
   type: 'ADD_LOCATION',
   location
 })
+
+export const addSelectedStudio = (studio) => ({
+  type: 'ADD_SELECTED_STUDIO',
+  studio
+})

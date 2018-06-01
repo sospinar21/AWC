@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
-import { addStudios } from '../../../Actions/actions';
+import { addStudios, addSelectedStudio } from '../../../Actions/actions';
 import './Studios.css';
-import ReactGoogleMaps from '../Map/Map';
+import MyMapComponent from '../Map/Map';
 import PropTypes from 'prop-types';
 
 
 export class Studios extends Component {
-
+  constructor() {
+    super()
+    this.state = ({
+      selectedStudio:false
+    })
+  }
 
   componentDidMount() {
     const city = this.props.selectedLocation;
@@ -22,13 +27,25 @@ fetchStudios = async (city) => {
   await this.props.addStudios(suggestedStudios);
 }
 
-displaySelected = async (studio) => {
+fetchSelected = (studio) => {
+  console.log(studio,'here')
   let api = new ApiCalls();
   if (studio) {
-    const reviews = await api.fetchSingleStudio(studio.id);
+    const reviews = api.fetchSingleStudio(studio)
+      .then(response => this.props.addSelectedStudio(response)) 
+    } else {
     return (
-      <div key={studio.id} className='suggStudio-cards' onClick= {() => this.displaySelected(studio)}>
-        <div className='main-info'>
+      <h1>Select a Studio</h1>
+    )
+  }
+}
+
+displaySelected = () => {
+  if(this.props.selectedStudio) {
+    
+    return (
+      <div key={1} className='suggStudio-cards'>
+        {/* <div className='main-info'>
           <div className='img-box'>
             <img className='studio-img' src={studio.image} />
           </div>
@@ -43,13 +60,9 @@ displaySelected = async (studio) => {
           <p>{studio.location.display_address[0]}</p>
           <p>{studio.location.display_address[1]}</p>          
           <p>{studio.phone}</p>              
-        </div>
+        </div> */}
       </div>
     );
-  } else {
-    return (
-      <h1>Select a Studio</h1>
-    )
   }
 }
 
@@ -61,7 +74,7 @@ displayStudios = () => {
           <div className='img-box'>
             <img className='studio-img' src={studio.image} />
           </div>
-          <div onClick= {() => this.displaySelected(studio.id)} className='description-container'>
+          <div onClick= {() => this.fetchSelected(studio.id)} className='description-container'>
             <div className='text-container'>
               <h4>{studio.title}</h4>
               <i className="material-icons">favorite</i><b>{studio.rating}</b>
@@ -87,7 +100,7 @@ render () {
     return (
       <div className='studiocards-container'>
         <div className='selected-studio'>
-          <ReactGoogleMaps />
+          <MyMapComponent />
           {this.displaySelected()}
           <div className='b-description'>
           </div>
@@ -109,13 +122,14 @@ render () {
 export const mapStateToProps = (state) => {
   return ({
     suggestedStudios: state.suggestedStudios,
-    selectedLocation: state.location
+    selectedLocation: state.location,
+    selectedStudio: state.selectedStudio
   });
 };
 
 export const mapDispatchToProps = dispatch => ({
-  addStudios: (studiosData) => dispatch(addStudios(studiosData)) 
-  
+  addStudios: (studiosData) => dispatch(addStudios(studiosData)),
+  addSelectedStudio: (selected) => dispatch(addSelectedStudio(selected))
 });
 
 Studios.propTypes = {
