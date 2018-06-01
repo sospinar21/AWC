@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React from "react";
+import './Map.css';
 import { compose, withProps } from "recompose";
 import { key } from '../../../apikey';
 import { connect } from 'react-redux';
@@ -15,7 +16,7 @@ const MyMapComponent = compose(
     googleMapURL:
     `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `320px`, width: `960px` }} />,
+    containerElement: <div style={{ height: `100%`, width: `100%` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
