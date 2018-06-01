@@ -1,7 +1,9 @@
 .img-box {
   height: 15vh;
   overflow: hidden;
-  width: 12vw; }
+  width: 12vw;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px #ccc; }
 
 .suggStudio-cards {
   width: 90%;
@@ -11,8 +13,7 @@
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-shadow: 3px 3px 5px lightgrey;
-  box-shadow: 0px 0px 9px lightgrey;
+  border-bottom: 1px solid #cccccc87;
   margin: 2vh auto; }
   .suggStudio-cards .studio-img {
     width: 100%;
@@ -25,6 +26,20 @@
     padding: 0 5vh;
     box-sizing: border-box;
     text-align: left; }
+    .suggStudio-cards .text-container .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      color: #b62d4e;
+      line-height: 5vh; }
   .suggStudio-cards b {
     font-size: 3vh;
     margin: -3px 1vh; }
@@ -33,18 +48,23 @@
   display: flex;
   flex-wrap: wrap; }
 
-.selected-studio {
-  width: 100%;
-  height: 40vh;
-  padding: 2vh 4vh;
-  box-sizing: border-box;
+.selected-card {
   display: flex;
-  overflow: hidden; 
-}
+  width: 100%;
+  position: relative; }
+
+.selected-studio-box {
+  width: 100%;
+  padding: 2vh 4vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 0px 3px lightgrey; }
 
 .studios {
   width: 100%;
-  height: 46vh;
+  height: 50vh;
   overflow-y: scroll; }
 
 .description-container {
@@ -56,17 +76,33 @@
 
 .description {
   font-size: 2vh;
-  margin-top: 1vh;
   overflow-y: hidden;
   line-height: 2;
-  color: #b62d4c; }
+  color: #b62d4c;
+  margin-top: 1vh; }
   .description p {
-    color: #b62d4c; }
+    color: #b62d4c;
+    font-size: 1rem;
+    line-height: 1.6rem; }
 
 .b-description {
   width: 60%;
   background-color: black; }
 
-  .selected-card{
-
-  }
+.description-box {
+  width: 300px;
+  position: absolute;
+  height: 1;
+  padding: 2vh 4vh;
+  bottom: 17px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 3px #eee;
+  box-shadow: 1px 2px 3px #eee;
+  margin-left: 20px;
+  background: white; }
+  .description-box h4 {
+    font-size: 30px;
+    color: black; }
+  .description-box b {
+    font-size: 3vh;
+    margin: 0 1vh; }

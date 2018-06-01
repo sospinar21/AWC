@@ -28,7 +28,6 @@ fetchStudios = async (city) => {
 }
 
 fetchSelected = (studio) => {
-  console.log(studio,'here')
   let api = new ApiCalls();
   if (studio) {
     const reviews = api.fetchSingleStudio(studio.id)
@@ -45,20 +44,21 @@ displaySelected = () => {
   if(selected.id) { 
     return (
       <div key={1} className='selected-card'> 
-        <MyMapComponent />     
-        <div className='img-box'>
-          <img className='studio-img' src={selected.image} />
-        </div>
-        <div className='description-container'>
-          <div className='text-container'>
-            <h4>{selected.title}</h4>
-            <i className="material-icons">favorite</i><b>{selected.rating}</b>
-          </div>
+        <div className='map'>
+          <MyMapComponent />
         </div> 
-        <div className='description'>
-          <p>{selected.location.display_address[0]}</p>
-          <p>{selected.location.display_address[1]}</p>          
-          <p>{selected.phone}</p>              
+        <div className='description-box'>    
+          <div className='description-container'>
+            <div className='text-container'>
+              <h4>{selected.title}</h4>
+              <i className="material-icons">favorite</i><b>{selected.rating}</b>
+            </div>
+          </div> 
+          <div className='description'>
+            <p>{selected.location.display_address[0]}</p>
+            <p>{selected.location.display_address[1]}</p>          
+            <p>{selected.phone}</p>              
+          </div>
         </div>
       </div>
     );
@@ -97,10 +97,10 @@ render () {
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
-        <div className='selected-studio'>
+        <div className='selected-studio-box'>
+          {/* <div className='selected-studio'> </div> */}
+          
           {this.displaySelected()}
-          <div className='b-description'>
-          </div>
         </div>
         <div className ='studios'>
           {this.displayStudios()}
