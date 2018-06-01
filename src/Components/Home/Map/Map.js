@@ -10,7 +10,7 @@ import {
   Marker
 } from "react-google-maps";
 
- const MyMapComponent = compose(
+const MyMapComponent = compose(
   withProps({
     googleMapURL:
     `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry,drawing,places`,
@@ -20,11 +20,14 @@ import {
   }),
   withScriptjs,
   withGoogleMap
-)(props => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-    <Marker position={{ lat: -34.397, lng: 150.644 }} />
-  </GoogleMap>
-));
+)(props => {
+  return (
+    <GoogleMap defaultZoom={8} defaultCenter={{ lat: props.selectedStudio.coordinates.latitude, lng: props.selectedStudio.coordinates.longitude }}>
+      <Marker position={{ lat: props.selectedStudio.coordinates.latitude, lng: props.selectedStudio.coordinates.longitude }} />
+    </GoogleMap>
+  );
+}
+);
 
 export const mapStateToProps = (state) => {
   return ({

@@ -33,7 +33,7 @@ fetchSelected = (studio) => {
   if (studio) {
     const reviews = api.fetchSingleStudio(studio.id)
       .then(response => this.props.addSelectedStudio({...response, ...studio})) 
-    } else {
+  } else {
     return (
       <h1>Select a Studio</h1>
     )
@@ -95,12 +95,12 @@ displayStudios = () => {
 
 
 render () {
-
+  const selected = this.props.selectedStudio.id ? <MyMapComponent /> : <h1>Select a Studio</h1>
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
         <div className='selected-studio'>
-          <MyMapComponent />
+          {selected}
           {this.displaySelected()}
           <div className='b-description'>
           </div>
