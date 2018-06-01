@@ -98,8 +98,11 @@ render () {
     return (
       <div className='studiocards-container'>
         <div className='selected-studio-box'>
-          {/* <div className='selected-studio'> </div> */}
-          
+          <div className='featured-studio-text'>
+            <h1>Studios</h1>
+            <h2>Blah blahped blah-dee dah</h2>
+            <p>I'm a studio!</p>
+          </div>
           {this.displaySelected()}
         </div>
         <div className ='studios'>
