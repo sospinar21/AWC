@@ -28,7 +28,7 @@ import {
 
 export const mapStateToProps = (state) => {
   return ({
-
+    selectedStudio: state.selectedStudio
   });
 };
 

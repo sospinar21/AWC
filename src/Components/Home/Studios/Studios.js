@@ -31,8 +31,8 @@ fetchSelected = (studio) => {
   console.log(studio,'here')
   let api = new ApiCalls();
   if (studio) {
-    const reviews = api.fetchSingleStudio(studio)
-      .then(response => this.props.addSelectedStudio(response)) 
+    const reviews = api.fetchSingleStudio(studio.id)
+      .then(response => this.props.addSelectedStudio({...response, ...studio})) 
     } else {
     return (
       <h1>Select a Studio</h1>
@@ -41,8 +41,8 @@ fetchSelected = (studio) => {
 }
 
 displaySelected = () => {
-  if(this.props.selectedStudio) {
-    
+
+  if(this.props.selectedStudio) { 
     return (
       <div key={1} className='suggStudio-cards'>
         {/* <div className='main-info'>
@@ -69,12 +69,12 @@ displaySelected = () => {
 displayStudios = () => {
   const studios = this.props.suggestedStudios.map(studio => {
     return (
-      <div key={studio.id} className='suggStudio-cards' onClick= {() => this.displaySelected(studio)}>
+      <div key={studio.id} className='suggStudio-cards' onClick= {() => this.fetchSelected(studio)}>
         <div className='main-info'>
           <div className='img-box'>
             <img className='studio-img' src={studio.image} />
           </div>
-          <div onClick= {() => this.fetchSelected(studio.id)} className='description-container'>
+          <div className='description-container'>
             <div className='text-container'>
               <h4>{studio.title}</h4>
               <i className="material-icons">favorite</i><b>{studio.rating}</b>
