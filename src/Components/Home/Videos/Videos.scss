@@ -3,13 +3,13 @@
 }
 
 .video-card {
-  margin: 1.5vh 0%;
+  margin: 15px 0%;
   display: flex;
   padding: 2px 38px;
-  height: 15vh;
+  height: 150px;
 
   img {
-   height: 14vh;
+   height: 140px;
    border-radius: 5px;
    -webkit-box-shadow: 1px 2px 3px #ccc;
    box-shadow: 1px 2px 3px #ccc;
@@ -39,7 +39,7 @@
 
 .title-box {
   width: 30%;
-  padding: 1vh;
+  padding: 10px;
   overflow: hidden;
 
   h4{
@@ -48,14 +48,14 @@
 }
 
 iframe {
-  height: 55vh;
+  height: 550px;
   width: 80%;
 }
 
 .videosidebar {
-  padding-top: 7.4vh;
+  padding-top: 74px;
   width: 30%;
-  height: 99vh;
+  height: 990px;
   background-color: white;
   overflow: scroll;
   -webkit-box-shadow: 1px 4px 11px lightgrey;
@@ -71,9 +71,9 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-  margin: 2vh auto;
+  margin: 20px auto;
   background-color: #a9a9a91c;
-  padding: 4vh;
+  padding: 40px;
   box-sizing: border-box;
   box-shadow: 0px 0px 6px #d3d3d394;
 
@@ -88,8 +88,8 @@ iframe {
   }
 
   .icon-vid{
-    font-size: 4vh;
-    margin: 0 1vh;
+    font-size: 40px;
+    margin: 0 10px;
   }
 
 }
@@ -97,8 +97,8 @@ iframe {
 .video-menu {
   display: flex;
   width: 100%;
-  height: 5.5vh;
-  padding: 1vh 0 1vh 5%;
+  height: 55px;
+  padding: 10px 0 10px 5%;
   box-sizing: border-box;
   text-align: center;
   background-color: #232b37;
@@ -106,13 +106,13 @@ iframe {
   position: fixed;
 
   input {
-    font-size: 1.5vh;
+    font-size: 15px;
     border: 1px solid #dcdcdc;
     margin: auto;
     width: 30%;
     margin-left: 0vh;
     background-color: #ffffff;
-    padding: 0.8vh;
+    padding: 8px;
     font-family: 'Roboto', sans-serif;
 
     .location ::placeholder {

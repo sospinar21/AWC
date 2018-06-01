@@ -1,7 +1,7 @@
 .forms {
   width: 30%;
   margin-left: 55%;
-  padding: 1vh;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   position: relative;
@@ -13,7 +13,7 @@
     -webkit-flex: 1 0 0;
     -ms-flex: 1 0 0;
     flex: 1 0 0px;
-    margin-top: 2vh;
+    margin-top: 20px;
     outline: 0;
     overflow: hidden;
     padding: 9px 0 7px 8px;
@@ -21,13 +21,13 @@
     background-color: #fafafa;
     width: 100%;
     box-sizing: border-box;
-    height: 6vh;
-    font-size: 1.5vh;
+    height: 60px;
+    font-size: 15px;
   }
 
   h1{
     color: #232b37;
-    font-size: 5vh;
+    font-size: 50px;
     font-family: 'Kalam', cursive;
     text-shadow: 1px 1px 1px #100b0b;
   }
@@ -35,7 +35,7 @@
   button {
     background-color: #b62d4d;
     color: white;
-    height: 5vh;
+    height: 50px;
     
   }
 }
@@ -79,13 +79,13 @@
 .password-si{}
 
 .si-su {
-  height: 100vh;
+  height: 1000px;
   overflow-y: hidden;
   background-color: #d3d3d347;
 }
 
 .policy {
-  margin-top: 3vh
+  margin-top: 30px
 }
 
 .website {
@@ -93,8 +93,8 @@
   background-image: url('http://www.marinecitydancecompany.com//Cut%20out%20images/RED%20Jump%20cropped.png');
   background-size: cover;
   position: absolute;
-  height: 90vh;
+  height: 900px;
   width: 45vw;
-  margin: 4% 24vh 0;
+  margin: 4% 240px 0;
   background-repeat: no-repeat;
 }
