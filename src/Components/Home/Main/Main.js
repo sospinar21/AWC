@@ -20,7 +20,8 @@ export class Main extends Component {
       locations: [],
       selectedLocation:'',
       communityActive:true,
-      studiosActive: false
+      studiosActive: false,
+      eventsActive:false
     };
   }
 
@@ -57,20 +58,38 @@ selectedLocation = async (e) => {
 makeStudioActive = () => {
   this.setState({
     communityActive: false,
-    studiosActive: true
+    studiosActive: true,
+    eventsActive:false
   })
 }
 
 makeCommunityActive = () => {
   this.setState({
     communityActive: true,
-    studiosActive: false
+    studiosActive: false,
+    eventsActive:false
   })
 }
 
-renderCommunityOrStudios = () => {
-  return this.state.communityActive === true ? <Community /> : <Studios />
+makeEventsActive = () => {
+  this.setState({
+    communityActive: false,
+    studiosActive: false,
+    eventsActive: true
+  })
 }
+
+
+renderCommunityOrStudios = () => {
+  if(this.state.studiosActive === true){
+    return <Studios />
+  } else if (this.state.eventsActive === true) {
+    return <Events />
+  } else {
+    return <Community /> 
+  }
+}
+
 
 render () {
   const suggestions = this.state.locations.map((suggestion, index) => {
@@ -124,10 +143,10 @@ render () {
           </div>
         </div>
         <div className='side-container'>
-          <div className='titleFix'>
+          <div className='titleFix' onClick={this.makeEventsActive}>
             <a>Events </a>
           </div>
-          <div className='events-small'>
+          <div className='events-small' onClick={this.makeEventsActive}>
             <br/>
             <Events />
           </div>
