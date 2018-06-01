@@ -90,7 +90,9 @@ render () {
       
   } else {
     return (
-      <h1>nadieata</h1>
+      <div className='loading'>
+        <h1 >Loading...</h1>
+      </div>
     );
   }
 }

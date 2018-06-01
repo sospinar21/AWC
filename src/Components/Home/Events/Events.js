@@ -74,7 +74,9 @@ export class Events extends Component {
       );
     } else {
       return (
-        <h1>Loading </h1>
+        <div className='loading'>
+          <h1 >Loading...</h1>
+        </div>
       );
     }
   }

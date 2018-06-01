@@ -100,8 +100,8 @@ render () {
         <div className='selected-studio-box'>
           <div className='featured-studio-text'>
             <h1>Studios</h1>
-            <h2>Blah blahped blah-dee dah</h2>
-            <p>I'm a studio!</p>
+            <h2>Find studios around the world</h2>
+            <p>click below!</p>
           </div>
           {this.displaySelected()}
         </div>
@@ -113,7 +113,9 @@ render () {
 
   } else {
     return (
-      <h1>Loading </h1>
+      <div className='loading'>
+        <h1 >Loading...</h1>
+      </div>
     );
   }
 }
