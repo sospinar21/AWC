@@ -11,6 +11,7 @@ import Music from '../Music/Music';
 import { Community } from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 import { addLocation, addEvents, addStudios } from '../../../Actions/actions'
+import { SelectedEvent } from '../SelectedEvent/SelectedEvent';
 
 export class Main extends Component {
   constructor() {
@@ -84,7 +85,9 @@ renderCommunityOrStudios = () => {
   if(this.state.studiosActive === true){
     return <Studios />
   } else if (this.state.eventsActive === true) {
-    return <div className='main-events'> <Events /> </div>
+    return <div className='main-events'> 
+      <SelectedEvent />
+      <Events /> </div>
   } else {
     return <Community /> 
   }
