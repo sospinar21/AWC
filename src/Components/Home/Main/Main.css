@@ -95,7 +95,7 @@
     border: none;
     padding: 10px 15px;
     font-size: 1.6vh;
-    width: 50%;
+    width: 80%;
     color: black;
     outline: none;
     line-height: 1.5; }
@@ -105,7 +105,8 @@
     width: 20%;
     padding: 0.8vh;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6vh; }
+    font-size: 17px;
+    cursor: pointer; }
   .location a {
     color: white;
     font-weight: 200; }
@@ -125,10 +126,24 @@
   width: 30%; }
 
 .location-form {
-  width: 60%;
+  width: 40%;
   display: flex; }
 
 .music {
   width: 100%;
   height: 100%;
   background-image: url("https://www.sketchappsources.com/resources/source-image/music-player_1x.png"); }
+
+.actual-location {
+  display: flex;
+  width: 40%; }
+  .actual-location h1 {
+    color: white;
+    margin: 1px;
+    font-size: 1.2em;
+    line-height: 40px; }
+  .actual-location .material-icons {
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1.3;
+    margin: 0 4px; }

@@ -98,6 +98,7 @@
   border-radius: 5px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 
   img {
     height: 100%;
@@ -112,4 +113,8 @@
     margin-left: 12px;
     margin: 0;
   }
+}
+
+.events-small-box:hover{
+  background-color: #d3d3d33b  
 }

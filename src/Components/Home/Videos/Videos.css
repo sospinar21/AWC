@@ -14,10 +14,18 @@
   .video-card :hover {
     cursor: pointer; }
 
+.video-card:hover {
+  background-color: #d3d3d33b; }
+
 .selectedVideo {
   width: 70%;
-  padding-top: 10%;
+  padding-top: 6%;
   text-align: center; }
+  .selectedVideo h1 {
+    margin: 0px 120px 28px;
+    font-size: 3em;
+    color: black;
+    text-align: left; }
 
 .title-box {
   width: 30%;

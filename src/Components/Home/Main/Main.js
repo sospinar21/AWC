@@ -81,6 +81,9 @@ render () {
     );
   });
 
+  const city = this.props.selectedLocation;
+  const selectedLocation = city.length ? city : 'USA'
+
   return (
     <div>
       <div className='news-feed'>
@@ -104,6 +107,10 @@ render () {
                 id='locations'>
                 {suggestions}
               </datalist>
+              <div className='actual-location'>
+                <i class="material-icons">location_on</i>
+                <h1>{selectedLocation}</h1>
+              </div>
               <div className='btns'>
                 <a
                   onClick={() => this.makeCommunityActive()}

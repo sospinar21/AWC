@@ -16,7 +16,7 @@
   text-align: center;
   border-bottom: 1px solid #cccccc87;
   margin: 2vh auto;
-  
+
   .studio-img {
     width: 100%;
     height: auto;
@@ -59,6 +59,10 @@
     margin: -3px 1vh;
   } 
 }
+
+.suggStudio-cards:hover{
+  background-color: #d3d3d33b
+ }
 
 .studiocards-container{
   display: flex;
