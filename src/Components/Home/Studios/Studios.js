@@ -57,7 +57,7 @@ displaySelected = () => {
           <div className='description'>
             <p>{selected.location.display_address[0]}</p>
             <p>{selected.location.display_address[1]}</p>          
-            <p>{selected.phone}</p>              
+            <p className='phone'>{selected.phone}</p>              
           </div>
         </div>
       </div>

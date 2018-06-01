@@ -72,6 +72,7 @@
   position: relative; }
 
 .selected-studio-box {
+  background-size: cover;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -108,6 +109,9 @@
     color: #b62d4c;
     font-size: 1rem;
     line-height: 1.6rem; }
+
+.phone {
+  color: pink; }
 
 .b-description {
   width: 60%;

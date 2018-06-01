@@ -3,9 +3,14 @@
 
 .video-card {
   margin: 1.5vh 0%;
-  display: flex; }
+  display: flex;
+  padding: 2px 38px;
+  height: 15vh; }
   .video-card img {
-    height: 14vh; }
+    height: 14vh;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 2px 3px #ccc;
+    box-shadow: 1px 2px 3px #ccc; }
   .video-card :hover {
     cursor: pointer; }
 
