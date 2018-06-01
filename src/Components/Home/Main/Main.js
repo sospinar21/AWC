@@ -11,7 +11,7 @@ import Music from '../Music/Music';
 import { Community } from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 import { addLocation, addEvents, addStudios } from '../../../Actions/actions'
-import { SelectedEvent } from '../SelectedEvent/SelectedEvent';
+import  SelectedEvent  from '../SelectedEvent/SelectedEvent';
 
 export class Main extends Component {
   constructor() {

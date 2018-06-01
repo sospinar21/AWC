@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 
 export class SelectedEvent extends Component {
 
-
-
 render () {
-
-    if (this.props.selectedEvent) {
+  console.log(this.props.selectedEvent)
+    const selected = this.props.selectedEvent
+    if (selected) {
       return (
         <div className='videos-main'>
-          
+          <h1> {selected.name}</h1>
+          {/* <h2>{selected.date.local}</h2> */}
+          <p>{selected.description}</p>
         </div>
-      );
-        
+      ); 
     } else {
       return (
         <div className='loading'>
