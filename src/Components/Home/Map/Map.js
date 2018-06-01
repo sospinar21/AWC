@@ -15,15 +15,18 @@ const MyMapComponent = compose(
     googleMapURL:
     `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px`, width: `800px`}} />,
+    containerElement: <div style={{ height: `400px`, width: `800px` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
   withGoogleMap
 )(props => {
+  const longitude = props.selectedStudio.id ? props.selectedStudio.coordinates.longitude : 40.730610;
+  const latitude = props.selectedStudio.id ? props.selectedStudio.coordinates.latitude : -73.935242;
+  console.log(longitude,latitude)  
   return (
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: props.selectedStudio.coordinates.latitude, lng: props.selectedStudio.coordinates.longitude }}>
-      <Marker position={{ lat: props.selectedStudio.coordinates.latitude, lng: props.selectedStudio.coordinates.longitude }} />
+    <GoogleMap defaultZoom={15} defaultCenter={{ lat: latitude, lng: longitude }}>
+      <Marker position={{ lat: latitude, lng: longitude }} />
     </GoogleMap>
   );
 }

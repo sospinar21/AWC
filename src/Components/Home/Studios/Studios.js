@@ -41,26 +41,25 @@ fetchSelected = (studio) => {
 }
 
 displaySelected = () => {
-
-  if(this.props.selectedStudio) { 
+  const selected = this.props.selectedStudio;
+  if(selected.id) { 
     return (
-      <div key={1} className='suggStudio-cards'>
-        {/* <div className='main-info'>
-          <div className='img-box'>
-            <img className='studio-img' src={studio.image} />
+      <div key={1} className='selected-card'> 
+        <MyMapComponent />     
+        <div className='img-box'>
+          <img className='studio-img' src={selected.image} />
+        </div>
+        <div className='description-container'>
+          <div className='text-container'>
+            <h4>{selected.title}</h4>
+            <i className="material-icons">favorite</i><b>{selected.rating}</b>
           </div>
-          <div onClick= {() => this.displaySelected(studio.id)} className='description-container'>
-            <div className='text-container'>
-              <h4>{studio.title}</h4>
-              <i className="material-icons">favorite</i><b>{studio.rating}</b>
-            </div>
-          </div>
-        </div>  
+        </div> 
         <div className='description'>
-          <p>{studio.location.display_address[0]}</p>
-          <p>{studio.location.display_address[1]}</p>          
-          <p>{studio.phone}</p>              
-        </div> */}
+          <p>{selected.location.display_address[0]}</p>
+          <p>{selected.location.display_address[1]}</p>          
+          <p>{selected.phone}</p>              
+        </div>
       </div>
     );
   }
@@ -94,13 +93,11 @@ displayStudios = () => {
 }
 
 
-render () {
-  const selected = this.props.selectedStudio.id ? <MyMapComponent /> : <h1>Select a Studio</h1>
+render () {  
   if (this.props.suggestedStudios.length) {
     return (
       <div className='studiocards-container'>
         <div className='selected-studio'>
-          {selected}
           {this.displaySelected()}
           <div className='b-description'>
           </div>

@@ -35,9 +35,12 @@
 
 .selected-studio {
   width: 100%;
+  height: 40vh;
   padding: 2vh 4vh;
   box-sizing: border-box;
-  display: flex; }
+  display: flex;
+  overflow: hidden; 
+}
 
 .studios {
   width: 100%;
@@ -63,3 +66,7 @@
 .b-description {
   width: 60%;
   background-color: black; }
+
+  .selected-card{
+
+  }
