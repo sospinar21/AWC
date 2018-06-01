@@ -22,3 +22,8 @@ export const addSelectedStudio = (studio) => ({
   type: 'ADD_SELECTED_STUDIO',
   studio
 })
+
+export const addSelectedEvent = (selected) => ({
+  type: 'ADD_SELECTED_EVENT',
+  selected
+})

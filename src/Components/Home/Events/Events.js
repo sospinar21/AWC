@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import  ApiCalls  from '../../../Helper/ApiCalls/ApiCalls';
 import { connect } from 'react-redux';
-import { addEvents } from '../../../Actions/actions';
+import { addEvents, addSelectedEvent } from '../../../Actions/actions';
 import PropTypes from 'prop-types';
 import './Events.css';
 
@@ -23,27 +23,8 @@ export class Events extends Component {
     await this.props.addEvents(suggestedEvents);
   }
 
-  displayEvents = () => {
-    const events = this.props.suggestedEvents.map(suggEvent => {
-      if (suggEvent.logo){
-        var img = suggEvent.logo.url;
-      } else {
-        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
-      }
-      return (
-        <div key={suggEvent.id} className='suggEvent-cards'>
-          <img src={img} />
-          <div className='text-container'>
-            <h4>{suggEvent.name}</h4>
-            <b>{suggEvent.date.utc}</b>
-            <div className='description'>
-              <p>{suggEvent.description}</p>
-            </div>
-          </div>   
-        </div>
-      );
-    });
-    return events;
+  storeSelected = (suggEvent) => {
+    this.props.addSelectedEvent(suggEvent)
   }
 
   eventsInMain = () => {
@@ -54,7 +35,7 @@ export class Events extends Component {
         var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       } 
       return (
-        <div key={suggEvent.id} className='events-small-box'>
+        <div key={suggEvent.id} onClick={() => this.storeSelected(suggEvent)} className='events-small-box'>
           <img src={img} />
           <h4>{suggEvent.name}</h4>
         </div>
@@ -85,13 +66,14 @@ export class Events extends Component {
 export const mapStateToProps = (state) => {
   return ({
     suggestedEvents: state.suggestedEvents,
-    selectedLocation: state.location
+    selectedLocation: state.location,
+    selectedEvent: state.selectedEvent
   });
 };
 
 export const mapDispatchToProps = dispatch => ({
-  addEvents: (eventsData) => dispatch(addEvents(eventsData)) 
-  
+  addEvents: (eventsData) => dispatch(addEvents(eventsData)), 
+  addSelectedEvent: (selected) => dispatch(addSelectedEvent(selected))
 });
 
 Events.propTypes = {

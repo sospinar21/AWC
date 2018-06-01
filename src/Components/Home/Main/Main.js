@@ -84,7 +84,7 @@ renderCommunityOrStudios = () => {
   if(this.state.studiosActive === true){
     return <Studios />
   } else if (this.state.eventsActive === true) {
-    return <Events />
+    return <div className='main-events'> <Events /> </div>
   } else {
     return <Community /> 
   }
@@ -127,7 +127,7 @@ render () {
                 {suggestions}
               </datalist>
               <div className='actual-location'>
-                <i class="material-icons">location_on</i>
+                <i className="material-icons">location_on</i>
                 <h1>{selectedLocation}</h1>
               </div>
               <div className='btns'>
@@ -158,10 +158,6 @@ render () {
           </div>
         </div> 
       </div>
-      {/* <div className='videos-small'>
-        <Videos />
-      </div> */}
-      {/* <Music /> */}
     </div>
   );
 }
