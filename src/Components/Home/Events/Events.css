@@ -66,18 +66,23 @@
     font-size: 4vh; }
 
 .events-small-box {
-  height: 6vh;
+  height: 12vh;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 2px 3px #ccc;
-  box-shadow: 1px 2px 3px #ccc; }
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
   .events-small-box img {
-    height: 70%;
-    margin-right: 1vh; }
+    height: 100%;
+    margin-right: 1.7vh;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 2px 3px #ccc;
+    box-shadow: 1px 2px 3px #ccc; }
   .events-small-box h4 {
-    font-size: 14px;
+    font-size: 1rem;
+    margin-left: 12px;
     margin: 0; }
