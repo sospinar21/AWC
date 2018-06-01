@@ -1,7 +1,7 @@
 .navBar {
   -webkit-box-shadow: 2px 2px 2px #70809094;
   box-shadow: 1px -3px 1px #d8d8d894;
-  height: 100vh;
+  height: 1000px;
   width: 13vw;
   display: -ms-flexbox;
   -ms-flex-pack: justify;
@@ -17,7 +17,7 @@
   font-weight: 1000;
   -ms-flex: 20 1;
   flex: 20 1;
-  font-size: 8vh;
+  font-size: 80px;
   color: #ffffff;
   font-family: 'Kalam', cursive;
   text-shadow: 2px 2px 2px #000000; }
@@ -25,24 +25,24 @@
 .menu {
   margin: auto;
   flex: 15 1;
-  line-height: 8vh; }
+  line-height: 80px; }
 
 a {
   display: block;
   text-decoration: none;
   color: white;
   font-weight: 200;
-  font-size: 2.1vh;
+  font-size: 19px;
   letter-spacing: 1px;
-  margin-left: 2vh; }
+  margin-left: 20px; }
 
 .li:hover {
   background-color: #363d489c; }
 
 .logo-box {
   text-align: center;
-  padding-top: 2vh;
-  margin-bottom: 3vh; }
+  padding-top: 20px;
+  margin-bottom: 30px; }
 
 .li {
   width: 80%;

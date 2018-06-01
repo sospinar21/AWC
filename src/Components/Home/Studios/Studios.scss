@@ -1,5 +1,5 @@
 .img-box {
-  height: 15vh;
+  height: 150px;
   overflow: hidden;
   width: 12vw;
   border-radius: 5px;
@@ -9,13 +9,13 @@
 .suggStudio-cards {
   width: 90%;
   cursor: pointer;
-  margin: 2vh;
-  padding: 2vh;
+  margin: 20px;
+  padding: 20px;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
   border-bottom: 1px solid #cccccc87;
-  margin: 2vh auto;
+  margin: 20px auto;
 
   .studio-img {
     width: 100%;

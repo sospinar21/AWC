@@ -4,7 +4,7 @@ $shadow: -2px -2px 3px lightgrey;
 .suggestions-menu {
   display: flex;
   width: 53%;
-  margin: 4vh auto;
+  margin: 40px auto;
   justify-content: space-between;
   background-color: #dcdcdc57;
 }
@@ -25,7 +25,7 @@ $shadow: -2px -2px 3px lightgrey;
 
 .news-feed {
   width: 100%;
-  height: 99vh;
+  height: 900px;
   display: flex;
   background-color: #f3dfdf1f;
 }
@@ -39,7 +39,7 @@ $shadow: -2px -2px 3px lightgrey;
 .forum {
   margin-left: 14vw;
   width: 80%;
-  height: 99vh;
+  height: 900px;
   background-color: white;
   -webkit-box-shadow: 3px 3px 5px lightgrey;
   box-shadow: 0px 2px 8px lightgrey;
@@ -47,11 +47,11 @@ $shadow: -2px -2px 3px lightgrey;
 
 .events-small {
   overflow-x: hidden;
-  height: 50vh;
+  height: 430px;
   overflow: scroll;
-  padding: 0vh 2vh;
+  padding: 0vh 20px;
   background-color: white;
-  margin: 1.3vh 1.3vh 1.3vh 0;
+  margin: 10.3px 10.3px 10.3px 0;
   box-sizing: border-box;
   box-shadow: 3px 3px 5px lightgrey;
 
@@ -61,9 +61,9 @@ $shadow: -2px -2px 3px lightgrey;
 }
 
 .titleFix {
-  padding: 1.4vh;
-  margin: 0vh 1.23vh 1.23vh 0;
-  height: 6.5vh;
+  padding: 10.4px;
+  margin: 0vh 10.12px 10.23px 0;
+  height: 60px;
   background-color: #232b37;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -85,9 +85,9 @@ $shadow: -2px -2px 3px lightgrey;
 .studios-small {
   overflow-x: hidden;
   background-color: white;  
-  margin: 1.3vh 1.3vh 1.3vh 0;
-  height: 34vh;
-  padding: 0 2vh;
+  margin: 10.3px 10.3px 10.3px 0;
+  height: 340px;
+  padding: 0 20px;
   box-sizing: border-box;
   box-shadow: 3px 3px 5px lightgrey;
 
@@ -108,8 +108,8 @@ $shadow: -2px -2px 3px lightgrey;
 .location {
   display: flex;
   width: 100%;
-  height: 6.5vh;
-  padding: 1vh 0 1vh 5%;
+  height: 60px;
+  padding: 10px 0 10px 5%;
   box-sizing: border-box;
   text-align: center;
   background-color: #232b37;
@@ -118,7 +118,7 @@ $shadow: -2px -2px 3px lightgrey;
   input {
     border: none;
     padding: 10px 15px;	
-    font-size: 1.6vh;
+    font-size: 16px;
     width: 80%;
     color: black;
     outline: none;
@@ -129,7 +129,7 @@ $shadow: -2px -2px 3px lightgrey;
   color: white;
   background-color: #b62d4d;
   width: 20%;
-  padding: 0.8vh;
+  padding: 8px;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
   cursor: pointer;
@@ -138,6 +138,7 @@ $shadow: -2px -2px 3px lightgrey;
 a {
   color: rgb(255, 255, 255);
   font-weight: 200;
+  font-size: 20px;
 }
 
 a:hover {
@@ -158,13 +159,14 @@ a:hover {
   justify-content: center;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 2vh;
+    margin-right: 20px;
     width: 30%;
 }
 
 .location-form {
   width: 40%;
   display: flex;
+  margin-right: 1em;
 }
 
 .music {

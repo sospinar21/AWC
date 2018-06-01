@@ -1,13 +1,13 @@
 .sidebar {
   width: 24%;
-  height: 99vh;
+  height: 900px;
   background-color: white;
   overflow: scroll;
   box-shadow: 1px 4px 11px lightgrey; }
 
 .entertainment {
   width: 100%;
-  height: 100vh;
+  height: 1000px;
   overflow: hidden; }
 
 .navBar-entert {

@@ -1,10 +1,10 @@
 .main-banner {
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 5vh auto 5vh;
+  margin: 50px auto 50px;
   width: 100%;
-  background-position-y: -10vh;
-  height: 45vh;
+  background-position-y: -100px;
+  height: 450px;
   background-image: url('https://2.bp.blogspot.com/-yE3M4nNXZ58/WMbInF32VBI/AAAAAAAACeA/uiXXIXrIvbYPD4CaaGC6tGDR7eWPtdTlgCLcB/s1600/Dido%2Bimage%2Bfor%2BFB.jpg')
 }
 
@@ -17,20 +17,20 @@
 
 .suggEvent-cards {
   width: 20%;
-  margin: 2.3vh;
-  height: 15vh;
+  margin: 20.3px;
+  height: 150px;
   overflow-y: hidden;
-  height: 35vh;
+  height: 350px;
   border-radius: 5%;
 
   img {
     width: 100%;
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
   }
 
   h4 {
-    font-size: 2.3vh;
-    margin: 1.5vh auto;
+    font-size: 20.3px;
+    margin: 10.5px auto;
     color: purple;
     letter-spacing: 0.5px;
   }
@@ -40,7 +40,6 @@
     font-family: 'Lato', sans-serif;
     font-weight: inherit;
     color: dimgrey;
-    ine-height: 1.5;
     
   }
 }
@@ -49,11 +48,11 @@
   display:flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 .description {
-  margin-top: 1vh;
+  margin-top: 10px;
   overflow-y: hidden;
 }
 
@@ -67,19 +66,19 @@
 
 .main-banner-text{
   z-index: 4;
-  margin: 9vh;
+  margin: 90px;
   width: 40%;
-  padding: 5vh;
+  padding: 50px;
   color: white !important;
   background-color: #0000008a;
 
   h1 {
-    font-size: 5vh;
-    margin: 1vh
+    font-size: 50px;
+    margin: 10px
   }
 
   h2 {
-    font-size: 4vh    
+    font-size: 40px    
   }
 }
 
@@ -88,7 +87,7 @@
 }
 
 .events-small-box {
-  height: 12vh;
+  height: 120px;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +101,7 @@
 
   img {
     height: 100%;
-    margin-right: 1.7vh;
+    margin-right: 10.7px;
     border-radius: 5px;
     -webkit-box-shadow: 1px 2px 3px #ccc;
     box-shadow: 1px 2px 3px #ccc;
