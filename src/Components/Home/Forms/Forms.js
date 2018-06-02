@@ -36,7 +36,7 @@ export class Forms extends Component {
         <NavBar />
         <div className='website'/> 
         <div className='forms'>
-          <div> 
+          <div className='forms-menu'> 
             <button onClick={this.showLogIn}>Log In </button>
             <button onClick={this.showSignUp}>Sign Up </button>
           </div>

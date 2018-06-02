@@ -2,16 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Login.css';
-import { signUp, 
-  logIn, 
-  updateUserInfo, 
-  confirmRegistration, 
-  changePassword,
-  forgotPassword,
-  userSignout,
-  cogToken,
-  rememberDevice,
- } from '../../../Helper/Users/Users'
+import {  logIn } from '../../../Helper/Users/Users'
   import { NavBar } from '../NavBar/NavBar'
 
 export class Login extends Component {
@@ -30,7 +21,8 @@ export class Login extends Component {
 
   userSignIn = (e) => {
     e.preventDefault()
-    logIn()
+    logIn(this.state)
+    this.setState({email:'', password:''})
   }
 
   validateEmail = () => {
@@ -42,7 +34,7 @@ export class Login extends Component {
   }
 
   getToken = () => {
-    cogToken()
+    // cogToken()
   }
 
   render () {

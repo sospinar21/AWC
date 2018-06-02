@@ -56,11 +56,11 @@ export const cogToken = () =>{
   }
 };
 
-export const logIn = () => {
-  var userData = {Username: 'Kai', Pool: userPool};
+export const logIn = (user) => {
+  var userData = {Username: user.email, Pool: userPool};
   var cognitoUser = new CognitoUser(userData);
 
-  var authenticationData = {Username: 'Kai', Password: 'holaWaaa10!'};
+  var authenticationData = {Username: user.email, Password: user.password};
   var authenticationDetails = new AuthenticationDetails(authenticationData);
 
   cognitoUser.authenticateUser(authenticationDetails, {
