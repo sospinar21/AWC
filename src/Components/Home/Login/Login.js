@@ -9,6 +9,7 @@ import { signUp,
   changePassword,
   forgotPassword,
   userSignout,
+  cogToken,
   rememberDevice
  } from '../../../Helper/Users/Users'
   import { NavBar } from '../NavBar/NavBar'
@@ -27,6 +28,10 @@ export class Login extends Component {
     e.preventDefault()
     logIn()
   }
+
+  getToken = () => {
+    cogToken()
+  }
   
   render () {
     return (
@@ -37,7 +42,7 @@ export class Login extends Component {
           <div className='signup-box'>
             <h1>AWC </h1>
             <button>Log in with Facebook </button>
-            <button>Log in with Google </button>              
+            <button onClick={() => this.getToken()}>Log in with Google </button>              
             <form className='form' autoComplete='on'>
               <input 
                 autoComplete='on'

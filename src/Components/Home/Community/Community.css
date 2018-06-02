@@ -66,13 +66,16 @@
 
 .post-menu {
   background: #F3F3F3;
-  display: block;
+  display: flex;
   margin: 0 0px -9px 0px;
   text-align: right;
   color: #C0C0C0;
   font-size: 11px;
   box-sizing: border-box; }
-  .post-menu button {
+  .post-menu li {
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
     outline: none;
     border: none;
     border-left: 1px solid lightgrey;

@@ -7,8 +7,6 @@ var userPool = new CognitoUserPool(poolData);
 
 export const signUp = () => {
 
-
-
   var attributeList = [];
 
   var dataEmail = {
@@ -31,39 +29,54 @@ export const signUp = () => {
       return;
     }
     var cognitoUser = result.user;
-    console.log(JSON.stringify(result))
+    console.log(JSON.stringify(result));
     console.log('user name is ' + cognitoUser.getUsername());
   });
-
 };
 
+export const cogToken = () =>{
+  console.log('here');
+  var cognitoUser = userPool.getCurrentUser();
+
+  if (cognitoUser != null) {
+    cognitoUser.getSession(function(err, session) {
+      if (err) {
+        alert(err);
+        return;
+      }
+      console.log('session validity: ' + session.isValid());
+      console.log(session.getIdToken().getJwtToken());
+
+    });
+  }
+};
 
 export const logIn = () => {
-  var userData = {Username: 'Kai', Pool: userPool}
+  var userData = {Username: 'Kai', Pool: userPool};
   var cognitoUser = new CognitoUser(userData);
 
   var authenticationData = {Username: 'Kai', Password: 'holaWaaa10!'};
   var authenticationDetails = new AuthenticationDetails(authenticationData);
 
   cognitoUser.authenticateUser(authenticationDetails, {
-      onSuccess: function (result) {
-        console.log('cool')
-          // LoggedIn(cognitoUser, result);
-      },
+    onSuccess: function (result) {
+      console.log('cool');
+      // LoggedIn(cognitoUser, result);
+    },
 
-      onFailure: function(err) {
-          alert(JSON.stringify(err));
-      },
+    onFailure: function(err) {
+      alert(JSON.stringify(err));
+    }
 
   });
-}
+};
 
 
 export const updateUserInfo = () => {
   var attributeList = [];
   var attribute = {
-      Name : 'nickname',
-      Value : 'joe'
+    Name : 'nickname',
+    Value : 'joe'
   };
   var attribute = new CognitoUserAttribute(attribute);
   attributeList.push(attribute);
@@ -75,57 +88,57 @@ export const updateUserInfo = () => {
     }
     console.log('call result: ' + result);
   });
-}
+};
 
 export const confirmRegistration = () => {
   CognitoUser.confirmRegistration('123456', true, function(err, result) {
     if (err) {
-        alert(err);
-        return;
+      alert(err);
+      return;
     }
     alert(result);
-});
-}
+  });
+};
 
 export const changePassword = () => {
   CognitoUser.changePassword('oldPassword', 'newPassword', function(err, result) {
     if (err) {
-        alert(err);
-        return;
+      alert(err);
+      return;
     }
     console.log('call result: ' + result);
-});
-}
+  });
+};
 
 export const forgotPassword = () => {
   CognitoUser.forgotPassword({
     onSuccess: function (result) {
-        console.log('call result: ' + result);
+      console.log('call result: ' + result);
     },
     onFailure: function(err) {
-        alert(err);
+      alert(err);
     },
     inputVerificationCode() {
-        var verificationCode = prompt('Please input verification code ' ,'');
-        var newPassword = prompt('Enter new password ' ,'');
-        CognitoUser.confirmPassword(verificationCode, newPassword, this);
+      var verificationCode = prompt('Please input verification code ' , '');
+      var newPassword = prompt('Enter new password ' , '');
+      CognitoUser.confirmPassword(verificationCode, newPassword, this);
     }
-});
-}
+  });
+};
 
 export const userSignout = () => {
   if (CognitoUser != null) {
     CognitoUser.signOut();
   }
-}
+};
 
 export const rememberDevice = () => {
   CognitoUser.setDeviceStatusRemembered({
     onSuccess: function (result) {
-        console.log('call result: ' + result);
+      console.log('call result: ' + result);
     },
     onFailure: function(err) {
-        alert(err);
+      alert(err);
     }
-});
-}
+  });
+};
