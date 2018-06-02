@@ -4,10 +4,9 @@ import ApiCalls from '../Helper/ApiCalls/ApiCalls';
 import { Profile } from '../Components/Profile/Profile/Profile';
 import Main from '../Components/Home/Main/Main';
 import { Route } from 'react-router-dom';
-import Login from '../Components/Home/Login/Login';
 import { Community } from '../Components/Home/Community/Community';
 import Entertainment from '../Components/Home/Entertainment/Entertainment'
-import { SignUp } from '../Components/Home/SignUp/SignUp'
+import { Forms } from '../Components/Home/Forms/Forms';
 
 class App extends Component {
   constructor () {
@@ -21,7 +20,7 @@ class App extends Component {
       <div className="App">
         <Route exact path='/' component={Main} />
         <Route path='/profile' component={Profile} /> 
-        <Route path='/signin' component={SignUp} />
+        <Route path='/signin' component={Forms} />
         <Route path='/community' component={Community} />
         <Route path='/entertainment' component={Entertainment} />                         
       </div>

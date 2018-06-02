@@ -48,48 +48,42 @@ export class SignUp extends Component {
 
   render () {
     return (
-      <div className='si-su'>
-        <NavBar />
-        <div className='website'/> 
-        <div className='forms'>
-          <div className='signup-box'>
-            <h1>AWC </h1>
-            <button>Log in with Facebook </button>
-            <button onClick={() => this.getToken()}>Log in with Google </button>              
-            <form className='form' autoComplete='on'>
-              <input
-                name='email'
-                type='email'
-                onChange={this.handleInputChange}
-                value={this.state.email} 
-                autoComplete='on'
-                placeholder='Email'
-                className='email'/>
-              <input
-                name='password'
-                onChange={this.handleInputChange}
-                value={this.state.password} 
-                autoComplete='on'
-                type='password' 
-                placeholder='Password'
-                className='password'/>
-              <input
-                name= 'city'
-                onChange={this.handleInputChange}
-                value={this.state.city}  
-                autoComplete='on'
-                placeholder='City'
-                className='city' />
-              <button
-                disabled={this.validateEmail()} 
-                onClick={(e) => this.userSignUp(e)}
-                className='signup'>Sign Up </button>
-            </form>
+      <div className='signup-box'>
+        <h1>AWC </h1>
+        <button>Log in with Facebook </button>
+        <button onClick={() => this.getToken()}>Log in with Google </button>              
+        <form className='form' autoComplete='on'>
+          <input
+            name='email'
+            type='email'
+            onChange={this.handleInputChange}
+            value={this.state.email} 
+            autoComplete='on'
+            placeholder='Email'
+            className='email'/>
+          <input
+            name='password'
+            onChange={this.handleInputChange}
+            value={this.state.password} 
+            autoComplete='on'
+            type='password' 
+            placeholder='Password'
+            className='password'/>
+          <input
+            name= 'city'
+            onChange={this.handleInputChange}
+            value={this.state.city}  
+            autoComplete='on'
+            placeholder='City'
+            className='city' />
+          <button
+            disabled={this.validateEmail()} 
+            onClick={(e) => this.userSignUp(e)}
+            className='signup'>Sign Up </button>
+        </form>
 
-            <div className='policy'> 
-              <h3>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h3>
-            </div>
-          </div>
+        <div className='policy'> 
+          <h3>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h3>
         </div>
       </div>
     );
