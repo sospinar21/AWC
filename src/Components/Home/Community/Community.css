@@ -53,13 +53,15 @@
   display: flex;
   margin-top: -20px;
   float: right; }
+  .likes h3 {
+    margin-right: 25px; }
 
 .icon {
   line-height: 0;
   margin: 20px; }
 
 .post-area {
-  margin: 50px;
+  margin: 14px 50px;
   border-radius: 2px; }
 
 .post-menu {

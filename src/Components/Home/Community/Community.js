@@ -8,6 +8,8 @@ export class Community extends Component {
     this.state = {
       user: 'Stephanie',
       input: '',
+      likes: 0,
+      dislikes: 0,
       posts: []
     }
   }
@@ -35,15 +37,27 @@ export class Community extends Component {
               <p>“{post}</p>
             </div>
             <div className='likes'>
-              <h3>{this.state.user}</h3>
-              <i className="material-icons icon">thumb_up_alt</i>
-              <i className="material-icons icon">thumb_down_alt</i>
+              <h3>@ {this.state.user}</h3>
+              <p>{this.state.likes}</p><i className="material-icons icon" onClick={()=> this.upvote()}>thumb_up_alt</i>
+              <p>{this.state.dislikes}</p><i className="material-icons icon" onClick={()=> this.downVote()}>thumb_down_alt</i>
             </div>
           </div>
         </div>
       );
     });
     return posts;
+  }
+
+  upvote = () => {
+    this.setState({
+      likes: this.state.likes + 1
+    })
+  }
+
+  downVote = () => {
+    this.setState({
+      dislikes: this.state.dislikes + 1
+    })
   }
   
 
@@ -54,11 +68,13 @@ export class Community extends Component {
           <label className='label' htmlFor= 'post'>Post here!</label>
           <textarea name='post' className='post-box' value={this.state.input} onChange={(e) => this.getPost(e)}/>
           <div className='post-menu'>
-            <button>Make Post </button>
-            <button>Upload Photo </button>
-            <button>Link Video</button>
+            <button>#Image</button>
+            <button>#Video</button>
+            <button>#Network </button>
+            <button>#Pro</button>
+            <button>#Entertainment</button>
           </div> 
-          <button className='submit-post' onClick={(e) => this.addPost(e)}> Submit </button>
+          <button type='submit' className='submit-post' onClick={(e) => this.addPost(e)}> Submit </button>
         </form>
       </div>
     )
