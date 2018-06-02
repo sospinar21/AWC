@@ -1,0 +1,5 @@
+.selected-event {
+  margin-bottom: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white; }

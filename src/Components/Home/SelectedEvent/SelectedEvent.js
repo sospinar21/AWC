@@ -10,7 +10,7 @@ render () {
     const selected = this.props.selectedEvent
     if (selected) {
       return (
-        <div className='videos-main'>
+        <div className='selected-event'>
           <h1> {selected.name}</h1>
           {/* <h2>{selected.date.local}</h2> */}
           <p>{selected.description}</p>

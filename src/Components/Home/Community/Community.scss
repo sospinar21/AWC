@@ -37,6 +37,9 @@
 }
 
 .post-description {
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
 
   h3 {
     font-size: 17px;
@@ -47,10 +50,10 @@
 }
 
 .text-description {
-  margin: 0 20px;
+  margin: 0 10px 15px;
   font-size: 18 px;
-  overflow-y: hidden;
-  height: 50px;
+  overflow-y: scroll;
+  height: 60px;
 
   p {
     letter-spacing: .35px;
@@ -59,12 +62,86 @@
 }
 
 .likes {
+  display: flex;
   margin-top: -20px;
-  text-align: right;
+  float: right;
 }
 
 .icon {
   line-height: 0;
   margin: 20px;
 
+}
+
+.post-area {
+  margin: 50px;
+  border-radius: 2px;
+}
+
+.post-menu {
+  background: #F3F3F3;
+  display: block;
+  margin: 0 0px -9px 0px;
+  text-align: right;
+  color: #C0C0C0;
+  font-size: 11px;
+  box-sizing: border-box;
+
+  button {
+    outline: none;
+    border: none;
+    border-left: 1px solid lightgrey;
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f3f3f3;
+  }
+
+}
+
+.label {
+  margin-top: -19px;
+  display: block;
+  float: left;
+  background: #FFFFFF;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: #B9B9B9;
+  font-size: 18px;
+}
+
+
+.post-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  height: 72px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0;
+}
+
+.submit-post {
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin-top: 13px;
+  background: #b62d4c;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #b62d4c;
+  border-radius: 3px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.post-cont {
+  display: block;
+  padding: 9px;
+  border:1px solid #DDDDDD;
+  margin-bottom: 30px;
+  border-radius: 3px;
 }
