@@ -10,7 +10,6 @@ export class Community extends Component {
     }
   }
 
-
   addPost = (post) => {
     const posts = [post, ...this.state.posts]
     this.setState({posts})

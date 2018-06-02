@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Post.css';
+import { cogToken } from '../../../Helper/Users/Users';
 
 export class Post extends Component {
   constructor(props) {
     super(props) 
 
     this.state = {
+      token: '',
       user: 'Stephanie',
       category: '',
       input: '',
@@ -21,7 +23,7 @@ export class Post extends Component {
 
   sendPost = (e) => {
     e.preventDefault()
-    this.props.addPost(this.state)
+    this.props.addPost(this.state) 
     this.setState({category:'', input:''})
   }
 

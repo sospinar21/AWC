@@ -2,39 +2,59 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Login.css';
-import {  logIn } from '../../../Helper/Users/Users'
-  import { NavBar } from '../NavBar/NavBar'
+import {  logIn } from '../../../Helper/Users/Users';
+import { NavBar } from '../NavBar/NavBar';
+import { addUser } from '../../../Actions/actions';
+import {CognitoUserPool} from 'amazon-cognito-identity-js';
 
 export class Login extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       email: '',
-      password: '',
-    }
+      password: ''
+    };
   }
 
   handleInputChange = (e) => {
-    const {name, value} = e.target
-    this.setState({[name]: value})
+    const {name, value} = e.target;
+    this.setState({[name]: value});
   }
 
   userSignIn = (e) => {
-    e.preventDefault()
-    logIn(this.state)
-    this.setState({email:'', password:''})
+    e.preventDefault();
+    logIn(this.state);
+    this.getToken()
+    this.setState({email:'', password:''});
   }
 
   validateEmail = () => {
-    const {email, password} = this.state
-    return(
+    const {email, password} = this.state;
+    return (
       email.length === 0,
       password.length === 0
-    )
+    );
   }
 
   getToken = () => {
-    // cogToken()
+    var poolData = { UserPoolId : 'us-west-2_t4LvOKjcE',
+      ClientId: '47bsfajnf2rmvpt02q8qjvm29u'
+    };
+
+    var userPool = new CognitoUserPool(poolData);
+    var cognitoUser = userPool.getCurrentUser();
+
+    if (cognitoUser != null) {
+      cognitoUser.getSession((err, session) =>  {
+        if (err) {
+          alert(err);
+          return;
+        }
+        var token = session.getIdToken().getJwtToken();
+        this.props.addUser(token)
+  
+      });
+    }
   }
 
   render () {
@@ -76,16 +96,17 @@ export class Login extends Component {
 
 export const mapStateToProps = (state) => {
   return ({
-    suggestedEvents: state.suggestedEvents
+    suggestedEvents: state.suggestedEvents,
+    user: state.user
   });
 };
 
 export const mapDispatchToProps = dispatch => ({
-  
+  addUser: (user) => dispatch(addUser(user))
 });
 
 Login.propTypes = {
-  suggestedEvents: PropTypes.array,
+  suggestedEvents: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -27,3 +27,8 @@ export const addSelectedEvent = (selected) => ({
   type: 'ADD_SELECTED_EVENT',
   selected
 })
+
+export const addUser = (user) => ({
+  type: 'ADD_USER',
+  user
+})

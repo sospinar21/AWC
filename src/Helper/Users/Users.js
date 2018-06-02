@@ -39,23 +39,6 @@ export const signUp = (user) => {
   });
 };
 
-export const cogToken = () =>{
-  console.log('here');
-  var cognitoUser = userPool.getCurrentUser();
-
-  if (cognitoUser != null) {
-    cognitoUser.getSession(function(err, session) {
-      if (err) {
-        alert(err);
-        return;
-      }
-      console.log('session validity: ' + session.isValid());
-      console.log(session.getIdToken().getJwtToken());
-
-    });
-  }
-};
-
 export const logIn = (user) => {
   var userData = {Username: user.email, Pool: userPool};
   var cognitoUser = new CognitoUser(userData);
@@ -65,7 +48,7 @@ export const logIn = (user) => {
 
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      console.log('cool');
+      return result 
       // LoggedIn(cognitoUser, result);
     },
 

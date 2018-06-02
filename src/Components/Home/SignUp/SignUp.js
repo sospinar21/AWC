@@ -3,12 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './SignUp.css';
 import { signUp, 
-  logIn, 
-  updateUserInfo, 
   confirmRegistration, 
-  changePassword,
-  forgotPassword,
-  userSignout,
   cogToken,
   rememberDevice,
  } from '../../../Helper/Users/Users'

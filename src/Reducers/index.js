@@ -5,6 +5,7 @@ import { videosReducer } from './videosReducer';
 import { locationReducer } from './locationReducer';
 import { selectedStudioReducer } from './selectedStudioReducer';
 import { selectedEventReducer } from './selectedEventReducer';
+import { userReducer } from './userReducer';
 
 
 
@@ -15,5 +16,6 @@ export const rootReducer = combineReducers({
   suggestedVideos: videosReducer,
   location: locationReducer,
   selectedStudio: selectedStudioReducer,
-  selectedEvent: selectedEventReducer
+  selectedEvent: selectedEventReducer,
+  user: userReducer
 }); 
