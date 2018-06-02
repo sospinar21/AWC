@@ -6,11 +6,13 @@ import {  logIn } from '../../../Helper/Users/Users';
 import { NavBar } from '../NavBar/NavBar';
 import { addUser } from '../../../Actions/actions';
 import {CognitoUserPool} from 'amazon-cognito-identity-js';
+import { Redirect } from 'react-router'
 
 export class Login extends Component {
   constructor() {
     super();
     this.state = {
+      login: false,
       email: '',
       password: ''
     };
@@ -24,7 +26,7 @@ export class Login extends Component {
   userSignIn = (e) => {
     e.preventDefault();
     logIn(this.state);
-    this.getToken()
+    this.getToken();
     this.setState({email:'', password:''});
   }
 
@@ -51,13 +53,18 @@ export class Login extends Component {
           return;
         }
         var token = session.getIdToken().getJwtToken();
-        this.props.addUser(token)
-  
+        this.giveAccess(token)
       });
     }
   }
 
+  giveAccess = (token) => {
+    this.props.addUser(token);
+    this.setState({login:true})
+  }
+
   render () {
+    
     return (
       <div className='si-su'>
         <div className='signin'>
