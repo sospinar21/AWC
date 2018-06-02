@@ -10,18 +10,22 @@ import { signUp,
   forgotPassword,
   userSignout,
   cogToken,
-  rememberDevice
+  rememberDevice,
  } from '../../../Helper/Users/Users'
   import { NavBar } from '../NavBar/NavBar'
 
 export class Login extends Component {
-
-  componentDidMount() {
+  constructor() {
+    super()
+    this.state = {
+      email: '',
+      password: '',
+    }
   }
-  
-  userSignUp = (e) => {
-    e.preventDefault()
-    signUp()
+
+  handleInputChange = (e) => {
+    const {name, value} = e.target
+    this.setState({[name]: value})
   }
 
   userSignIn = (e) => {
@@ -29,62 +33,48 @@ export class Login extends Component {
     logIn()
   }
 
+  validateEmail = () => {
+    const {email, password} = this.state
+    return(
+      email.length === 0,
+      password.length === 0
+    )
+  }
+
   getToken = () => {
     cogToken()
   }
-  
+
   render () {
     return (
       <div className='si-su'>
-      <NavBar />
-        <div className='website'/> 
-        <div className='forms'>
-          <div className='signup-box'>
-            <h1>AWC </h1>
-            <button>Log in with Facebook </button>
-            <button onClick={() => this.getToken()}>Log in with Google </button>              
-            <form className='form' autoComplete='on'>
-              <input 
-                autoComplete='on'
-                placeholder='Email'
-                className='email'/>
-              <input
-                autoComplete='on'
-                type='password' 
-                placeholder='Password'
-                className='password'/>
-              <input 
-                autoComplete='on'
-                placeholder='City'
-                className='city' />
-              <button 
-                onClick={(e) => this.userSignUp(e)}
-                className='signup'>Sign Up </button>
-            </form>
-
-            <div className='policy'> 
-              <h3>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h3>
-            </div>
-          </div>
-          <div className='signin'>
-            <h3>Have an Account ?</h3>
-            <form autoComplete='on'>
-              <input 
-                autoComplete='on'
-                placeholder='Email'              
-                className='email-si'/>
-              <input 
-                autoComplete='on'
-                type='password'
-                placeholder='Password'
-                className='password-si'/>
-              <button 
-                onClick={(e) => this.userSignIn(e)}              
-                className='login'>Log In</button>              
-            </form>
-          </div>
+        <div className='signin'>
+          <h3>Have an Account ?</h3>
+          <form autoComplete='on'>
+            <input 
+              name='email'
+              type='email'
+              onChange={this.handleInputChange}
+              value={this.state.email} 
+              autoComplete='on'
+              placeholder='Email'             
+              className='email-si'/>
+            <input 
+              name='password'
+              onChange={this.handleInputChange}
+              value={this.state.password} 
+              autoComplete='on'
+              type='password' 
+              placeholder='Password'
+              className='password-si'/>
+            <button
+              disabled={this.validateEmail()}  
+              onClick={(e) => this.userSignIn(e)}              
+              className='login'>Log In</button>              
+          </form>
         </div>
       </div>
+
     );
   }
 }

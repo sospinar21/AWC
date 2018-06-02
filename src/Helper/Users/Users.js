@@ -1,21 +1,26 @@
-import { CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails} from 'amazon-cognito-identity-js';
+import { Config, CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails, CognitoIdentityCredentials } from 'amazon-cognito-identity-js';
+import { Lambda } from 'aws-sdk';
+
+// var myCredentials = new CognitoIdentityCredentials({IdentityPoolId:'IDENTITY_POOL_ID'});
+// var myConfig = new Config({
+//   credentials: myCredentials, region: 'us-west-2'
+// });
 
 var poolData = { UserPoolId : 'us-west-2_t4LvOKjcE',
   ClientId: '47bsfajnf2rmvpt02q8qjvm29u'
 };
 var userPool = new CognitoUserPool(poolData);
 
-export const signUp = () => {
-
+export const signUp = (user) => {
   var attributeList = [];
 
   var dataEmail = {
     Name : 'email',
-    Value : 'kkh@gkkh.io'
+    Value : user.email
   };
   var city = {
     Name : 'custom:city',
-    Value : 'BTA'
+    Value : user.city
   };
   var attributeEmail = new CognitoUserAttribute(dataEmail);
   var attributeCity = new CognitoUserAttribute(city);
@@ -23,7 +28,7 @@ export const signUp = () => {
   attributeList.push(attributeEmail);
   attributeList.push(attributeCity);
 
-  userPool.signUp('Kai', 'holaWaaa10!', attributeList, null, function(err, result) {
+  userPool.signUp(user.email, user.password, attributeList, null, function(err, result) {
     if (err) {
       alert('this is it' + JSON.stringify(err));
       return;
@@ -119,8 +124,8 @@ export const forgotPassword = () => {
       alert(err);
     },
     inputVerificationCode() {
-      var verificationCode = prompt('Please input verification code ' , '');
-      var newPassword = prompt('Enter new password ' , '');
+      var verificationCode = prompt('Please input verification code ', '');
+      var newPassword = prompt('Enter new password ', '');
       CognitoUser.confirmPassword(verificationCode, newPassword, this);
     }
   });
@@ -142,3 +147,4 @@ export const rememberDevice = () => {
     }
   });
 };
+

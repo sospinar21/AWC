@@ -7,6 +7,7 @@ import { Route } from 'react-router-dom';
 import Login from '../Components/Home/Login/Login';
 import { Community } from '../Components/Home/Community/Community';
 import Entertainment from '../Components/Home/Entertainment/Entertainment'
+import { SignUp } from '../Components/Home/SignUp/SignUp'
 
 class App extends Component {
   constructor () {
@@ -20,7 +21,7 @@ class App extends Component {
       <div className="App">
         <Route exact path='/' component={Main} />
         <Route path='/profile' component={Profile} /> 
-        <Route path='/signin' component={Login} />
+        <Route path='/signin' component={SignUp} />
         <Route path='/community' component={Community} />
         <Route path='/entertainment' component={Entertainment} />                         
       </div>
