@@ -68,11 +68,11 @@ export class Login extends Component {
     return (
       <div className='si-su'>
         <div className='signin'>
-          <h3>Have an Account ?</h3>
+          <h3>LOGIN</h3>
           <h1>AWC </h1>
           <button>Log in with Facebook </button>
           <button onClick={() => this.getToken()}>Log in with Google </button>
-          <form autoComplete='on'>
+          <form className='login-form' autoComplete='on'>
             <input 
               name='email'
               type='email'

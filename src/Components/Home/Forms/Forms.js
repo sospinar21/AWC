@@ -28,6 +28,8 @@ export class Forms extends Component {
   }
 
   render () { 
+    const selected = this.state.logIn === true ? 'selected' : 'no-selected'
+    const selected2 = this.state.signUp === true ? 'selected' : 'no-selected'
 
     return (
       <div className='si-su'>
@@ -35,8 +37,8 @@ export class Forms extends Component {
         <div className='website'/> 
         <div className='forms'>
           <div className='forms-menu'> 
-            <button onClick={this.showLogIn}>Log In </button>
-            <button onClick={this.showSignUp}>Sign Up </button>
+            <button className= {selected} onClick={this.showLogIn}>Log In </button>
+            <button className={selected2} onClick={this.showSignUp}>Sign Up </button>
           </div>
           {this.displaySelected()}
         </div>

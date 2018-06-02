@@ -44,6 +44,7 @@ export class SignUp extends Component {
   render () {
     return (
       <div className='signup-box'>
+        <h3>SIGN UP</h3>
         <h1>AWC </h1>
         <button>Log in with Facebook </button>
         <button onClick={() => this.getToken()}>Log in with Google </button>              
@@ -78,7 +79,7 @@ export class SignUp extends Component {
         </form>
 
         <div className='policy'> 
-          <h3>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h3>
+          <p>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</p>
         </div>
       </div>
     );

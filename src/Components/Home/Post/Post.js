@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ApiCalls from '../../../Helper/ApiCalls/ApiCalls'
 import './Post.css';
-import { cogToken } from '../../../Helper/Users/Users';
 
 export class Post extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export class Post extends Component {
   sendPost = (e) => {
     e.preventDefault()
     this.props.addPost(this.state) 
+    this.sendToLambda()
     this.setState({category:'', input:''})
   }
 
@@ -32,6 +34,14 @@ export class Post extends Component {
     this.setState({
       category : selected
     })
+  }
+
+  sendToLambda = async () => {
+    const api = new ApiCalls()
+    console.log(this.props.user)
+    const token = await api.postComment(this.props.user);
+    console.log(token)
+
   }
   
   displayPostBox = () => {
@@ -63,8 +73,18 @@ export class Post extends Component {
   }
 }
 
-// export mapStateToProps = {}
 
-// export mapDispatchToProps = () => ({})
+export const mapStateToProps = (state) => {
+  return ({
+    user: state.user
+  });
+};
 
-// export connect(mapStateToProps, mapDispatchToProps)(Post)
+export const mapDispatchToProps = dispatch => ({
+});
+
+Post.propTypes = {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Post);

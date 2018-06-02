@@ -23,6 +23,7 @@
     box-sizing: border-box;
     height: 60px;
     font-size: 15px;
+    cursor: pointer;
   }
 
   h1{
@@ -35,8 +36,11 @@
   button {
     background-color: #b62d4d;
     color: white;
-    height: 50px;
-    
+    height: 50px;    
+  }
+
+  .no-selected {
+    background-color: #e6d9db;
   }
 }
 

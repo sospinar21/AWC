@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Community.css';
-import { Post } from '../Post/Post';
+import  Post  from '../Post/Post';
 
 export class Community extends Component {
   constructor() {

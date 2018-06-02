@@ -21,7 +21,8 @@
     width: 100%;
     box-sizing: border-box;
     height: 60px;
-    font-size: 15px; }
+    font-size: 15px;
+    cursor: pointer; }
   .forms h1 {
     color: #232b37;
     font-size: 50px;
@@ -31,6 +32,8 @@
     background-color: #b62d4d;
     color: white;
     height: 50px; }
+  .forms .no-selected {
+    background-color: #e6d9db; }
 
 .si-su {
   height: 900px;

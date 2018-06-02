@@ -46,6 +46,14 @@ class ApiCalls extends Component {
 
     return data;
   }
+
+  postComment = async (token) => {
+    const url = `https://api.awc.dance/postcomment?token=${token}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+
+  }
 }
 
 export default ApiCalls;
