@@ -139,7 +139,8 @@
 
 .actual-location {
   display: flex;
-  width: 40%; }
+  width: 40%;
+  overflow-x: scroll; }
   .actual-location h1 {
     color: white;
     margin: 1px;

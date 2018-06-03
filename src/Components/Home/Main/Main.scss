@@ -179,6 +179,7 @@ a:hover {
 .actual-location{
   display: flex;
   width: 40%;
+  overflow-x: scroll;
 
   h1{
     color: white;

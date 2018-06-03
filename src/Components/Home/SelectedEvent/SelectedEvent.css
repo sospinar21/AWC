@@ -1,5 +1,17 @@
 .selected-event {
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   display: -ms-flexbox;
   display: flex;
   background-color: white; }
+
+.event-desc {
+  width: 95%;
+  padding: 20px; }
+  .event-desc h1 {
+    color: #b62d4c; }
+
+.event-description {
+  padding: 0 10px;
+  margin: 11px auto;
+  height: 100px;
+  overflow: scroll; }

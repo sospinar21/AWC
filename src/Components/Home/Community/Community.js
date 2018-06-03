@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Community.css';
 import  Post  from '../Post/Post';
+import { connect } from 'react-redux';
+
 
 export class Community extends Component {
   constructor() {
@@ -16,6 +18,7 @@ export class Community extends Component {
   }
   
   displayForum = () => {
+    const user = this.props.user.username
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
         return (
@@ -28,9 +31,9 @@ export class Community extends Component {
               </div>
               <div className='likes'>
                 <h3>category: {post.category}</h3>
-                <h3>@ {post.user}</h3>
-                <p>{post.likes}</p><i className="material-icons icon" onClick={(e)=> this.upvote(e, post)}>thumb_up_alt</i>
-                <p>{post.dislikes}</p><i className="material-icons icon" onClick={(e)=> this.downVote(e, post)}>thumb_down_alt</i>
+                <h3>@ {user}</h3>
+                {/* <p>{post.likes}</p><i className="material-icons icon" onClick={(e)=> this.upvote(e, post)}>thumb_up_alt</i>
+                <p>{post.dislikes}</p><i className="material-icons icon" onClick={(e)=> this.downVote(e, post)}>thumb_down_alt</i> */}
               </div>
             </div>
           </div>
@@ -59,8 +62,17 @@ export class Community extends Component {
   }
 }
 
-// export mapStateToProps = {}
+export const mapStateToProps = (state) => {
+  return ({
+    user: state.user
+  });
+};
 
-// export mapDispatchToProps = () => ({})
+export const mapDispatchToProps = dispatch => ({
+});
 
-// export connect(mapStateToProps, mapDispatchToProps)(Community)
+Community.propTypes = {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Community)

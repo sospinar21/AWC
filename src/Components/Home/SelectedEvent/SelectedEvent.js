@@ -11,9 +11,13 @@ render () {
     if (selected) {
       return (
         <div className='selected-event'>
-          <h1> {selected.name}</h1>
-          {/* <h2>{selected.date.local}</h2> */}
-          <p>{selected.description}</p>
+          <div className='event-desc'>
+            <h1> {selected.name}</h1>
+            <div className='event-description'>
+              {/* <h2>{selected.date.local}</h2> */}
+              <p>{selected.description}</p>
+            </div>
+          </div>
         </div>
       ); 
     } else {

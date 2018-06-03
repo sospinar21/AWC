@@ -8,8 +8,6 @@ export class Post extends Component {
     super(props) 
 
     this.state = {
-      token: '',
-      user: 'Stephanie',
       category: '',
       input: '',
       likes: 0,
@@ -36,9 +34,7 @@ export class Post extends Component {
   }
 
   sendToLambda = async () => {
-    
-// i need to send post to Lamda = token, post content, type
-// 
+ 
 
   }
   

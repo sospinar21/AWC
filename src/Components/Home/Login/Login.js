@@ -47,7 +47,7 @@ export class Login extends Component {
 
     var userPool = new CognitoUserPool(poolData);
     var cognitoUser = userPool.getCurrentUser();
-
+    console.log(cognitoUser)
     if (cognitoUser != null) {
       cognitoUser.getSession((err, session) =>  {
         if (err) {
@@ -55,16 +55,17 @@ export class Login extends Component {
           return;
         }
         var token = session.getIdToken().getJwtToken();
-        this.giveAccess(token)
+        this.giveAccess(token, cognitoUser.username)
       });
     }
   }
 
-  giveAccess = async (token) => {
+  giveAccess = async (token, user) => {
+    const currentUser= {token, user}
     const api = new ApiCalls()
     const access = await api.postComment(token);
-    console.log('response', access)
-    this.props.addUser(token);
+    console.log('response', currentUser)
+    this.props.addUser(currentUser);
     this.setState({login:true})
   }
 

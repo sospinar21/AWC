@@ -83,7 +83,7 @@ displayStudios = () => {
         <div className='description'>
           <p>{studio.location.display_address[0]}</p>
           <p>{studio.location.display_address[1]}</p>          
-          <p>{studio.phone}</p>              
+          <p className='phone'>{studio.phone}</p>              
         </div>
       </div>
     );
