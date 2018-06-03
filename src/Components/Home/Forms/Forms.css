@@ -20,7 +20,7 @@
     background-color: #fafafa;
     width: 100%;
     box-sizing: border-box;
-    height: 60px;
+    height: 45px;
     font-size: 15px;
     cursor: pointer; }
   .forms h1 {
@@ -31,12 +31,18 @@
   .forms button {
     background-color: #b62d4d;
     color: white;
-    height: 50px; }
+    height: 40px; }
+  .forms button:disabled {
+    background-color: #e6d9db;
+    cursor: default; }
+  .forms .selected {
+    box-shadow: 0px 2px 6px grey;
+    border: 1px solid dimgrey; }
   .forms .no-selected {
-    background-color: #e6d9db; }
+    background-color: #b62d4de3; }
 
 .si-su {
-  height: 900px;
+  height: 100vh;
   overflow-y: hidden;
   background-color: #f3f3f3; }
 
@@ -47,7 +53,7 @@
   position: absolute;
   height: 900px;
   width: 45vw;
-  margin: 4% 240px 0;
+  margin: 0 240px 0;
   background-repeat: no-repeat; }
 
 .forms-menu {

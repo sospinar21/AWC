@@ -25,7 +25,6 @@ export class Post extends Component {
   sendPost = (e) => {
     e.preventDefault()
     this.props.addPost(this.state) 
-    this.sendToLambda()
     this.setState({category:'', input:''})
   }
 
@@ -37,10 +36,9 @@ export class Post extends Component {
   }
 
   sendToLambda = async () => {
-    const api = new ApiCalls()
-    console.log(this.props.user)
-    const token = await api.postComment(this.props.user);
-    console.log(token)
+    
+// i need to send post to Lamda = token, post content, type
+// 
 
   }
   

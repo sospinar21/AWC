@@ -7,6 +7,8 @@ import { NavBar } from '../NavBar/NavBar';
 import { addUser } from '../../../Actions/actions';
 import {CognitoUserPool} from 'amazon-cognito-identity-js';
 import { Redirect } from 'react-router'
+import ApiCalls from '../../../Helper/ApiCalls/ApiCalls'
+
 
 export class Login extends Component {
   constructor() {
@@ -58,7 +60,10 @@ export class Login extends Component {
     }
   }
 
-  giveAccess = (token) => {
+  giveAccess = async (token) => {
+    const api = new ApiCalls()
+    const access = await api.postComment(token);
+    console.log('response', access)
     this.props.addUser(token);
     this.setState({login:true})
   }
@@ -70,7 +75,7 @@ export class Login extends Component {
         <div className='signin'>
           <h3>LOGIN</h3>
           <h1>AWC </h1>
-          <button>Log in with Facebook </button>
+          <button> Log in with Facebook</button>
           <button onClick={() => this.getToken()}>Log in with Google </button>
           <form className='login-form' autoComplete='on'>
             <input 

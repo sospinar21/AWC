@@ -1,7 +1,7 @@
 .navBar {
   -webkit-box-shadow: 2px 2px 2px #70809094;
   box-shadow: 1px -3px 1px #d8d8d894;
-  height: 905px;
+  height: 100vh;
   width: 13vw;
   display: -ms-flexbox;
   -ms-flex-pack: justify;
@@ -17,7 +17,7 @@
   font-weight: 1000;
   -ms-flex: 20 1;
   flex: 20 1;
-  font-size: 80px;
+  font-size: 50px;
   color: #ffffff;
   font-family: 'Kalam', cursive;
   text-shadow: 2px 2px 2px #000000; }
@@ -32,7 +32,7 @@ a {
   text-decoration: none;
   color: white;
   font-weight: 200;
-  font-size: 19px;
+  font-size: 14px;
   letter-spacing: 1px;
   margin-left: 20px; }
 
