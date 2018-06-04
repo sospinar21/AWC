@@ -19,7 +19,8 @@
 
 button:disabled{
   background-color: #b4b4b4;
-  cursor: default
+  cursor: default;
+  border-bottom: none;
 }
 
 .post:hover{

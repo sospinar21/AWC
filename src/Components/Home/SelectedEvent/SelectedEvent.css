@@ -18,9 +18,10 @@
 .event-desc {
   background-color: rgba(0, 0, 0, 0.74);
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   padding: 23px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  width: 60%; }
   .event-desc h1 {
     color: #b62d4c;
     text-shadow: 1px 1px 1px black; }

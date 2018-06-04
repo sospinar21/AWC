@@ -56,14 +56,13 @@ export class Login extends Component {
           return;
         }
         var token = session.getIdToken().getJwtToken();
-        this.giveAccess(token, cognitoUser.username);
+        this.giveAccess(cognitoUser);
       });
     }
   }
 
-  giveAccess = async (token, user) => {
-    const currentUser= {token, user};
-    this.props.addUser(currentUser);
+  giveAccess = async (user) => {
+    this.props.addUser(user);
     this.setState({login:true});
   }
 

@@ -12,8 +12,8 @@ export class Post extends Component {
     super(props); 
 
     this.state = {
-      category: 'Post',
-      input: '',
+      type: 'Post',
+      content: '',
       likes: 0,
       dislikes: 0
     };
@@ -23,35 +23,33 @@ export class Post extends Component {
     const currentUser = await checkUser()
     if (currentUser.username){
       this.props.addUser(currentUser)
-      console.log('here')
     }
   }
 
-
   getPost = (e) => {
-    const input = e.target.value;
-    this.setState({input});
+    const content = e.target.value;
+    this.setState({content});
   }
 
   sendPost = (e) => {
     e.preventDefault();
     this.props.addPost(this.state);
     this.sendToLambda(); 
-    this.setState({category:'Post', input:''});
+    this.setState({type:'Post', content:''});
   }
 
   listenClick = (e) => {
     const selected = e.target.closest('li').innerText;
     this.setState({
-      category : selected
+      type : selected
     });
   }
 
   sendToLambda = async () => {
     const api = new ApiCalls();
     const user = this.props.user;
-    const {category, input} = this.state;
-    const response = await api.postComment(user, input, category);
+    const {type, content} = this.state;
+    const response = await api.postComment(user, content, type);
     console.log(response)
   }
 
@@ -59,7 +57,7 @@ export class Post extends Component {
     const user = this.props.user;
     return (
       user === {},
-      this.state.input.length === 0
+      this.state.content.length === 0
     );
   }
   
@@ -68,7 +66,7 @@ export class Post extends Component {
       <div className='post-area'>
         <form className='post-cont'> 
           <label className='label' htmlFor= 'post'>Post here!</label>
-          <textarea name='post' className='post-box' value={this.state.input} onChange={(e) => this.getPost(e)}/>
+          <textarea name='post' className='post-box' value={this.state.content} onChange={(e) => this.getPost(e)}/>
           <div className='post-menu' onClick={(e) => this.listenClick(e)}>
             <li>#Image</li>
             <li>#Video</li>
