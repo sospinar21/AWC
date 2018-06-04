@@ -138,7 +138,7 @@ Studios.propTypes = {
   suggestedStudios: PropTypes.array,
   addStudios: PropTypes.func,
   addSelectedStudio: PropTypes.func,
-  selectedStudio: PropTypes.obj,
+  selectedStudio: PropTypes.object,
   selectedLocation: PropTypes.string
 };
 

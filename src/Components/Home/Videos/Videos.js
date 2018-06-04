@@ -109,7 +109,7 @@ export const mapDispatchToProps = dispatch => ({
 
 Videos.propTypes = {
   addVideos: PropTypes.func,
-  suggestedVideos: PropTypes.obj
+  suggestedVideos: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Videos);

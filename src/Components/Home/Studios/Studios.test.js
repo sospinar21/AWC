@@ -17,7 +17,10 @@ describe('Studios', () => {
       suggestedStudios: [{name: 'BPC',
         location:'denver'
       }],
-      addStudios: jest.fn()
+      selectedLocation: 'Denver',
+      selectedStudio: {id:2},
+      addStudios: jest.fn(),
+      addSelectedStudio: jest.fn()
     };
 
     api.fetchEvents = jest.fn()
