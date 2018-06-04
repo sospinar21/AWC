@@ -30,7 +30,7 @@ export const signUp = (user) => {
 
   userPool.signUp(user.email, user.password, attributeList, null, function(err, result) {
     if (err) {
-      const error = document.querySelector('.error');
+      const error = document.querySelector('.created');
       error.innerText = 'invalid email or password: min 6 characters';
       return;
     }
@@ -56,7 +56,7 @@ export const logIn = (user) => {
     },
 
     onFailure: function (err) {
-      const incorrect = document.querySelector('.incorrect');
+      const incorrect = document.querySelector('.success');
       incorrect.innerText = 'Check your Password or Email';
       return; 
     }
