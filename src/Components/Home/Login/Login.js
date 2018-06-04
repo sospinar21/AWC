@@ -77,8 +77,8 @@ export class Login extends Component {
           <h1>AWC </h1>
           <h4 className='success'></h4>
           <h4 className='incorrect'></h4>
-          <button> Log in with Facebook</button>
-          <button onClick={() => this.getToken()}>Log in with Google </button>
+          {/* <button> Log in with Facebook</button>
+          <button onClick={() => this.getToken()}>Log in with Google </button> */}
           <form className='login-form' autoComplete='on'>
             <input 
               name='email'
