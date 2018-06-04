@@ -1,6 +1,6 @@
 import { eventsReducer } from './eventsReducer';
 
-describe('favorites reducer', () => {
+describe('events reducer', () => {
   it('returns default state if the action type doesn\'t match', () => {
     let initialState = {};
     
