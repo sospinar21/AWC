@@ -5,12 +5,20 @@ import PropTypes from 'prop-types';
 
 export class SelectedEvent extends Component {
 
+  backgroundImage = () => {
+    if (this.props.selectedEvent.logo){
+      const selected = this.props.selectedEvent.logo.url;
+      const selectedEvent = document.querySelector('.selected-event')
+      selectedEvent.style.backgroundImage = `url(${selected})`
+    }
+  }
+
 render () {
-  console.log(this.props.selectedEvent)
     const selected = this.props.selectedEvent
     if (selected) {
       return (
-        <div className='selected-event'>
+        <div className='flex'>
+          {this.backgroundImage()}
           <div className='event-desc'>
             <h1> {selected.name}</h1>
             <div className='event-description'>
@@ -23,7 +31,7 @@ render () {
     } else {
       return (
         <div className='loading'>
-         
+         Loading...
         </div>
       );
     }

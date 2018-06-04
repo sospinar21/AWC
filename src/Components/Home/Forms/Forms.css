@@ -37,10 +37,11 @@
     background-color: #e6d9db;
     cursor: default; }
   .forms .selected {
+    background-color: #232b37;
     box-shadow: 0px 2px 6px grey;
     border: 1px solid dimgrey; }
   .forms .no-selected {
-    background-color: #b62d4de3; }
+    background-color: #232b37; }
 
 .si-su {
   height: 100vh;

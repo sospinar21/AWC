@@ -85,9 +85,13 @@ renderCommunityOrStudios = () => {
   if(this.state.studiosActive === true){
     return <Studios />
   } else if (this.state.eventsActive === true) {
-    return <div className='main-events'> 
-      <SelectedEvent />
-      <Events /> </div>
+    return <div>
+      <div className='selected-event'>
+        <SelectedEvent />
+      </div>
+      <div className='main-events'> 
+        <Events /> </div>
+    </div>
   } else {
     return <Community /> 
   }

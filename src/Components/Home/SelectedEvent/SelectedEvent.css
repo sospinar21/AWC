@@ -1,17 +1,37 @@
 .selected-event {
-  margin-bottom: 10px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 320px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white; }
+  -webkit-box-shadow: 0px 0px 3px lightgrey;
+  box-shadow: 0px 0px 3px lightgrey;
+  background-image: url(http://www.semo.edu/images/dance-modernBanner.jpg); }
 
 .event-desc {
-  width: 95%;
-  padding: 20px; }
+  background-color: rgba(0, 0, 0, 0.74);
+  position: absolute;
+  bottom: 50px;
+  padding: 23px;
+  border-radius: 3px; }
   .event-desc h1 {
-    color: #b62d4c; }
+    color: #b62d4c;
+    text-shadow: 1px 1px 1px black; }
+
+.flex {
+  display: flex; }
 
 .event-description {
   padding: 0 10px;
   margin: 11px auto;
   height: 100px;
   overflow: scroll; }
+  .event-description p {
+    color: white; }
