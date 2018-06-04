@@ -5,13 +5,6 @@ import PropTypes from 'prop-types';
 
 export class SelectedEvent extends Component {
 
-  backgroundImage = () => {
-    if (this.props.selectedEvent.logo){
-      const selected = this.props.selectedEvent.logo.url;
-      const selectedEvent = document.querySelector('.selected-event');
-      selectedEvent.style.backgroundImage = `url(${selected})`;
-    }
-  }
 
   render () {
     const selected = this.props.selectedEvent;
@@ -19,7 +12,6 @@ export class SelectedEvent extends Component {
       const name = selected.name ? selected.name : 'Select an Event'
       return (
         <div className='flex'>
-          {this.backgroundImage()}
           <div className='event-desc'>
             <h1> {name}</h1>
             <div className='event-description'>
