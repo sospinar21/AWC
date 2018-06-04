@@ -14,7 +14,10 @@ describe('events', () => {
 
     mockProps = {
       suggestedEvents: [{name: 'party'}],
-      addEvents: jest.fn()
+      addEvents: jest.fn(),
+      selectedEvent: {name:'workshop'},
+      addSelectedEvent: jest.fn(),
+      selectedLocation: 'Denver'
     }
 
     api.fetchEvents = jest.fn()
@@ -22,7 +25,7 @@ describe('events', () => {
       status: 200,
       json: () => Promise.resolve({data: {}})
     }));
-    events = mount(<Events {...mockProps} /> )
+    events = shallow(<Events {...mockProps} /> )
 
   })
 
@@ -33,6 +36,7 @@ describe('events', () => {
 
   describe('componentDidMount', () => {
     it('calls fetchEvents', () => {
+      events = mount(<Events {...mockProps} /> )
 
       events.instance().componentDidMount()
       events.instance().fetchEvents = jest.fn()
@@ -42,9 +46,11 @@ describe('events', () => {
 
   describe('fetchEvents', () => {
 
-    it('calls window.fetch with the correct params', () => {
-      events.instance().fetchEvents()
-      expect(window.fetch).toHaveBeenCalledWith('https://api.awc.dance/events?city=denver')
+    it('calls window.fetch with the correct params', async () => {
+      const expected = ["https://api.awc.dance/events?city=Denver"]
+
+      await events.instance().fetchEvents(mockProps.selectedLocation)
+      expect(window.fetch).toHaveBeenCalledWith(expected)
     })
 
     it('calls props.addEvents', () => {
@@ -55,18 +61,11 @@ describe('events', () => {
     
   })
 
-  describe('displayEvents', () => {
+  describe('eventsInMain', () => {
 
     it('shows a default image if the event doesnt have one', () => {
 
-      const mockProps2 = {
-        suggestedEvents: [{date:{utc:'today'}}],
-        addEvents: jest.fn()
-      }
-
-      events = mount(<Events {...mockProps2} /> )
-
-      events.instance().displayEvents()
+      events.instance().eventsInMain()
       
       const logo = events.find('img')
 

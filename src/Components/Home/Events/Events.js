@@ -25,14 +25,14 @@ export class Events extends Component {
   }
 
   eventsInMain = () => {
-    const events = this.props.suggestedEvents.map(suggEvent => {
+    const events = this.props.suggestedEvents.map((suggEvent, index) => {
       if (suggEvent.logo){
         var img = suggEvent.logo.url;
       } else {
         var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       } 
       return (
-        <div key={suggEvent.id} onClick={() => this.storeSelected(suggEvent)} className='events-small-box'>
+        <div key={suggEvent + index} onClick={() => this.storeSelected(suggEvent)} className='events-small-box'>
           <img src={img} />
           <h4>{suggEvent.name}</h4>
         </div>
@@ -75,7 +75,7 @@ export const mapDispatchToProps = dispatch => ({
 
 Events.propTypes = {
   suggestedEvents: PropTypes.array,
-  selectedEvent: PropTypes.obj,
+  selectedEvent: PropTypes.object,
   addSelectedEvent: PropTypes.func,
   addEvents: PropTypes.func,
   selectedLocation: PropTypes.string
