@@ -7,8 +7,8 @@ import './Entertainment.css';
 import Videos from '../Videos/Videos';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 
-export class Main extends Component {
-  constructor() {
+export class Entertainment extends Component {
+  constructor () {
     super();
 
     this.state = {
@@ -43,8 +43,8 @@ export const mapDispatchToProps = dispatch => ({
   
 });
 
-Main.propTypes = {
+Entertainment.propTypes = {
   suggestedEvents: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Entertainment);

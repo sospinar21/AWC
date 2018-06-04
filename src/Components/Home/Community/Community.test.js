@@ -14,7 +14,7 @@ describe('community', () => {
       user: {username: 'Steph'},
     };
 
-    api.fetchEvents = jest.fn();
+    api.getPosts = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({data: {}})
@@ -34,7 +34,7 @@ describe('community', () => {
     it('calls api get post on load', () => {
       let community = shallow(<Community {...mockProps}/>);
 
-      api.getPosts = jest.fn().mockImplementation(() => Promise.resolve({
+      api.getPosts.mockImplementation(() => Promise.resolve({
         status: 200,
         json: () => Promise.resolve({data: []})
       }));
