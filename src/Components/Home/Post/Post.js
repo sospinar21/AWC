@@ -22,7 +22,8 @@ export class Post extends Component {
 
   sendPost = (e) => {
     e.preventDefault()
-    this.props.addPost(this.state) 
+    this.props.addPost(this.state)
+    this.sendToLambda() 
     this.setState({category:'', input:''})
   }
 
@@ -34,8 +35,11 @@ export class Post extends Component {
   }
 
   sendToLambda = async () => {
- 
-
+    const api = new ApiCalls()
+    const {token, user} = this.props.user
+    const {category, input} = this.state
+    const response = await api.postComment(token, user, input, category)
+    console.log(response)
   }
   
   displayPostBox = () => {

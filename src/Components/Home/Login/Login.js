@@ -10,6 +10,7 @@ import { Redirect } from 'react-router'
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls'
 
 
+
 export class Login extends Component {
   constructor() {
     super();
@@ -47,7 +48,7 @@ export class Login extends Component {
 
     var userPool = new CognitoUserPool(poolData);
     var cognitoUser = userPool.getCurrentUser();
-    console.log(cognitoUser)
+
     if (cognitoUser != null) {
       cognitoUser.getSession((err, session) =>  {
         if (err) {
@@ -62,20 +63,21 @@ export class Login extends Component {
 
   giveAccess = async (token, user) => {
     const currentUser= {token, user}
-    const api = new ApiCalls()
-    const access = await api.postComment(token);
-    console.log('response', currentUser)
     this.props.addUser(currentUser);
     this.setState({login:true})
   }
 
   render () {
+
+    this.state.login === true && <Redirect to='/profile' />;
     
     return (
       <div className='si-su'>
         <div className='signin'>
           <h3>LOGIN</h3>
           <h1>AWC </h1>
+          <h4 className='success'></h4>
+          <h4 className='incorrect'></h4>
           <button> Log in with Facebook</button>
           <button onClick={() => this.getToken()}>Log in with Google </button>
           <form className='login-form' autoComplete='on'>

@@ -43,15 +43,6 @@ export class Community extends Component {
     }
   }
 
-  upvote = (e, post) => {
-    post.likes = post.likes + 1
-  }
-
-  downVote = (e, post) => {
-    post.dislikes = post.dislikes + 1
-  }
-  
-
   render () {
     return (
       <div className='post-container'>

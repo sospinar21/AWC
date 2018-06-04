@@ -1,11 +1,6 @@
 import { Config, CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails, CognitoIdentityCredentials } from 'amazon-cognito-identity-js';
 import { Lambda } from 'aws-sdk';
 
-// var myCredentials = new CognitoIdentityCredentials({IdentityPoolId:'IDENTITY_POOL_ID'});
-// var myConfig = new Config({
-//   credentials: myCredentials, region: 'us-west-2'
-// });
-
 var poolData = { UserPoolId : 'us-west-2_t4LvOKjcE',
   ClientId: '47bsfajnf2rmvpt02q8qjvm29u'
 };
@@ -30,12 +25,13 @@ export const signUp = (user) => {
 
   userPool.signUp(user.email, user.password, attributeList, null, function(err, result) {
     if (err) {
-      alert('this is it' + JSON.stringify(err));
+      const error = document.querySelector('.error');
+      error.innerText = 'invalid email or password: min 6 characters';
       return;
     }
     var cognitoUser = result.user;
-    console.log(JSON.stringify(result));
-    console.log('user name is ' + cognitoUser.getUsername());
+    const created = document.querySelector('.created');
+    created.innerText = 'Welcome! your new user name is ' + cognitoUser.getUsername();
   });
 };
 
@@ -48,12 +44,16 @@ export const logIn = (user) => {
 
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
-      return result 
+      const success = document.querySelector('.success');
+      success.innerText = 'Welcome back!' + cognitoUser.getUsername();
+      return result; 
       // LoggedIn(cognitoUser, result);
     },
 
-    onFailure: function(err) {
-      alert(JSON.stringify(err));
+    onFailure: function (err) {
+      const incorrect = document.querySelector('.incorrect');
+      incorrect.innerText = 'Check your Password or Email';
+      return; 
     }
 
   });

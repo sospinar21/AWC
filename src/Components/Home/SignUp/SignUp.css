@@ -7,3 +7,11 @@
   .signup-box h3 {
     color: #232b37;
     font-size: 27px; }
+
+.error {
+  font-size: 16px;
+  color: red; }
+
+.created {
+  color: #418b0f;
+  font-size: 16px; }
