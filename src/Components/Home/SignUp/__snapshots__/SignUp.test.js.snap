@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`login matches snapshot 1`] = `undefined`;
-
 exports[`signUp matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
