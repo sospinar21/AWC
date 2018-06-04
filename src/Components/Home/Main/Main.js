@@ -7,10 +7,9 @@ import { NavBar } from '../../Home/NavBar/NavBar';
 import Studios from '../Studios/Studios';
 import './Main.css';
 import Videos from '../Videos/Videos';
-import Music from '../Music/Music';
 import Community from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
-import { addLocation, addEvents, addStudios } from '../../../Actions/actions'
+import { addLocation, addEvents, addStudios } from '../../../Actions/actions';
 import  SelectedEvent  from '../SelectedEvent/SelectedEvent';
 
 export class Main extends Component {
@@ -28,7 +27,7 @@ export class Main extends Component {
 
 updateState = (e) => {
   const userInput = e.target.value;
-  this.setState({selectedLocation:userInput})
+  this.setState({selectedLocation:userInput});
   this.fetchLocation(userInput);
 }
 
@@ -42,18 +41,18 @@ fetchLocation = async (userInput) => {
 
 displaySuggestions = (suggestions) => {
   if (suggestions){  
-    this.setState({locations:suggestions})
+    this.setState({locations:suggestions});
   } 
 }
 
 selectedLocation = async (e) => {
-  e.preventDefault()
-  const api = new ApiCalls()
-  this.props.addLocation(this.state.selectedLocation)
-  const suggestedEvents = await api.fetchEvents(this.state.selectedLocation)
-  const suggestedStudios = await api.fetchStudios(this.state.selectedLocation)
-  this.props.addEvents(suggestedEvents)
-  this.props.addStudios(suggestedStudios)
+  e.preventDefault();
+  const api = new ApiCalls();
+  this.props.addLocation(this.state.selectedLocation);
+  const suggestedEvents = await api.fetchEvents(this.state.selectedLocation);
+  const suggestedStudios = await api.fetchStudios(this.state.selectedLocation);
+  this.props.addEvents(suggestedEvents);
+  this.props.addStudios(suggestedStudios);
 }
 
 makeStudioActive = () => {
@@ -61,7 +60,7 @@ makeStudioActive = () => {
     communityActive: false,
     studiosActive: true,
     eventsActive:false
-  })
+  });
 }
 
 makeCommunityActive = () => {
@@ -69,7 +68,7 @@ makeCommunityActive = () => {
     communityActive: true,
     studiosActive: false,
     eventsActive:false
-  })
+  });
 }
 
 makeEventsActive = () => {
@@ -77,13 +76,13 @@ makeEventsActive = () => {
     communityActive: false,
     studiosActive: false,
     eventsActive: true
-  })
+  });
 }
 
 
 renderCommunityOrStudios = () => {
-  if(this.state.studiosActive === true){
-    return <Studios />
+  if (this.state.studiosActive === true){
+    return <Studios />;
   } else if (this.state.eventsActive === true) {
     return <div>
       <div className='selected-event'>
@@ -91,9 +90,9 @@ renderCommunityOrStudios = () => {
       </div>
       <div className='main-events'> 
         <Events /> </div>
-    </div>
+    </div>;
   } else {
-    return <Community /> 
+    return <Community />; 
   }
 }
 
@@ -108,7 +107,7 @@ render () {
   });
 
   const city = this.props.selectedLocation;
-  const selectedLocation = city.length ? city : 'USA'
+  const selectedLocation = city.length ? city : 'USA';
 
   return (
     <div>
@@ -158,10 +157,10 @@ render () {
             <Events />
           </div>
           <div className='titleFix'>
-            <a>Music </a>
+            <a>Video of the week</a>
           </div>
           <div className='studios-small'>
-            <div className='music'></div>
+            <iframe width="350" height="215" src="https://www.youtube.com/embed/2X2tCidTfEU?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowfullScreen></iframe>
           </div>
         </div> 
       </div>
@@ -185,7 +184,10 @@ export const mapDispatchToProps = dispatch => ({
 
 Main.propTypes = {
   suggestedEvents: PropTypes.array,
-  addLocation: PropTypes.func
+  addLocation: PropTypes.func,
+  addEvents: PropTypes.func,
+  addStudios: PropTypes.func,
+  selectedLocation: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

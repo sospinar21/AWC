@@ -45,7 +45,7 @@ export const logIn = (user) => {
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function (result) {
       const success = document.querySelector('.success');
-      success.innerText = 'Welcome back!' + cognitoUser.getUsername();
+      success.innerText = 'Welcome back! ' + cognitoUser.getUsername();
       return result; 
       // LoggedIn(cognitoUser, result);
     },

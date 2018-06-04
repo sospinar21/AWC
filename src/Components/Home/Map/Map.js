@@ -4,6 +4,7 @@ import './Map.css';
 import { compose, withProps } from "recompose";
 import { key } from '../../../apikey';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   withScriptjs,
   withGoogleMap,
@@ -24,7 +25,6 @@ const MyMapComponent = compose(
 )(props => {
   const longitude = props.selectedStudio.id ? props.selectedStudio.coordinates.longitude : 40.730610;
   const latitude = props.selectedStudio.id ? props.selectedStudio.coordinates.latitude : -73.935242;
-  console.log(longitude,latitude)  
   return (
     <GoogleMap defaultZoom={12} defaultCenter={{ lat: latitude, lng: longitude }}>
       <Marker position={{ lat: latitude, lng: longitude }} />
@@ -37,6 +37,10 @@ export const mapStateToProps = (state) => {
   return ({
     selectedStudio: state.selectedStudio
   });
+};
+
+Map.propTypes = {
+  selectedStudio: PropTypes.obj
 };
 
 export default connect(mapStateToProps)(MyMapComponent);

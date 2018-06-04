@@ -9,11 +9,8 @@ import Entertainment from '../Components/Home/Entertainment/Entertainment'
 import { Forms } from '../Components/Home/Forms/Forms';
 
 class App extends Component {
-  constructor () {
-    super();
-  }
 
-  render() {
+  render () {
     let api = new ApiCalls();
    
     return (

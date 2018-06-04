@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Events from '../Events/Events';
 import { NavBar } from '../../Home/NavBar/NavBar';
 import './Entertainment.css';
 import Videos from '../Videos/Videos';
-import Music from '../Music/Music';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 
 export class Main extends Component {
@@ -18,7 +16,7 @@ export class Main extends Component {
     };
   }
 
-render () {
+  render () {
 
     return (
       <div>
@@ -32,7 +30,7 @@ render () {
         </div>
       </div>
     );
-}
+  }
 }
 
 export const mapStateToProps = (state) => {

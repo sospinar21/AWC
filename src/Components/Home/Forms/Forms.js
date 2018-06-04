@@ -2,34 +2,34 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Forms.css';
-import { NavBar } from '../NavBar/NavBar'
+import { NavBar } from '../NavBar/NavBar';
 import  Login  from '../Login/Login';
 import { SignUp } from '../SignUp/SignUp';
 
 export class Forms extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       logIn: false,
       signUp: true
-    }
+    };
   }
 
   showLogIn = () => {
-    this.setState({ logIn: true, signUp: false})
+    this.setState({ logIn: true, signUp: false});
   }
 
   showSignUp = () => {
-    this.setState({ logIn: false, signUp: true})
+    this.setState({ logIn: false, signUp: true});
   }
 
   displaySelected = () => {
-    return this.state.logIn === true ? <Login /> : <SignUp />
+    return this.state.logIn === true ? <Login /> : <SignUp />;
   }
 
   render () { 
-    const selected = this.state.logIn === true ? 'selected' : 'no-selected'
-    const selected2 = this.state.signUp === true ? 'selected' : 'no-selected'
+    const selected = this.state.logIn === true ? 'selected' : 'no-selected';
+    const selected2 = this.state.signUp === true ? 'selected' : 'no-selected';
 
     return (
       <div className='si-su'>
@@ -58,7 +58,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Forms.propTypes = {
-  suggestedEvents: PropTypes.array,
+  suggestedEvents: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Forms);

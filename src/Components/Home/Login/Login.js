@@ -6,8 +6,8 @@ import {  logIn } from '../../../Helper/Users/Users';
 import { NavBar } from '../NavBar/NavBar';
 import { addUser } from '../../../Actions/actions';
 import {CognitoUserPool} from 'amazon-cognito-identity-js';
-import { Redirect } from 'react-router'
-import ApiCalls from '../../../Helper/ApiCalls/ApiCalls'
+import { Redirect } from 'react-router';
+import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 
 
 
@@ -56,15 +56,15 @@ export class Login extends Component {
           return;
         }
         var token = session.getIdToken().getJwtToken();
-        this.giveAccess(token, cognitoUser.username)
+        this.giveAccess(token, cognitoUser.username);
       });
     }
   }
 
   giveAccess = async (token, user) => {
-    const currentUser= {token, user}
+    const currentUser= {token, user};
     this.props.addUser(currentUser);
-    this.setState({login:true})
+    this.setState({login:true});
   }
 
   render () {
@@ -121,7 +121,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Login.propTypes = {
-  suggestedEvents: PropTypes.array
+  suggestedEvents: PropTypes.array,
+  addUser: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -6,14 +6,11 @@ import PropTypes from 'prop-types';
 import './Events.css';
 
 export class Events extends Component {
-  constructor () {
-    super();
-    
-  }
+
 
   componentDidMount() {
     const city = this.props.selectedLocation;
-    const selectedLocation = city.length ? city : 'usa'
+    const selectedLocation = city.length ? city : 'usa';
     this.fetchEvents(selectedLocation);
   }
   
@@ -24,7 +21,7 @@ export class Events extends Component {
   }
 
   storeSelected = (suggEvent) => {
-    this.props.addSelectedEvent(suggEvent)
+    this.props.addSelectedEvent(suggEvent);
   }
 
   eventsInMain = () => {
@@ -78,6 +75,8 @@ export const mapDispatchToProps = dispatch => ({
 
 Events.propTypes = {
   suggestedEvents: PropTypes.array,
+  selectedEvent: PropTypes.obj,
+  addSelectedEvent: PropTypes.func,
   addEvents: PropTypes.func,
   selectedLocation: PropTypes.string
 };

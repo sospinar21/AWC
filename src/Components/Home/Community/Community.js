@@ -2,23 +2,24 @@ import React, { Component } from 'react';
 import './Community.css';
 import  Post  from '../Post/Post';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 export class Community extends Component {
   constructor() {
-    super() 
+    super(); 
     this.state = {
       posts: []
-    }
+    };
   }
 
   addPost = (post) => {
-    const posts = [post, ...this.state.posts]
-    this.setState({posts})
+    const posts = [post, ...this.state.posts];
+    this.setState({posts});
   }
   
   displayForum = () => {
-    const user = this.props.user.username
+    const user = this.props.user.username;
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
         return (
@@ -63,7 +64,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Community.propTypes = {
-
+  user: PropTypes.obj
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Community)
+export default connect(mapStateToProps, mapDispatchToProps)(Community);

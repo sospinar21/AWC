@@ -37,9 +37,9 @@ export class Post extends Component {
   sendToLambda = async () => {
     const api = new ApiCalls()
     const {token, user} = this.props.user
+    console.log(token)
     const {category, input} = this.state
     const response = await api.postComment(token, user, input, category)
-    console.log(response)
   }
   
   displayPostBox = () => {

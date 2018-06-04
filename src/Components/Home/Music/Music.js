@@ -5,39 +5,24 @@ import './Music.css';
 
 export class Music extends Component {
 
+  componentDidMount() {
+    this.fetchMusic();
+  }
 
-//   componentDidMount() {
-//     this.fetchMusic();
-//   }
+fetchMusic = async () => {
+  let api = new ApiCalls();
+  const suggestedMusic = await api.fetchMusic();
+  await this.props.addMusic(suggestedMusic);
 
-// fetchMusic = async () => {
-//   let api = new ApiCalls();
-//   const suggestedMusic = await api.fetchMusic();
-//   await this.props.addMusic(suggestedMusic);
-
-// }
-
-// displayMusic = () => {
-//   const Music = this.props.suggestedMusic.map(video => {
-//     return (
-//       <div key={video.id.videoId} className=''>
-//         <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} />
-//       </div>
-//     );
-//   });
-
-//   return Music;
-// }
-
+}
 
 render () {
-
-    return (
-      <div className='music-box'>
-        nadieata
-      </div>
-    );
-  }
+  return (
+    <div className='music-box'>
+      nadieata
+    </div>
+  );
+}
 }
 
 export const mapStateToProps = (state) => {

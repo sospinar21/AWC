@@ -70,7 +70,7 @@ render () {
         <div className='selectedVideo'>
           <h1> Videos </h1>
           <div key={selectedVideo} className='video-display'>
-            <iframe src={`https://www.youtube.com/embed/${selectedVideo}`} />
+            <iframe className='selected-iframe'src={`https://www.youtube.com/embed/${selectedVideo}`} />
           </div>
           <div className='video-description'>
             <h3>{selectedTitle}</h3>
