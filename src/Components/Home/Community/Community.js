@@ -18,7 +18,7 @@ export class Community extends Component {
   async componentDidMount() {
     const api = new ApiCalls();
     const posts = await api.getPosts()
-    console.log('heah',posts)
+
     this.setState({posts})
   }
 
@@ -73,7 +73,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Community.propTypes = {
-  user: PropTypes.obj
+  user: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Community);
