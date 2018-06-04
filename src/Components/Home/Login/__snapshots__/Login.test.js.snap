@@ -46,14 +46,6 @@ ShallowWrapper {
         <h4
                 className="incorrect"
         />
-        <button>
-                 Log in with Facebook
-        </button>
-        <button
-                onClick={[Function]}
-        >
-                Log in with Google 
-        </button>
         <form
                 autoComplete="on"
                 className="login-form"
@@ -106,14 +98,6 @@ ShallowWrapper {
           <h4
             className="incorrect"
 />,
-          <button>
-             Log in with Facebook
-</button>,
-          <button
-            onClick={[Function]}
->
-            Log in with Google 
-</button>,
           <form
             autoComplete="on"
             className="login-form"
@@ -192,29 +176,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": " Log in with Facebook",
-          },
-          "ref": null,
-          "rendered": " Log in with Facebook",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Log in with Google ",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Log in with Google ",
-          "type": "button",
         },
         Object {
           "instance": null,
@@ -330,14 +291,6 @@ ShallowWrapper {
           <h4
                     className="incorrect"
           />
-          <button>
-                     Log in with Facebook
-          </button>
-          <button
-                    onClick={[Function]}
-          >
-                    Log in with Google 
-          </button>
           <form
                     autoComplete="on"
                     className="login-form"
@@ -390,14 +343,6 @@ ShallowWrapper {
             <h4
               className="incorrect"
 />,
-            <button>
-               Log in with Facebook
-</button>,
-            <button
-              onClick={[Function]}
->
-              Log in with Google 
-</button>,
             <form
               autoComplete="on"
               className="login-form"
@@ -476,29 +421,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": " Log in with Facebook",
-            },
-            "ref": null,
-            "rendered": " Log in with Facebook",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Log in with Google ",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Log in with Google ",
-            "type": "button",
           },
           Object {
             "instance": null,

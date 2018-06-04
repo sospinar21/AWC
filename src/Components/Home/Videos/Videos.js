@@ -62,9 +62,9 @@ render () {
     return (
       <div className='videos-main'>
         <div className='video-menu'> 
-          <input 
+          {/* <input 
             placeholder='Search categories'
-          />
+          /> */}
         </div> 
         <div className='selectedVideo'>
           <h1> Videos </h1>
