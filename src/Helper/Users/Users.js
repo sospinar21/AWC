@@ -6,6 +6,11 @@ var poolData = { UserPoolId : 'us-west-2_t4LvOKjcE',
 };
 var userPool = new CognitoUserPool(poolData);
 
+export const checkUser = () => {
+  var cognitoUser = userPool.getCurrentUser();
+  return cognitoUser;
+}
+
 export const signUp = (user) => {
   var attributeList = [];
 

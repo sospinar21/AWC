@@ -3,18 +3,30 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 import './Post.css';
+import { checkUser
+} from '../../../Helper/Users/Users';
+import { addUser } from '../../../Actions/actions';
 
 export class Post extends Component {
   constructor(props) {
     super(props); 
 
     this.state = {
-      category: '',
+      category: 'Post',
       input: '',
       likes: 0,
       dislikes: 0
     };
   }
+
+  async componentDidMount() {
+    const currentUser = await checkUser()
+    if (currentUser.username){
+      this.props.addUser(currentUser)
+      console.log('here')
+    }
+  }
+
 
   getPost = (e) => {
     const input = e.target.value;
@@ -25,7 +37,7 @@ export class Post extends Component {
     e.preventDefault();
     this.props.addPost(this.state);
     this.sendToLambda(); 
-    this.setState({category:'', input:''});
+    this.setState({category:'Post', input:''});
   }
 
   listenClick = (e) => {
@@ -37,9 +49,18 @@ export class Post extends Component {
 
   sendToLambda = async () => {
     const api = new ApiCalls();
-    const {token, user} = this.props.user;
+    const user = this.props.user;
     const {category, input} = this.state;
-    const response = await api.postComment(token, user, input, category);
+    const response = await api.postComment(user, input, category);
+    console.log(response)
+  }
+
+  validatePost = () => {
+    const user = this.props.user;
+    return (
+      user === {},
+      this.state.input.length === 0
+    );
   }
   
   displayPostBox = () => {
@@ -55,7 +76,7 @@ export class Post extends Component {
             <li>#Pro</li>
             <li>#Entertainment</li>
           </div> 
-          <button type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}> Submit </button>
+          <button disabled={this.validatePost()} type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}> Submit </button>
         </form>
       </div>
     );
@@ -79,6 +100,7 @@ export const mapStateToProps = (state) => {
 };
 
 export const mapDispatchToProps = dispatch => ({
+  addUser: (user) => dispatch(addUser(user))
 });
 
 Post.propTypes = {

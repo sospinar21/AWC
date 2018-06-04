@@ -15,6 +15,10 @@
   display: flex;
   cursor: pointer; }
 
+button:disabled {
+  background-color: #b4b4b4;
+  cursor: default; }
+
 .post:hover {
   background-color: #d3d3d33b; }
 
