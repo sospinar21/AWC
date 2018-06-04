@@ -31,16 +31,16 @@ describe('community', () => {
 
   describe('componenDidMount', () => {
 
-    it('calls api get post on load', () => {
+    it('calls api get post on load', async () => {
       let community = shallow(<Community {...mockProps}/>);
 
       api.getPosts.mockImplementation(() => Promise.resolve({
         status: 200,
-        json: () => Promise.resolve({data: []})
+        json: () => Promise.resolve({data: [{type:'Post'}]})
       }));
 
-      community.instance().componentDidMount();
-      expect(community.state().posts).toEqual([])
+      await community.instance().componentDidMount();
+      expect(community.state().posts).toEqual({data:{}})
     });
   });
 
@@ -72,7 +72,5 @@ describe('community', () => {
       
     })
   })
-
-  
 
 });

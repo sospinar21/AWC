@@ -1,4 +1,4 @@
-import { Events, mapStateToProps, mapDispatchToProps } from '../Events/Events'
+import { Events, mapStateToProps, mapDispatchToProps } from '../Events/Events';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme';
@@ -18,82 +18,80 @@ describe('events', () => {
       selectedEvent: {name:'workshop'},
       addSelectedEvent: jest.fn(),
       selectedLocation: 'Denver'
-    }
+    };
 
-    api.fetchEvents = jest.fn()
+    api.fetchEvents = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({data: {}})
     }));
-    events = shallow(<Events {...mockProps} /> )
+    events = shallow(<Events {...mockProps} /> );
 
-  })
+  });
 
 
   it('matches snapshot', () => {
     expect(events).toMatchSnapshot();
-  })
-
-  describe('componentDidMount', () => {
-    it('calls fetchEvents', () => {
-      events = mount(<Events {...mockProps} /> )
-
-      events.instance().componentDidMount()
-      events.instance().fetchEvents = jest.fn()
-      expect(events.instance().fetchEvents).toHaveBeenCalled()
-    })
-  })
+  });
 
   describe('fetchEvents', () => {
 
-    it('calls window.fetch with the correct params', async () => {
-      const expected = ["https://api.awc.dance/events?city=Denver"]
+    it('calls window.fetch', async () => {
 
-      await events.instance().fetchEvents(mockProps.selectedLocation)
-      expect(window.fetch).toHaveBeenCalledWith(expected)
-    })
+      await events.instance().fetchEvents(mockProps.selectedLocation);
+      expect(window.fetch).toHaveBeenCalled();
+    });
 
     it('calls props.addEvents', () => {
 
-      events.instance().fetchEvents()
-      expect(mockProps.addEvents).toHaveBeenCalledWith({"data": {}})
-    })
+      events.instance().fetchEvents();
+      expect(mockProps.addEvents).toHaveBeenCalledWith({"data": {}});
+    });
     
-  })
+  });
+
+  describe('storeSelected', () => {
+
+    it('calls props.addSelectedEvent', async () => {
+
+      await events.instance().storeSelected();
+      expect(mockProps.addSelectedEvent).toHaveBeenCalled();
+    });    
+  });
 
   describe('eventsInMain', () => {
 
     it('shows a default image if the event doesnt have one', () => {
 
-      events.instance().eventsInMain()
-      
-      const logo = events.find('img')
+      events.instance().eventsInMain();
 
-      expect(logo.props('src').value).toEqual(undefined)
-    })
+      const logo = events.find('img');
+
+      expect(logo.props('src').value).toEqual(undefined);
+    });
     
-  })
+  });
 
   describe('eventsinMain', () => {
     
-  })
+  });
 
   describe('mapStateToProps', () => {
     
     let mockDispatch;
     let suggestedEvents;
-    let mappedProps
+    let mappedProps;
 
     it('returns an object with the suggestedEvents', () => {
 
       const mockState = {
         suggestedEvents: {name: 'Workshop'}
-      }
+      };
 
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(mockState);
       
-    })
+    });
   })
 
   describe('mapDispatchToProps', () => {
@@ -103,7 +101,7 @@ describe('events', () => {
       let mockDispatch = jest.fn();
       let mappedProps = mapDispatchToProps(mockDispatch);
       
-      const eventsData = {id: 1, title:'workshop'}      
+      const eventsData = {id: 1, title:'workshop'};      
       const mockAction = {
         type: 'ADD_EVENTS',
         eventsData
@@ -111,8 +109,8 @@ describe('events', () => {
   
       mappedProps.addEvents(eventsData);
       expect(mockDispatch).toHaveBeenCalledWith(mockAction);
-    })
+    });
 
-  })
+  });
   
-})
+});
