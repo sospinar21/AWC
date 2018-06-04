@@ -16,11 +16,12 @@ export class SelectedEvent extends Component {
   render () {
     const selected = this.props.selectedEvent;
     if (selected) {
+      const name = selected.name ? selected.name : 'Select an Event'
       return (
         <div className='flex'>
           {this.backgroundImage()}
           <div className='event-desc'>
-            <h1> {selected.name}</h1>
+            <h1> {name}</h1>
             <div className='event-description'>
               {/* <h2>{selected.date.local}</h2> */}
               <p>{selected.description}</p>
