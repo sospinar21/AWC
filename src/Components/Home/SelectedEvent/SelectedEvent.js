@@ -8,13 +8,13 @@ export class SelectedEvent extends Component {
   backgroundImage = () => {
     if (this.props.selectedEvent.logo){
       const selected = this.props.selectedEvent.logo.url;
-      const selectedEvent = document.querySelector('.selected-event')
-      selectedEvent.style.backgroundImage = `url(${selected})`
+      const selectedEvent = document.querySelector('.selected-event');
+      selectedEvent.style.backgroundImage = `url(${selected})`;
     }
   }
 
-render () {
-    const selected = this.props.selectedEvent
+  render () {
+    const selected = this.props.selectedEvent;
     if (selected) {
       return (
         <div className='flex'>
@@ -42,6 +42,10 @@ export const mapStateToProps = (state) => {
   return ({
     selectedEvent: state.selectedEvent
   });
+};
+
+SelectedEvent.propTypes = {
+  selectedEvent: PropTypes.obj
 };
 
 export default connect(mapStateToProps)(SelectedEvent);

@@ -1,45 +1,45 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ApiCalls from '../../../Helper/ApiCalls/ApiCalls'
+import PropTypes from 'prop-types';
+import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 import './Post.css';
 
 export class Post extends Component {
   constructor(props) {
-    super(props) 
+    super(props); 
 
     this.state = {
       category: '',
       input: '',
       likes: 0,
       dislikes: 0
-    }
+    };
   }
 
   getPost = (e) => {
-    const input = e.target.value
-    this.setState({input})
+    const input = e.target.value;
+    this.setState({input});
   }
 
   sendPost = (e) => {
-    e.preventDefault()
-    this.props.addPost(this.state)
-    this.sendToLambda() 
-    this.setState({category:'', input:''})
+    e.preventDefault();
+    this.props.addPost(this.state);
+    this.sendToLambda(); 
+    this.setState({category:'', input:''});
   }
 
   listenClick = (e) => {
     const selected = e.target.closest('li').innerText;
     this.setState({
       category : selected
-    })
+    });
   }
 
   sendToLambda = async () => {
-    const api = new ApiCalls()
-    const {token, user} = this.props.user
-    console.log(token)
-    const {category, input} = this.state
-    const response = await api.postComment(token, user, input, category)
+    const api = new ApiCalls();
+    const {token, user} = this.props.user;
+    const {category, input} = this.state;
+    const response = await api.postComment(token, user, input, category);
   }
   
   displayPostBox = () => {
@@ -58,7 +58,7 @@ export class Post extends Component {
           <button type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}> Submit </button>
         </form>
       </div>
-    )
+    );
   }
 
 
@@ -82,7 +82,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Post.propTypes = {
-
+  user: PropTypes.obj,
+  addPost: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post);

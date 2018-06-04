@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 
 export class Studios extends Component {
   constructor() {
-    super()
+    super();
     this.state = ({
       selectedStudio:false
-    })
+    });
   }
 
   componentDidMount() {
@@ -31,17 +31,17 @@ fetchSelected = (studio) => {
   let api = new ApiCalls();
   if (studio) {
     const reviews = api.fetchSingleStudio(studio.id)
-      .then(response => this.props.addSelectedStudio({...response, ...studio})) 
+      .then(response => this.props.addSelectedStudio({...response, ...studio})); 
   } else {
     return (
       <h1>Select a Studio</h1>
-    )
+    );
   }
 }
 
 displaySelected = () => {
   const selected = this.props.selectedStudio;
-  if(selected.id) { 
+  if (selected.id) { 
     return (
       <div key={1} className='selected-card'> 
         <div className='map'>
@@ -136,7 +136,10 @@ export const mapDispatchToProps = dispatch => ({
 
 Studios.propTypes = {
   suggestedStudios: PropTypes.array,
-  addStudios: PropTypes.func
+  addStudios: PropTypes.func,
+  addSelectedStudio: PropTypes.func,
+  selectedStudio: PropTypes.obj,
+  selectedLocation: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Studios);

@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import './NavBar.css'
+import './NavBar.css';
 
 export class NavBar extends Component {
   
   render () {
-    return(
+    return (
       <div className='navBar'>
         <div className='logo-box'>
           <h1 className='logo'>AWC</h1>
@@ -27,12 +27,12 @@ export class NavBar extends Component {
           </div>
         </div>         
       </div>
-    )
+    );
   }
 }
 
-export const mapStateToProps = {}
+export const mapStateToProps = {};
 
-export const mapDispatchToProps = () => ({})
+export const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar)
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

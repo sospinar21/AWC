@@ -5,40 +5,40 @@ import './SignUp.css';
 import { signUp, 
   confirmRegistration, 
   cogToken,
-  rememberDevice,
- } from '../../../Helper/Users/Users'
+  rememberDevice
+} from '../../../Helper/Users/Users';
  
- import { NavBar } from '../NavBar/NavBar'
+import { NavBar } from '../NavBar/NavBar';
 
 export class SignUp extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       email: '',
       password: '',
-      city: '',
-    }
+      city: ''
+    };
   }
 
   handleInputChange = (e) => {
-    const {name, value} = e.target
-    this.setState({[name]: value})
+    const {name, value} = e.target;
+    this.setState({[name]: value});
   }
   
   userSignUp = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const validate = this.validateEmail();
-    signUp(this.state)
-    this.setState({email:'', password:'', city: ''})
+    signUp(this.state);
+    this.setState({email:'', password:'', city: ''});
   }
 
   validateEmail = () => {
-    const {email, password, city} = this.state
-    return(
+    const {email, password, city} = this.state;
+    return (
       email.length === 0,
       password.length === 0,
       city.length === 0
-    )
+    );
   }
 
   getToken = () => {
@@ -103,7 +103,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 SignUp.propTypes = {
-  suggestedEvents: PropTypes.array,
+  suggestedEvents: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

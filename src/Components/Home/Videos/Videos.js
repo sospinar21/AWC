@@ -7,12 +7,12 @@ import PropTypes from 'prop-types';
 
 export class Videos extends Component {
   constructor() {
-    super() 
+    super(); 
 
     this.state = {
       selectedVideo: '',
       selectedTitle:''
-    }
+    };
   }
 
   componentDidMount() {
@@ -27,13 +27,12 @@ fetchVideos = async () => {
 }
 
 displaySelectedVideo = (id, title) => {
-  console.log(title)
- if (id){
-  this.setState({
-    selectedVideo: id,
-    selectedTitle: title
-  })
- }
+  if (id){
+    this.setState({
+      selectedVideo: id,
+      selectedTitle: title
+    });
+  }
 }
 
 displayVideos = () => {
@@ -56,8 +55,8 @@ displayVideos = () => {
 
 
 render () {
-  const selectedVideo = this.state.selectedVideo.length ? this.state.selectedVideo : 'Kl5B6MBAntI'
-  const selectedTitle = this.state.selectedTitle.length ? this.state.selectedTitle: 'ED SHEERAN - Shape Of You | Kyle Hanagami Choreography'
+  const selectedVideo = this.state.selectedVideo.length ? this.state.selectedVideo : 'Kl5B6MBAntI';
+  const selectedTitle = this.state.selectedTitle.length ? this.state.selectedTitle: 'ED SHEERAN - Shape Of You | Kyle Hanagami Choreography';
 
   if (this.props.suggestedVideos.length) {
     return (
@@ -106,6 +105,11 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = dispatch => ({
   addVideos: (VideosData) => dispatch(addVideos(VideosData)) 
-  
 });
+
+Videos.propTypes = {
+  addVideos: PropTypes.func,
+  suggestedVideos: PropTypes.obj
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(Videos);
