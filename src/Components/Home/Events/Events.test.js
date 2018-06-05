@@ -23,7 +23,7 @@ describe('events', () => {
     api.fetchEvents = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
-      json: () => Promise.resolve({data: {}})
+      json: () => Promise.resolve({data: {name: 'workshop'}})
     }));
     events = shallow(<Events {...mockProps} /> );
 
@@ -45,7 +45,7 @@ describe('events', () => {
     it('calls props.addEvents', () => {
 
       events.instance().fetchEvents();
-      expect(mockProps.addEvents).toHaveBeenCalledWith({"data": {}});
+      expect(mockProps.addEvents).toHaveBeenCalledWith({data: {name: 'workshop'}});
     });
     
   });
@@ -54,8 +54,9 @@ describe('events', () => {
 
     it('calls props.addSelectedEvent', async () => {
 
-      await events.instance().storeSelected();
-      expect(mockProps.addSelectedEvent).toHaveBeenCalled();
+      const suggested = {name: 'workshop'}
+      await events.instance().storeSelected(suggested);
+      expect(mockProps.addSelectedEvent).toHaveBeenCalledWith(suggested);
     });    
   });
 
@@ -65,14 +66,9 @@ describe('events', () => {
 
       events.instance().eventsInMain();
 
-      const logo = events.find('img');
+      expect(events.find('img').prop('src')).toEqual('https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-');
 
-      expect(logo.props('src').value).toEqual(undefined);
     });
-    
-  });
-
-  describe('eventsinMain', () => {
     
   });
 
