@@ -33,7 +33,8 @@
   padding: 10px;
   overflow: hidden; }
   .title-box h4 {
-    font-size: 15px; }
+    font-size: 15px;
+    color: black; }
 
 .selected-iframe {
   height: 417px;

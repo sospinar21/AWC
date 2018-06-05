@@ -89,7 +89,13 @@ body{
 }
 
 #featured{
-  height: 45%;
+  height: 55%;
+
+  h3{
+    font-size: 14px;
+    color: black;
+    margin: 2px 0px 10px;
+  }
 }
 
 .logo{
@@ -294,6 +300,12 @@ body{
   font-size: 15px;
   color: rgb(100, 101, 110);
   margin-bottom: 10px;
+}
+
+#studios{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(http://risingstardance.com.au/wp-content/uploads/2014/06/Dancer_Quote_Beenleigh_Dance.png)
 }
 
 .flagico{

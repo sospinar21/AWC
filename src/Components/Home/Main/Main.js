@@ -162,9 +162,10 @@ render () {
           </div> 
         </div>
         <div className="stack">
-          <div id="studios" onClick = {() => this.makeEventsActive()} className="stacked  box">
+          <div id="studios" className="stacked  box">
           </div>
           <div id="featured" className="stacked  box">
+            <h3>Featured Video</h3>
             <iframe width="350" height="215" src="https://www.youtube.com/embed/2X2tCidTfEU?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowfullScreen></iframe>
           </div>
         </div>
