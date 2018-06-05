@@ -17,9 +17,9 @@ export class Community extends Component {
 
   async componentDidMount() {
     const api = new ApiCalls();
-    const posts = await api.getPosts()
+    const posts = await api.getPosts();
 
-    this.setState({posts})
+    this.setState({posts});
   }
 
   addPost = (post) => {
@@ -31,23 +31,26 @@ export class Community extends Component {
     const user = this.props.user.username;
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
-        console.log(post)
+        console.log(post);
         return (
-          <div className='post' key={user + index}>
-            <div className='post-img'>
+          <div className="post" key={user + index}>
+            <div className="poster">
+              <i className="flagico">
+                <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-co" viewbox="0 0 512 512">
+                  <g fillRule="evenodd" strokeWidth="1pt">
+                    <path fill="#ffe800" d="M0 0h512v512H0z"/>
+                    <path fill="#00148e" d="M0 256h512v256H0z"/>
+                    <path fill="#da0010" d="M0 384h512v128H0z"/>
+                  </g>
+                </svg>
+              </i>
+              <b>{post.user}</b>
+              <br/>
+              <b>category: {post.type}</b>
             </div>
-            <div className='post-description'>
-              <div className='text-description'> 
-                <p>{post.content}</p>
-              </div>
-              <div className='likes'>
-                <h3>category: {post.type}</h3>
-                <h3>@ {post.user}</h3>
-                {/* <p>{post.likes}</p><i className="material-icons icon" onClick={(e)=> this.upvote(e, post)}>thumb_up_alt</i>
-                <p>{post.dislikes}</p><i className="material-icons icon" onClick={(e)=> this.downVote(e, post)}>thumb_down_alt</i> */}
-              </div>
+            <div className="content">{post.content}
             </div>
-          </div>
+          </div> 
         );
       });
       return posts;
@@ -56,9 +59,11 @@ export class Community extends Component {
 
   render () {
     return (
-      <div className='post-container'>
+      <div>
         <Post addPost = {this.addPost}/>
-        {this.displayForum()}
+        <div className='post-container'>
+          {this.displayForum()}
+        </div>
       </div>
     );
   }

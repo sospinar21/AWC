@@ -41,6 +41,7 @@ fetchSelected = (studio) => {
 
 displaySelected = () => {
   const selected = this.props.selectedStudio;
+  const review = selected.rating * 20
   if (selected.id) { 
     return (
       <div key={1} className='selected-card'> 
@@ -51,7 +52,14 @@ displaySelected = () => {
           <div className='description-container'>
             <div className='text-container'>
               <h4>{selected.title}</h4>
-              <i className="material-icons">favorite</i><b>{selected.rating}</b>
+              <div className="stars">
+                <div>
+                  <img src={require('../../../assets/regular_0.png')} />
+                </div>
+                <div className="redStars" style={{ "width": `${review}%` }}>
+                  <img src={require('../../../assets/regular_5@3x.png')} />
+                </div>
+              </div>
             </div>
           </div> 
           <div className='description'>
@@ -68,24 +76,20 @@ displaySelected = () => {
 displayStudios = () => {
   const studios = this.props.suggestedStudios.map(studio => {
     return (
-      <div key={studio.id} className='suggStudio-cards' onClick= {() => this.fetchSelected(studio)}>
-        <div className='main-info'>
-          <div className='img-box'>
-            <img className='studio-img' src={studio.image} />
+      <div className="post" key={studio.id} onClick={() => this.fetchSelected(studio)}>
+        <div className="poster poster-studio">
+          <b className='event-b'>{studio.title}</b>
+          <div className='description'>
+            <p>{studio.location.display_address[0]}</p>
+            <p>{studio.location.display_address[1]}</p>          
+            <p className='phone'>{studio.phone}</p>              
           </div>
-          <div className='description-container'>
-            <div className='text-container'>
-              <h4>{studio.title}</h4>
-              <i className="material-icons">favorite</i><b>{studio.rating}</b>
-            </div>
-          </div>
-        </div>  
-        <div className='description'>
-          <p>{studio.location.display_address[0]}</p>
-          <p>{studio.location.display_address[1]}</p>          
-          <p className='phone'>{studio.phone}</p>              
+          <br/>
         </div>
-      </div>
+        <div className="content content-s">
+          <img className='studio-img' src={studio.image} />
+        </div>
+      </div> 
     );
   });
 

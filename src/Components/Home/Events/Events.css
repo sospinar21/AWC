@@ -13,6 +13,12 @@
   border-color: rgba(0, 0, 0, 0.05);
   border-image: initial; }
 
+.content-e {
+  text-align: right; }
+
+.event-b {
+  font-size: 17px; }
+
 .suggEvent-cards {
   width: 20%;
   margin: 20.3px;
@@ -64,6 +70,9 @@
   .main-banner-text h2 {
     font-size: 40px; }
 
+.content img {
+  max-height: 100px; }
+
 .events-small-box {
   height: 95px;
   width: 100%;
@@ -89,3 +98,7 @@
 
 .events-small-box:hover {
   background-color: #d3d3d33b; }
+
+.main-events {
+  height: 300px;
+  overflow-y: scroll; }

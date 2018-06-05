@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   position: relative;
-  height: 320px;
+  height: 250px;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,19 +13,21 @@
   display: flex;
   -webkit-box-shadow: 0px 0px 3px lightgrey;
   box-shadow: 0px 0px 3px lightgrey;
-  background-image: url(http://entertainmentvoice.com/wp-content/uploads/2017/08/TheRedShoes-JohanPersson_Feature2.jpg);
+  background-image: url(https://i.pinimg.com/originals/80/68/6a/80686a60f0db8ac844b633a5c2c12733.jpg);
 }
 
 .event-desc {
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(0, 0, 0, 0.87);
   position: absolute;
   bottom: 20px;
   padding: 23px;
   border-radius: 3px;
   width: 60%;
+  height: 185px;
 
   h1 {
-    color: #b62d4c;
+    font-size: 23px;
+    color: #d4c9cc;
     text-shadow: 1px 1px 1px black;
   }
 }
@@ -37,10 +39,12 @@
 .event-description{
   padding: 0 10px;
   margin: 11px auto;
-  height: 100px;
+  height: 50px;
   overflow: scroll;
 
   p{
-    color: white
+    font-size: 13px;
+    line-height: 1.5;
+    color: white;
   }
 }

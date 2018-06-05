@@ -32,10 +32,15 @@ export class Events extends Component {
         var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       } 
       return (
-        <div key={suggEvent + index} onClick={() => this.storeSelected(suggEvent)} className='events-small-box'>
-          <img src={img} />
-          <h4>{suggEvent.name}</h4>
-        </div>
+        <div className="post" key={suggEvent + index} onClick={() => this.storeSelected(suggEvent)}>
+          <div className="poster">
+            <b className='event-b'>{suggEvent.name}</b>
+            <br/>
+          </div>
+          <div className="content content-e">
+            <img src={img} />
+          </div>
+        </div> 
       );
     });
     return events;

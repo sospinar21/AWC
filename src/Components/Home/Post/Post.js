@@ -21,7 +21,7 @@ export class Post extends Component {
 
   async componentDidMount() {
     const currentUser = await checkUser()
-    if (currentUser.username){
+    if (currentUser){
       this.props.addUser(currentUser)
     }
   }
@@ -36,13 +36,6 @@ export class Post extends Component {
     this.props.addPost(this.state);
     this.sendToLambda(); 
     this.setState({type:'Post', content:''});
-  }
-
-  listenClick = (e) => {
-    const selected = e.target.closest('li').innerText;
-    this.setState({
-      type : selected
-    });
   }
 
   sendToLambda = async () => {
@@ -67,13 +60,6 @@ export class Post extends Component {
         <form className='post-cont'> 
           <label className='label' htmlFor= 'post'>Post here!</label>
           <textarea name='post' className='post-box' value={this.state.content} onChange={(e) => this.getPost(e)}/>
-          <div className='post-menu' onClick={(e) => this.listenClick(e)}>
-            <li>#Image</li>
-            <li>#Video</li>
-            <li>#Network </li>
-            <li>#Pro</li>
-            <li>#Entertainment</li>
-          </div> 
           <button disabled={this.validatePost()} type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}> Submit </button>
         </form>
       </div>

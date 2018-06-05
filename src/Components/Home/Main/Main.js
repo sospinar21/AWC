@@ -110,59 +110,64 @@ render () {
   const selectedLocation = city.length ? city : 'USA';
 
   return (
-    <div>
-      <div className='news-feed'>
-        <div className='navBar-forum'>
-          <NavBar />
-          <div className='forum'>
-            <div className='location'>
-              <form className='location-form'>
-                <input
-                  type='text'
-                  list='locations'
-                  onInput={(e) => this.updateState(e)}
-                  placeholder='Start typing your City'
-                  className='city-input'
-                />
-                <button 
-                  className='submit-location'
-                  onClick = {(e) => this.selectedLocation(e)}>Search</button>
-              </form>
-              <datalist 
-                id='locations'>
-                {suggestions}
-              </datalist>
-              <div className='actual-location'>
-                <i className="material-icons">location_on</i>
-                <h1>{selectedLocation}</h1>
-              </div>
-              <div className='btns'>
-                <a
-                  onClick={() => this.makeCommunityActive()}
-                  className='active'>Posts</a> 
-                <a
-                  onClick={() => this.makeStudioActive()}
-                >Studios</a> 
-              </div>
-            </div>  
-            {this.renderCommunityOrStudios()}
-          </div>
+    <div className='body'>
+      <div className="nav">
+        <div className="logo">
+          <div className="logocir">AWC</div>
         </div>
-        <div className='side-container'>
-          <div className='titleFix' onClick={this.makeEventsActive}>
-            <a>Events </a>
+
+        <form className='location-form'>
+          <input
+            type='text'
+            list='locations'
+            onInput={(e) => this.updateState(e)}
+            placeholder='Start typing your City'
+            className='city-input'
+          />
+          <button 
+            className='submit-location'
+            onClick = {(e) => this.selectedLocation(e)}>Search</button>
+        </form>
+        <datalist 
+          id='locations'>
+          {suggestions}
+        </datalist>
+        <div className='actual-location'>
+          <i className="material-icons">location_on</i>
+          <h1>{selectedLocation}</h1>
+        </div>
+
+        <div className="buffer"></div>
+        <NavLink to='/signin' className="signink">
+          <div className="ico">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
           </div>
-          <div className='events-small' onClick={this.makeEventsActive}>
-            <br/>
-            <Events />
+          <div className="txt">Sign Up</div>
+        </NavLink>
+      </div>
+      <div className="main">
+        <div className="profile box"></div>
+        <div className="posts box">
+          <div className="filters">
+            <NavLink to='/' className='main-btn' onClick={() => this.makeCommunityActive()}>Post!</NavLink>
+            <NavLink to='/entertainment' className='main-btn'>Videos</NavLink>
+            <button className='main-btn' onClick={() => this.makeEventsActive()}>Events</button>
+            <button className='main-btn' onClick={() => this.makeStudioActive()}>Studios</button>
           </div>
-          <div className='titleFix'>
-            <a>Video of the week</a>
+          <div className="main-box">
+            {this.renderCommunityOrStudios()}
+          </div> 
+        </div>
+        <div className="stack">
+          <div id="studios" onClick = {() => this.makeEventsActive()} className="stacked  box">
           </div>
-          <div className='studios-small'>
+          <div id="featured" className="stacked  box">
             <iframe width="350" height="215" src="https://www.youtube.com/embed/2X2tCidTfEU?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowfullScreen></iframe>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   );

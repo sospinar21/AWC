@@ -27,15 +27,6 @@
   flex: 15 1;
   line-height: 50px; }
 
-a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-weight: 200;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-left: 20px; }
-
 .li:hover {
   background-color: #363d489c; }
 
