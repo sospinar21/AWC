@@ -16,6 +16,7 @@
     color: black;
     outline: none;
     line-height: 1.5;
+    font-family: r;
 }
 }
 
@@ -23,7 +24,7 @@
   color: white;
   background-color: #b62d4d;
   width: 30%;
-  font-family: 'Roboto', sans-serif;
+  font-family: r;
   font-size: 12px;
   cursor: pointer;
 }
@@ -41,6 +42,7 @@
   width: 40%;
   overflow-x: scroll;
   padding: 10px;
+  font-family: r;
 
   h1{
     color: white;
@@ -262,25 +264,25 @@ body{
   /* background-color: rgb(231, 19, 114); */
 }
 
-.filters main-btn:hover{   
+.filters .main-btn:hover{   
   box-shadow: 0 2px 1px 0 rgba(0,0,0,0.75) ;
 }
 
-.filters main-btn:nth-child(2){
+.filters .main-btn:nth-child(2){
   background: #716aca;
 }
 
-.filters main-btn:nth-child(3){
+.filters .main-btn:nth-child(3){
   /* background: rgb(69, 188, 210); */
   background: rgb(99, 183, 249);
 }
 
-.filters main-btn:nth-child(4){
+.filters .main-btn:nth-child(4){
   background: rgb(231, 19, 114);
   /* background: rgb(146, 143, 162); */
 }
 
-.filters main-btn:nth-child(5){
+.filters .main-btn:nth-child(5){
   /* background: rgb(146, 143, 162); */
   background: rgb(231, 19, 114);
 }
@@ -318,9 +320,9 @@ body{
 }
 
 .content{
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
-  font-family: light;
+  font-family: r;
   padding-left: 25px;
   box-sizing: border-box;
 }
@@ -330,10 +332,24 @@ svg{
   height: 100%;
 }
 
+.post img{
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 25vh;
+  border-radius: 2%;
+  box-shadow: 0px 0px 0px 1px rgba(52,40,104,0.5);
+}
+
+.pic s{
+  display: block;
+  margin-top: 1.5vh;
+}
+
 @font-face { font-family: 'logo'; src:  url('./fonts/ms.ttf');}
 @font-face { font-family: 'r'; src:  url('./fonts/Poppins-Regular.ttf');}
 @font-face { font-family: 'm'; src:  url('./fonts/Poppins-Medium.ttf');}
-@font-face { font-family: 'h'; src:  url('./fonts/Poppins-Bold.ttf');}
+@font-face { font-family: 'b'; src:  url('./fonts/Poppins-Bold.ttf');}
 
 
 textarea,button,input,select{border: none;}
