@@ -23,7 +23,7 @@ describe('forms', () => {
     expect(forms).toMatchSnapshot();
   })
 
-  describe('shoLogIn', () => {
+  describe('showLogIn', () => {
 
     it('sets the the state to login: true', () => {
 
@@ -32,6 +32,28 @@ describe('forms', () => {
       forms.instance().showLogIn()
 
       expect(forms.state().logIn).toEqual(true)
+    })
+    
+  })
+
+  it('sets the the state to signUp: false', () => {
+
+    forms.state().signUp = true
+
+    forms.instance().showLogIn()
+
+    expect(forms.state().signUp).toEqual(false)
+  })
+
+  describe('showSignUp', () => {
+
+    it('sets the the state to login: false', () => {
+
+      forms.state().logIn = true
+
+      forms.instance().showSignUp()
+
+      expect(forms.state().logIn).toEqual(false)
     })
     
   })
