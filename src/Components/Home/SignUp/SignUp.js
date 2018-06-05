@@ -53,8 +53,6 @@ export class SignUp extends Component {
           <div className="logocir">AWC</div>
         </div>
         <h4 className='created'> </h4>
-        {/* <button>Log in with Facebook </button>
-        <button onClick={() => this.getToken()}>Log in with Google </button>               */}
         <form className='form' autoComplete='on'>
           <input
             name='email'

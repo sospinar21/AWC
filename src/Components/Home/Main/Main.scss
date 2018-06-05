@@ -128,21 +128,23 @@ body{
 }
 
 .buffer{
-  flex-basis: 80%;
+  flex-basis: 40%;
   flex-shrink: 1;
   flex-grow: 0;
 }
 
 .signink{
-  flex-basis: 2.5%;
+  flex-basis: 12.5%;
   flex-shrink: 0;
   flex-grow: 0; 
   text-align: center;
+  display:flex;
 }
 
-.signin .txt{
-  display: block;
-  color: #6c6e86;
+.signin, .txt{
+  font-size: 14px;
+  display: flex;
+  color: white;
   font-size: 15px;
   font-family: r;
   vertical-align: top;
