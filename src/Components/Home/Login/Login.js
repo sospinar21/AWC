@@ -75,8 +75,8 @@ export class Login extends Component {
         <div className='signin'>
           <h3>LOGIN</h3>
           <div className="logo">
-          <div className="logocir">AWC</div>
-        </div>
+            <div className="logocir">AWC</div>
+          </div>
           <h4 className='success'></h4>
           <h4 className='incorrect'></h4>
           <form className='login-form' autoComplete='on'>

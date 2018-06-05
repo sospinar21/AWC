@@ -2,7 +2,7 @@ import {Login, mapStateToProps, mapDispatchToProps} from '../Login/Login';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme';
-import {logIn} from '../../../Helper/Users/Users';
+import * as users from '../../../Helper/Users/Users';
 
 describe('login', () => {
 
@@ -18,15 +18,9 @@ describe('login', () => {
       addUser: jest.fn()
     };
 
-    login = shallow(<Login {...mockProps}/>, { disableLifecycleMethods: true });
+    login = mount(<Login {...mockProps}/>, { disableLifecycleMethods: true });
+    users.logIn = jest.fn();
 
-    event = {
-      target: {
-        email: "user@user.com",
-        password: "hola"
-      },
-      preventDefault: () => {}
-    };
   });
 
   it('matches snapshot', () => {
@@ -34,17 +28,54 @@ describe('login', () => {
   });
 
 
-  // describe('userSignIn', () => {
+  describe('handleInputChange', () => {
 
-  //   it('sets the state with the new users email and psw', () => {
+    it('sets the state with the new users email', () => {
+      
+      event = {
+        target: {
+          name: 'email',
+          value: 'user@user.com'
+        },
+        preventDefault: () => {}
+      };
 
-  //     login.state().email = '';
+      login.instance().handleInputChange(event);
 
-  //     login.instance().userSignIn(event);
+      expect(login.state().email).toEqual('user@user.com');
+    });
 
-  //     expect(login.state().email).toEqual('a@a.me');
-  //   });
-  // });
+    it('sets the state with the new users password', () => {
+      
+      event = {
+        target: {
+          name: 'password',
+          value: 'hola!'
+        },
+        preventDefault: () => {}
+      };
+
+      login.instance().handleInputChange(event);
+
+      expect(login.state().password).toEqual('hola!');
+    });
+  });
+
+  describe('userSignIn', () => {
+
+    it('clears the state', () => {
+      
+      event = {
+        preventDefault: () => {}
+      };
+
+      login.instance().userSignIn(event);
+
+      expect(login.state().password).toEqual('');
+      expect(login.state().email).toEqual('');
+      
+    });
+  });
 
   describe('validateEmail', () => {
 
@@ -65,14 +96,20 @@ describe('login', () => {
     });
   });
 
-  // describe('giveAccess', () => {
+  describe('giveAccess', () => {
 
-  //   it('calls giveAccess with the correct params', () => {
+    it('calls addUser with the correct params', () => {
   
-  //     login.instance().getToken();
-  //     login.instance().giveAccess = jest.fn()
+      login.instance().giveAccess();
   
-  //     expect(login.instance().giveAccess).toHaveBeenCalled()
-  //   });
-  // });
+      expect(mockProps.addUser).toHaveBeenCalled()
+    });
+
+    it('sets the state to login = true', () => {
+  
+      login.instance().giveAccess();
+  
+      expect(login.state().login).toEqual(true);
+    });
+  });
 });
