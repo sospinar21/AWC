@@ -310,7 +310,29 @@ body{
   background-image: url(http://risingstardance.com.au/wp-content/uploads/2014/06/Dancer_Quote_Beenleigh_Dance.png)
 }
 
+.userInfo {
+  margin-bottom: 10px;
+  height: 130px;
+  background-size: cover;
+  border-bottom: 1px solid gainsboro;
+  color: white;
+  margin-left: 30px;
+  margin-top: 2vh;
+  padding-bottom: 12px;
+  text-align: center;
+  width: 130px;
+  border-radius: 50%;
+  background-image: url(https://lh3.googleusercontent.com/-cslDDNz-2Mg/AAAAAAAAAAI/AAAAAAAAAAA/lFXEJ4GBDIg/s640/photo.jpg);  
+}
+
+.useremail {
+  font-size: 14px;
+  color:black
+}
+
+
 .flagico{
+  background-size: contain;
   width: 20px;
   height: 20px;
   border-radius: 100%;

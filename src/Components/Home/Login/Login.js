@@ -74,7 +74,9 @@ export class Login extends Component {
       <div className='si-su'>
         <div className='signin'>
           <h3>LOGIN</h3>
-          <h1>AWC </h1>
+          <div className="logo">
+          <div className="logocir">AWC</div>
+        </div>
           <h4 className='success'></h4>
           <h4 className='incorrect'></h4>
           {/* <button> Log in with Facebook</button>

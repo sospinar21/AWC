@@ -108,6 +108,7 @@ render () {
 
   const city = this.props.selectedLocation;
   const selectedLocation = city.length ? city : 'USA';
+  console.log(this.props.user)
 
   return (
     <div className='body'>
@@ -149,7 +150,11 @@ render () {
         </NavLink>
       </div>
       <div className="main">
-        <div className="profile box"></div>
+        <div className="profile box">
+        <section class ='hidden userInfo'>
+        </section>
+          <h2 className='useremail' aria-label = "Stephanie is logged in">{this.props.user.username}</h2>
+        </div>
         <div className="posts box">
           <div className="filters">
             <NavLink to='/' className='main-btn' onClick={() => this.makeCommunityActive()}>Post!</NavLink>
@@ -178,7 +183,8 @@ render () {
 export const mapStateToProps = (state) => {
   return ({
     suggestedEvents: state.suggestedEvents,
-    selectedLocation: state.location
+    selectedLocation: state.location,
+    user: state.user
   });
 };
 

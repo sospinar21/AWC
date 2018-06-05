@@ -49,7 +49,9 @@ export class SignUp extends Component {
     return (
       <div className='signup-box'>
         <h3>SIGN UP</h3>
-        <h1>AWC </h1>
+        <div className="logo">
+          <div className="logocir">AWC</div>
+        </div>
         <h4 className='created'> </h4>
         {/* <button>Log in with Facebook </button>
         <button onClick={() => this.getToken()}>Log in with Google </button>               */}
