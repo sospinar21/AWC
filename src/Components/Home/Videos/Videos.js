@@ -61,11 +61,6 @@ render () {
   if (this.props.suggestedVideos.length) {
     return (
       <div className='videos-main'>
-        <div className='video-menu'> 
-          {/* <input 
-            placeholder='Search categories'
-          /> */}
-        </div> 
         <div className='selectedVideo'>
           <h1> Videos </h1>
           <div key={selectedVideo} className='video-display'>
