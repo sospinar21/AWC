@@ -98,14 +98,16 @@ renderCommunityOrStudios = () => {
 }
 
 suggestLocation = () => {
-  const suggestions = this.state.locations.map((suggestion, index) => {
-    return (
-      <option 
-        onClick = {() => this.selectedLocation()}
-        key={index} value={suggestion}/>
-    );
-  });
-  return suggestions;
+  if (this.state.locations.length) {
+    const suggestions = this.state.locations.map((suggestion, index) => {
+      return (
+        <option 
+          onClick = {() => this.selectedLocation()}
+          key={index} value={suggestion}/>
+      );
+    });
+    return suggestions;
+  }
 }
 
 
@@ -206,7 +208,7 @@ Main.propTypes = {
   addLocation: PropTypes.func,
   addEvents: PropTypes.func,
   addStudios: PropTypes.func,
-  selectedLocation: PropTypes.string
+  selectedLocation: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

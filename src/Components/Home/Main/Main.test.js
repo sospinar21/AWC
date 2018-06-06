@@ -16,17 +16,18 @@ describe('Main', () => {
       addLocation: jest.fn(),
       addEvents: jest.fn(),
       addStudios: jest.fn(),
-      selectedLocation: 'Denver',
+      selectedLocation: [],
       user: {username:'Laura'}
     };
+
+    main = shallow(<Main {...mockProps}/>, { disableLifecycleMethods: true });
+    main.state().locations = []
 
     api.getPosts = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({data: {}})
     }));
-
-    main = shallow(<Main {...mockProps}/>, { disableLifecycleMethods: true });
 
     event = {
       target: {
@@ -45,28 +46,48 @@ describe('Main', () => {
 
   describe('update state', () => {
 
-    it('calls fetchlocation', async () => {
+    it('sets the state with the selected location', () => {
+      
+      event = {
+        target: {
+          name: 'selectedLocation',
+          value: 'Denver'
+        },
+        preventDefault: () => {}
+      };
 
-      await main.instance().updateState(event);
-      main.instance().fetchLocation = jest.fn()
+      main.instance().updateState(event);
 
-      expect(main.instance().fetchLocation).toHaveBeenCalled()
+      expect(main.state().selectedLocation).toEqual('Denver');
     });
   });
 
-  describe('addPost', () => {
+  describe('fetchLocation', () => {
   
-    it('sets the state with the list of posts', () => {
-      main.state().posts = []
-      const post = {content:'hello'}
-      const expected = [{content:'hello'}]
+    it('calls fetchGoogle with the correct params', () => {
+      
+      const userInput = 'Denver'
+      const expected = 'https://api.awc.dance/autocomplete?input=Denver'
 
-      main.instance().addPost(post);
+      main.instance().fetchLocation(userInput);
 
-      expect(main.state().posts).toEqual(expected);
+      expect(window.fetch).toHaveBeenCalledWith(expected)
     });
   });
 
+  describe('displaySuggestions', () => {
+
+    it('sets the state with the selected location', () => {
+      
+      const suggestions = ['Denver', 'LA', 'NYC']
+
+      main.instance().displaySuggestions(suggestions );
+
+      expect(main.state().locations).toEqual(suggestions);
+    });
+  });
+
+  
   describe('mapStateToProps', () => {
 
     let mappedProps

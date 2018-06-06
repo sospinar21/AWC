@@ -8,7 +8,7 @@ ShallowWrapper {
     addEvents={[Function]}
     addLocation={[Function]}
     addStudios={[Function]}
-    selectedLocation="Denver"
+    selectedLocation={Array []}
     suggestedEvents={
         Object {
             "name": "workshop",
@@ -64,9 +64,7 @@ ShallowWrapper {
           </form>
           <datalist
                     id="locations"
-          >
-                    
-          </datalist>
+          />
           <div
                     className="actual-location"
           >
@@ -76,7 +74,7 @@ ShallowWrapper {
                               location_on
                     </i>
                     <h1>
-                              Denver
+                              USA
                     </h1>
           </div>
           <div
@@ -236,9 +234,7 @@ ShallowWrapper {
 </form>,
             <datalist
               id="locations"
->
-              
-</datalist>,
+/>,
             <div
               className="actual-location"
 >
@@ -248,7 +244,7 @@ ShallowWrapper {
                             location_on
               </i>
               <h1>
-                            Denver
+                            USA
               </h1>
 </div>,
             <div
@@ -381,11 +377,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [],
+              "children": undefined,
               "id": "locations",
             },
             "ref": null,
-            "rendered": Array [],
+            "rendered": null,
             "type": "datalist",
           },
           Object {
@@ -400,7 +396,7 @@ ShallowWrapper {
                   location_on
 </i>,
                 <h1>
-                  Denver
+                  USA
 </h1>,
               ],
               "className": "actual-location",
@@ -424,10 +420,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Denver",
+                  "children": "USA",
                 },
                 "ref": null,
-                "rendered": "Denver",
+                "rendered": "USA",
                 "type": "h1",
               },
             ],
@@ -1021,9 +1017,7 @@ ShallowWrapper {
             </form>
             <datalist
                         id="locations"
-            >
-                        
-            </datalist>
+            />
             <div
                         className="actual-location"
             >
@@ -1033,7 +1027,7 @@ ShallowWrapper {
                                     location_on
                         </i>
                         <h1>
-                                    Denver
+                                    USA
                         </h1>
             </div>
             <div
@@ -1193,9 +1187,7 @@ ShallowWrapper {
 </form>,
               <datalist
                 id="locations"
->
-                
-</datalist>,
+/>,
               <div
                 className="actual-location"
 >
@@ -1205,7 +1197,7 @@ ShallowWrapper {
                                 location_on
                 </i>
                 <h1>
-                                Denver
+                                USA
                 </h1>
 </div>,
               <div
@@ -1338,11 +1330,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [],
+                "children": undefined,
                 "id": "locations",
               },
               "ref": null,
-              "rendered": Array [],
+              "rendered": null,
               "type": "datalist",
             },
             Object {
@@ -1357,7 +1349,7 @@ ShallowWrapper {
                     location_on
 </i>,
                   <h1>
-                    Denver
+                    USA
 </h1>,
                 ],
                 "className": "actual-location",
@@ -1381,10 +1373,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Denver",
+                    "children": "USA",
                   },
                   "ref": null,
-                  "rendered": "Denver",
+                  "rendered": "USA",
                   "type": "h1",
                 },
               ],
@@ -1951,5 +1943,3 @@ ShallowWrapper {
   },
 }
 `;
-
-exports[`main matches snapshot 1`] = `undefined`;
