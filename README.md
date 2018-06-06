@@ -1,11 +1,13 @@
 # AWC
 
+"Coming together is a beginning. Keeping together is progress. Working together is success."--Henry Ford AWC brings the dance and art community together to share experiences, news and information about the industry.
+
 ### Project team:
 
 Stephanie Ospina [GitHub](https://github.com/sospinar21) 
  
 
-### Our design:
+### My design:
 
 ![Project Screenshot](./src/assets/main.png)
 ![Project Screenshot](./src/assets/login.png)
