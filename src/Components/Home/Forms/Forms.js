@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Forms.css';
-import { NavBar } from '../NavBar/NavBar';
 import  Login  from '../Login/Login';
 import { SignUp } from '../SignUp/SignUp';
 import { NavLink } from 'react-router-dom';

@@ -7,9 +7,6 @@ import { selectedStudioReducer } from './selectedStudioReducer';
 import { selectedEventReducer } from './selectedEventReducer';
 import { userReducer } from './userReducer';
 
-
-
-
 export const rootReducer = combineReducers({
   suggestedEvents: eventsReducer,
   suggestedStudios: studiosReducer,

@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './SignUp.css';
-import { signUp, 
-  confirmRegistration, 
-  cogToken,
-  rememberDevice
-} from '../../../Helper/Users/Users';
+import { signUp } from '../../../Helper/Users/Users';
  
 import { NavBar } from '../NavBar/NavBar';
 

@@ -5,4 +5,4 @@ export const selectedEventReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};

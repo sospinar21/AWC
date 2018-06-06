@@ -5,4 +5,4 @@ export const locationReducer = (state = '', action) => {
     default:
       return state;
   }
-}
+};

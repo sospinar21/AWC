@@ -4,7 +4,7 @@ import  Post  from '../Post/Post';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
-import '../../../index.css'
+import '../../../index.css';
 
 
 
@@ -29,7 +29,6 @@ export class Community extends Component {
   }
   
   displayForum = () => {
-    const user = this.props.user.username;
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
         return (     
@@ -41,7 +40,6 @@ export class Community extends Component {
               <br/>
             </div>
             <div className ="content">
-              {/* <img src="bdsample.jpg"/> */}
               <s>{post.content}</s>
             </div>
           </div> 
@@ -69,11 +67,8 @@ export const mapStateToProps = (state) => {
   });
 };
 
-export const mapDispatchToProps = dispatch => ({
-});
-
 Community.propTypes = {
   user: PropTypes.object
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Community);
+export default connect(mapStateToProps)(Community);

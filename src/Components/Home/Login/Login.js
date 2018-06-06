@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Login.css';
 import {  logIn } from '../../../Helper/Users/Users';
-import { NavBar } from '../NavBar/NavBar';
 import { addUser } from '../../../Actions/actions';
 import {CognitoUserPool} from 'amazon-cognito-identity-js';
 import { Redirect } from 'react-router';
-import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 
 
 
@@ -49,7 +47,7 @@ export class Login extends Component {
     var userPool = new CognitoUserPool(poolData);
     var cognitoUser = userPool.getCurrentUser();
 
-    if (cognitoUser != null) {
+    if (cognitoUser !== null) {
       cognitoUser.getSession((err, session) =>  {
         if (err) {
           alert(err);

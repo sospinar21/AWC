@@ -20,9 +20,9 @@ export class Post extends Component {
   }
 
   async componentDidMount() {
-    const currentUser = await checkUser()
+    const currentUser = await checkUser();
     if (currentUser){
-      this.props.addUser(currentUser)
+      this.props.addUser(currentUser);
     }
   }
 
@@ -86,7 +86,8 @@ export const mapDispatchToProps = dispatch => ({
 
 Post.propTypes = {
   user: PropTypes.object,
-  addPost: PropTypes.func
+  addPost: PropTypes.func,
+  addUser: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post);

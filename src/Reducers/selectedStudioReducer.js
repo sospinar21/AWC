@@ -6,4 +6,4 @@ export const selectedStudioReducer = (state = {}, action ) => {
     default:
       return state;
   }
-}
+};

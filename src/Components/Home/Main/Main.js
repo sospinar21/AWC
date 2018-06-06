@@ -6,7 +6,6 @@ import Events from '../Events/Events';
 import NavBar from '../../Home/NavBar/NavBar';
 import Studios from '../Studios/Studios';
 import './Main.css';
-import Videos from '../Videos/Videos';
 import Community from '../Community/Community';
 import ApiCalls from '../../../Helper/ApiCalls/ApiCalls';
 import { addLocation, addEvents, addStudios } from '../../../Actions/actions';
