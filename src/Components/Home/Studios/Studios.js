@@ -139,7 +139,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Studios.propTypes = {
-  suggestedStudios: PropTypes.array,
+  suggestedStudios: PropTypes.object,
   addStudios: PropTypes.func,
   addSelectedStudio: PropTypes.func,
   selectedStudio: PropTypes.object,

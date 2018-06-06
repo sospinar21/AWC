@@ -9,21 +9,21 @@ describe('Studios', () => {
 
   let studios;
   let mockProps;
-  let api = new ApiCalls()
+  let api = new ApiCalls();
 
   beforeEach(() => {
 
     mockProps = {
-      suggestedStudios: [{name: 'BPC',
-        location:'denver'
-      }],
+      suggestedStudios: {
+        studio: {location: {display_address: []}}
+      },
       selectedLocation: 'Denver',
       selectedStudio: {id:2},
       addStudios: jest.fn(),
       addSelectedStudio: jest.fn()
     };
 
-    api.fetchEvents = jest.fn()
+    api.fetchEvents = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({data: {}})
@@ -37,62 +37,48 @@ describe('Studios', () => {
     expect(studios).toMatchSnapshot();
   });
 
-  describe('componentDidMount', () => {
-    it('calls fetchstudios', () => {
-
-      studios.instance().componentDidMount()
-      studios.instance().fetchStudios = jest.fn()
-      expect(studios.instance().fetchStudios).toHaveBeenCalled()
-    })
-  })
-
   describe('fetchStudios', () => {
 
-    it('calls window.fetch with the correct params', () => {
-      const expected = ["https://api.awc.dance/?city=80202", {"headers": {"Content-type": "application/json"}, "method": "GET"}]
-      studios.instance().fetchStudios()
-      expect(window.fetch).toHaveBeenCalledWith(...expected)
-    })
+    it('calls window.fetch', () => {
 
-    it('calls props.addStudios', () => {
+      studios.instance().fetchStudios();
+      expect(window.fetch).toHaveBeenCalled();
+    });
 
-      studios.instance().fetchStudios()
-      expect(mockProps.addStudios).toHaveBeenCalled()
-    })
+    it('calls props.addStudios', async () => {
+
+      await studios.instance().fetchStudios();
+
+      expect(mockProps.addStudios).toHaveBeenCalled();
+    });
     
-  })
+  });
 
-  describe('displayEvents', () => {
-
-    it('shows a default image if the event doesnt have one', () => {
-
-
-      expect().toEqual()
-    })
-    
-  })
-
-  describe('eventsinMain', () => {
-    
-  })
+  describe('fetchSelected', () => {
+    it('calls window.fetch', () => {
+      const studio = {id: 3};
+      studios.instance().fetchSelected(studio);
+      expect(window.fetch).toHaveBeenCalledWith("https://api.awc.dance/single-studio?id=3");
+    });
+  });
 
   describe('mapStateToProps', () => {
     
     let mockDispatch;
     let suggestedStudios;
-    let mappedProps
+    let mappedProps;
 
     it('returns an object with the suggestedStudios', () => {
 
       const mockState = {
         suggestedStudios: {name: 'BPC'}
-      }
+      };
 
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(mockState);
       
-    })
-  })
+    });
+  });
 
   describe('mapDispatchToProps', () => {
 
@@ -101,7 +87,7 @@ describe('Studios', () => {
       let mockDispatch = jest.fn();
       let mappedProps = mapDispatchToProps(mockDispatch);
       
-      const studiosData = {id: 1, title:'ASANA'}      
+      const studiosData = {id: 1, title:'ASANA'};      
       const mockAction = {
         type: 'ADD_STUDIOS',
         studiosData
@@ -109,7 +95,23 @@ describe('Studios', () => {
   
       mappedProps.addStudios(studiosData);
       expect(mockDispatch).toHaveBeenCalledWith(mockAction);
-    })
+    });
 
-  })
+    it('should call dispatch with the correct params', () => {
+    
+      let mockDispatch = jest.fn();
+      let mappedProps = mapDispatchToProps(mockDispatch);
+      
+      const studio = {id: 1, title:'BPC'};      
+      const mockAction = {
+        type: 'ADD_SELECTED_STUDIO',
+        studio
+      };
+  
+      mappedProps.addSelectedStudio(studio);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+
+
+  });
 });
