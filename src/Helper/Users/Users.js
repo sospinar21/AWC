@@ -1,5 +1,5 @@
-import { Config, CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails, CognitoIdentityCredentials } from 'amazon-cognito-identity-js';
-import { Lambda } from 'aws-sdk';
+import { CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+// import { Lambda } from 'aws-sdk';
 
 var poolData = { UserPoolId : 'us-west-2_t4LvOKjcE',
   ClientId: '47bsfajnf2rmvpt02q8qjvm29u'
@@ -9,7 +9,7 @@ var userPool = new CognitoUserPool(poolData);
 export const checkUser = () => {
   var cognitoUser = userPool.getCurrentUser();
   return cognitoUser;
-}
+};
 
 export const signUp = (user) => {
   var attributeList = [];
@@ -84,5 +84,5 @@ export const userSignout = () => {
   var cognitoUser = userPool.getCurrentUser();
   cognitoUser.signOut();
   return cognitoUser;
-}
+};
 

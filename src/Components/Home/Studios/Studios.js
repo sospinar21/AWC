@@ -30,7 +30,7 @@ fetchStudios = async (city) => {
 fetchSelected = (studio) => {
   let api = new ApiCalls();
   if (studio) {
-    const reviews = api.fetchSingleStudio(studio.id)
+    api.fetchSingleStudio(studio.id)
       .then(response => this.props.addSelectedStudio({...response, ...studio})); 
   } else {
     return (
@@ -41,7 +41,7 @@ fetchSelected = (studio) => {
 
 displaySelected = () => {
   const selected = this.props.selectedStudio;
-  const review = selected.rating * 20
+  const review = selected.rating * 20;
   if (selected.id) { 
     return (
       <div key={1} className='selected-card'> 

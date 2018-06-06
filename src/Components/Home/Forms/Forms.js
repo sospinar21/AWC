@@ -68,12 +68,9 @@ export const mapStateToProps = (state) => {
   });
 };
 
-export const mapDispatchToProps = dispatch => ({
-  
-});
 
 Forms.propTypes = {
   suggestedEvents: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Forms);
+export default connect(mapStateToProps)(Forms);

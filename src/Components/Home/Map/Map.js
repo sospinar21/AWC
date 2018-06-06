@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React from "react";
 import './Map.css';
 import { compose, withProps } from "recompose";

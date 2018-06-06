@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import './SignUp.css';
 import { signUp } from '../../../Helper/Users/Users';
  
-import { NavBar } from '../NavBar/NavBar';
 
 export class SignUp extends Component {
   constructor() {
@@ -23,7 +22,7 @@ export class SignUp extends Component {
   
   userSignUp = (e) => {
     e.preventDefault();
-    const validate = this.validateEmail();
+    this.validateEmail();
     signUp(this.state);
     this.setState({email:'', password:'', city: ''});
   }
@@ -89,12 +88,8 @@ export const mapStateToProps = (state) => {
   });
 };
 
-export const mapDispatchToProps = dispatch => ({
-  
-});
-
 SignUp.propTypes = {
   suggestedEvents: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps)(SignUp);

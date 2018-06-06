@@ -42,7 +42,7 @@ export class Post extends Component {
     const api = new ApiCalls();
     const user = this.props.user;
     const {type, content} = this.state;
-    const response = await api.postComment(user, content, type);
+    await api.postComment(user, content, type);
   }
 
   validatePost = () => {

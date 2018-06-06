@@ -50,12 +50,8 @@ export const mapStateToProps = (state) => {
   });
 };
 
-export const mapDispatchToProps = dispatch => ({
-  
-});
-
 Entertainment.propTypes = {
   suggestedEvents: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Entertainment);
+export default connect(mapStateToProps)(Entertainment);

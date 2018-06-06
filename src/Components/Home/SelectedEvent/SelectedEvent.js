@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 
 export class SelectedEvent extends Component {
 
-
   render () {
     const selected = this.props.selectedEvent;
     if (selected) {
-      const name = selected.name ? selected.name : 'Select an Event'
+      const name = selected.name ? selected.name : 'Select an Event';
       return (
         <div className='flex'>
           <div className='event-desc'>

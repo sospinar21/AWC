@@ -6,7 +6,8 @@ class ApiCalls {
       const url = `https://api.awc.dance/events?city=${city}`;
       const response = await fetch(url);
       const data= await response.json();
-      return data; } catch (error) {
+      return data; 
+    } catch (error) {
       throw new Error(error.message);
     }
   } 
@@ -21,8 +22,8 @@ class ApiCalls {
         }
       }).then( response => response.json() )
         .then( data => data )
- ;}
-    catch (error) {
+      ;
+    } catch (error) {
       throw new Error(error.message);
     }      
   }

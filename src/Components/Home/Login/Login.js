@@ -53,7 +53,7 @@ export class Login extends Component {
           alert(err);
           return;
         }
-        var token = session.getIdToken().getJwtToken();
+        session.getIdToken().getJwtToken();
         this.giveAccess(cognitoUser);
       });
     }

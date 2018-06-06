@@ -29,7 +29,7 @@ export class Events extends Component {
       if (suggEvent.logo){
         var img = suggEvent.logo.url;
       } else {
-        var img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
+        img = 'https://www.kent.edu/sites/default/files/styles/teaser_image/public/page/B0B_4055crop.JPG?itok=4ie7uvK-';
       } 
       return (
         <div className="post" key={suggEvent + index} onClick={() => this.storeSelected(suggEvent)}>

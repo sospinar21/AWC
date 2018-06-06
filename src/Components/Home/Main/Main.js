@@ -203,6 +203,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Main.propTypes = {
+  user: PropTypes.object,
   suggestedEvents: PropTypes.object,
   addLocation: PropTypes.func,
   addEvents: PropTypes.func,
