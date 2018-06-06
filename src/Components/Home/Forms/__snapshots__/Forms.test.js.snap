@@ -48,7 +48,7 @@ ShallowWrapper {
                     activeClassName="active"
                     ariaCurrent="true"
                     className="signink"
-                    to="/"
+                    to="/signin"
           >
                     <div
                               className="txt"
@@ -129,7 +129,7 @@ ShallowWrapper {
               activeClassName="active"
               ariaCurrent="true"
               className="signink"
-              to="/"
+              to="/signin"
 >
               <div
                             className="txt"
@@ -234,7 +234,7 @@ ShallowWrapper {
 </div>,
               ],
               "className": "signink",
-              "to": "/",
+              "to": "/signin",
             },
             "ref": null,
             "rendered": Array [
@@ -462,7 +462,7 @@ ShallowWrapper {
                         activeClassName="active"
                         ariaCurrent="true"
                         className="signink"
-                        to="/"
+                        to="/signin"
             >
                         <div
                                     className="txt"
@@ -543,7 +543,7 @@ ShallowWrapper {
                 activeClassName="active"
                 ariaCurrent="true"
                 className="signink"
-                to="/"
+                to="/signin"
 >
                 <div
                                 className="txt"
@@ -648,7 +648,7 @@ ShallowWrapper {
 </div>,
                 ],
                 "className": "signink",
-                "to": "/",
+                "to": "/signin",
               },
               "ref": null,
               "rendered": Array [

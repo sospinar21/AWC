@@ -87,7 +87,7 @@ describe('login', () => {
       expect(login.instance().validateEmail()).toEqual(true);
     });
 
-    it('returns false if the length of email or password is 0', () => {
+    it('returns false if the length of email or password is not 0', () => {
 
       login.state().email = 'me@me';
       login.state().password = 'hola';
@@ -112,4 +112,38 @@ describe('login', () => {
       expect(login.state().login).toEqual(true);
     });
   });
+
+  describe('mapStateToProps', () => {
+
+    let mappedProps
+
+    it('returns an object with the user', () => {
+
+      const mockState = {
+        user: {username: 'Kai'}
+      }
+
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(mockState);
+      
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+
+    it('should call dispatch with the correct params', () => {
+    
+      let mockDispatch = jest.fn();
+      let mappedProps = mapDispatchToProps(mockDispatch);
+      
+      const user = {name:'Steph'};      
+      const mockAction = {
+        type: 'ADD_USER',
+        user
+      };
+  
+      mappedProps.addUser(user);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+  })
 });

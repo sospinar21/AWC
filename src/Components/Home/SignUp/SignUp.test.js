@@ -1,12 +1,12 @@
-import {Login, mapStateToProps, mapDispatchToProps} from '../Login/Login';
+import {SignUp, mapStateToProps, mapDispatchToProps} from '../signUp/signUp';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme';
 import * as users from '../../../Helper/Users/Users';
 
-describe('login', () => {
+describe('signUp', () => {
 
-  let login;
+  let signUp;
   let mockProps;
   let event;
 
@@ -14,17 +14,14 @@ describe('login', () => {
 
     mockProps = {
       suggestedEvents: [{name: 'party'}],
-      user: {namename:'Steph'},
-      addUser: jest.fn()
     };
 
-    login = mount(<Login {...mockProps}/>, { disableLifecycleMethods: true });
-    users.logIn = jest.fn();
-
+    signUp = shallow(<SignUp {...mockProps}/>, { disableLifecycleMethods: true });
+    users.signUp = jest.fn();
   });
 
   it('matches snapshot', () => {
-    expect(login).toMatchSnapshot();
+    expect(signUp).toMatchSnapshot();
   });
 
 
@@ -40,9 +37,9 @@ describe('login', () => {
         preventDefault: () => {}
       };
 
-      login.instance().handleInputChange(event);
+      signUp.instance().handleInputChange(event);
 
-      expect(login.state().email).toEqual('user@user.com');
+      expect(signUp.state().email).toEqual('user@user.com');
     });
 
     it('sets the state with the new users password', () => {
@@ -55,13 +52,13 @@ describe('login', () => {
         preventDefault: () => {}
       };
 
-      login.instance().handleInputChange(event);
+      signUp.instance().handleInputChange(event);
 
-      expect(login.state().password).toEqual('hola!');
+      expect(signUp.state().password).toEqual('hola!');
     });
   });
 
-  describe('userSignIn', () => {
+  describe('userSignUp', () => {
 
     it('clears the state', () => {
       
@@ -69,10 +66,10 @@ describe('login', () => {
         preventDefault: () => {}
       };
 
-      login.instance().userSignIn(event);
+      signUp.instance().userSignUp(event);
 
-      expect(login.state().password).toEqual('');
-      expect(login.state().email).toEqual('');
+      expect(signUp.state().password).toEqual('');
+      expect(signUp.state().email).toEqual('');
       
     });
   });
@@ -81,35 +78,26 @@ describe('login', () => {
 
     it('returns true if the length of email or password is 0', () => {
 
-      login.state().email = '';
-      login.state().password = '';
+      signUp.state().email = '';
+      signUp.state().password = '';
 
-      expect(login.instance().validateEmail()).toEqual(true);
-    });
-
-    it('returns false if the length of email or password is 0', () => {
-
-      login.state().email = 'me@me';
-      login.state().password = 'hola';
-
-      expect(login.instance().validateEmail()).toEqual(false);
+      expect(signUp.instance().validateEmail()).toEqual(true);
     });
   });
 
-  describe('giveAccess', () => {
+  describe('mapStateToProps', () => {
 
-    it('calls addUser with the correct params', () => {
-  
-      login.instance().giveAccess();
-  
-      expect(mockProps.addUser).toHaveBeenCalled()
-    });
+    let mappedProps
 
-    it('sets the state to login = true', () => {
-  
-      login.instance().giveAccess();
-  
-      expect(login.state().login).toEqual(true);
-    });
-  });
+    it('returns an object with the user', () => {
+
+      const mockState = {
+        suggestedEvents: [{name: "workshop"}]
+      }
+
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(mockState);
+      
+    })
+  })
 });

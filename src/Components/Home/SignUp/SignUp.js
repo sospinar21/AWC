@@ -41,10 +41,6 @@ export class SignUp extends Component {
     );
   }
 
-  getToken = () => {
-
-  }
-
   render () {
     return (
       <div className='signup-box'>
