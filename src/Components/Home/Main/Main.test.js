@@ -167,4 +167,52 @@ describe('Main', () => {
     })
   })
 
+  describe('mapDispatchToProps', () => {
+
+    it('should call dispatch with the correct params', () => {
+    
+      let mockDispatch = jest.fn();
+      let mappedProps = mapDispatchToProps(mockDispatch);
+      
+      const location = 'Denver';      
+      const mockAction = {
+        type: 'ADD_LOCATION',
+        location
+      };
+  
+      mappedProps.addLocation(location);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+
+    it('should call dispatch with the correct params', () => {
+    
+      let mockDispatch = jest.fn();
+      let mappedProps = mapDispatchToProps(mockDispatch);
+      
+      const eventsData = [name: 'workshop'];      
+      const mockAction = {
+        type: 'ADD_EVENTS',
+        eventsData
+      };
+  
+      mappedProps.addEvents(eventsData);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+
+    it('should call dispatch with the correct params', () => {
+    
+      let mockDispatch = jest.fn();
+      let mappedProps = mapDispatchToProps(mockDispatch);
+      
+      const studiosData = [name: 'BPC'];      
+      const mockAction = {
+        type: 'ADD_STUDIOS',
+        studiosData
+      };
+  
+      mappedProps.addStudios(studiosData);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+  });
+
 });
