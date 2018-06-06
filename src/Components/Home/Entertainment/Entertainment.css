@@ -15,3 +15,50 @@
 
 .videos {
   width: 100%; }
+
+@media only screen and (max-width: 760px) {
+  .main {
+    overflow-y: scroll;
+    position: absolute;
+    display: block !important; }
+  .profile {
+    width: 100%; }
+  .menuSection {
+    display: flex;
+    margin: 0 !important; }
+  .posts {
+    width: 100%;
+    min-width: auto !important; }
+  .aMenu .material-icons {
+    display: block; }
+  .userInfo {
+    margin-bottom: 10px;
+    height: 100px !important;
+    margin: auto !important;
+    text-align: center !important;
+    width: 100px !important;
+    border-radius: 50%; }
+  .location-form {
+    width: 60% !important;
+    margin-left: 65px !important; }
+  .signin, .txt {
+    font-size: 0px; }
+  .main {
+    height: -webkit-fill-available; }
+  .featured {
+    text-align: center; }
+  .videos-main {
+    display: block; }
+  .selected-video {
+    width: 100%; }
+  .entertainment {
+    overflow-y: scroll;
+    height: -webkit-fill-available; }
+  .video-sidebar {
+    display: flex;
+    flex-wrap: wrap; }
+  .video-card {
+    margin: 18px auto; }
+  .selected-iframe {
+    height: 268px;
+    width: 65%; } }

@@ -90,3 +90,28 @@
     font-family: 'Roboto', sans-serif; }
     .video-menu input .location ::placeholder {
       color: white; }
+
+@media only screen and (max-width: 760px) {
+  .userInfo {
+    margin-bottom: 10px;
+    height: 100px !important;
+    margin: auto !important;
+    text-align: center !important;
+    width: 100px !important;
+    border-radius: 50%; }
+  .vides-main {
+    display: block; }
+  .selectedVideo {
+    width: 100%; }
+  .entertainment {
+    overflow-y: scroll;
+    height: -webkit-fill-available; }
+  .videosidebar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+  .video-card {
+    margin: 18px auto; }
+  .selected-iframe {
+    height: 268px;
+    width: 65%; } }

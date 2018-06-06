@@ -85,7 +85,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Post.propTypes = {
-  user: PropTypes.obj,
+  user: PropTypes.object,
   addPost: PropTypes.func
 };
 

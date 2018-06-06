@@ -33,7 +33,7 @@ export class Community extends Component {
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
         return (     
-          <div className="post post-box" key={user + index}>
+          <div className="post post-box" key={'post' + index}>
             <div className="poster">
               <i className="flagico us">
               </i>

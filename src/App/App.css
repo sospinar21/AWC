@@ -32,3 +32,47 @@ h1, h2, h3, h4, h5, a, li, p {
   font-size: 20px; }
   .loading h1 {
     color: #b62d4e; }
+
+@media only screen and (max-width: 760px) {
+  .userInfo {
+    margin-bottom: 10px;
+    height: 100px !important;
+    margin: auto !important;
+    text-align: center !important;
+    width: 100px !important;
+    border-radius: 50%; }
+  .location-form {
+    width: 60% !important;
+    margin-left: 0px !important;
+    position: absolute;
+    width: 60%; }
+  .signin, .txt {
+    font-size: 0px; }
+  .main {
+    height: -webkit-fill-available !important;
+    padding: 10px !important; }
+  .featured {
+    text-align: center; }
+  .vides-main {
+    display: block; }
+  .selected-video {
+    width: 100%; }
+  .entertainment {
+    overflow-y: scroll;
+    height: -webkit-fill-available; }
+  .video-card {
+    margin: 18px auto; }
+  .selected-iframe {
+    height: 268px;
+    width: 65%; }
+  .forms {
+    width: 90% !important;
+    padding: 40px 0 !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    position: relative !important;
+    margin-top: 40px !important;
+    margin: auto !important; }
+  .website {
+    display: none; } }

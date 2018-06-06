@@ -173,7 +173,7 @@ render () {
           </div>
           <div id="featured" className="stacked  box">
             <h3>Featured Video</h3>
-            <iframe width="350" height="215" src="https://www.youtube.com/embed/2X2tCidTfEU?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowfullScreen></iframe>
+            <iframe width="350" height="215" src="https://www.youtube.com/embed/2X2tCidTfEU?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Main.propTypes = {
-  suggestedEvents: PropTypes.array,
+  suggestedEvents: PropTypes.object,
   addLocation: PropTypes.func,
   addEvents: PropTypes.func,
   addStudios: PropTypes.func,
