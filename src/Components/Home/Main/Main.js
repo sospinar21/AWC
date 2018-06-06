@@ -110,7 +110,6 @@ render () {
   const city = this.props.selectedLocation;
   const selectedLocation = city.length ? city : 'USA';
   const singinOut =  this.props.user.username ? <div className="txt" onClick={() => userSignout()}>Log Out</div> : <div className="txt">Sign Up/ SignIn</div>
-  console.log(this.props.user)
 
   return (
     <div className='body'>

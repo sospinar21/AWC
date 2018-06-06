@@ -7,7 +7,6 @@ import './NavBar.css';
 export class NavBar extends Component {
   
   render () {
-    console.log(this.props)
     return (
       <div role = 'navigation' className  = 'sideMenu'>
         <section className  ='hidden userInfo'/>

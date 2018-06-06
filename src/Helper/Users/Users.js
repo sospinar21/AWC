@@ -68,7 +68,6 @@ export const logIn = (user) => {
 export const forgotPassword = () => {
   CognitoUser.forgotPassword({
     onSuccess: function (result) {
-      console.log('call result: ' + result);
     },
     onFailure: function(err) {
       alert(err);
@@ -83,9 +82,7 @@ export const forgotPassword = () => {
 
 export const userSignout = () => {
   var cognitoUser = userPool.getCurrentUser();
-  console.log(cognitoUser)
   cognitoUser.signOut();
-  console.log(cognitoUser)
   return cognitoUser;
 }
 

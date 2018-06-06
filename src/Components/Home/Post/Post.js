@@ -47,10 +47,8 @@ export class Post extends Component {
 
   validatePost = () => {
     const user = this.props.user;
-    if ( user === {} || this.state.content.length === 0)
-      return (
-        true
-      );
+    const valid = user === {} || this.state.content.length === 0 ? true : false;
+    return valid;
   }
   
   displayPostBox = () => {

@@ -58,7 +58,6 @@ class ApiCalls extends Component {
     const url = 'https://api.awc.dance/getposts';
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
     return data
   }
 

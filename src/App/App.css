@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, a, li, p {
 .loading {
   width: 100%;
   height: 100%;
-  padding: 20%; }
+  padding: 20%;
+  font-size: 20px; }
   .loading h1 {
     color: #b62d4e; }
