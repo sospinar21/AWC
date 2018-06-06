@@ -27,9 +27,10 @@ ShallowWrapper {
         <Connect(Post)
           addPost={[Function]}
 />,
-        undefined,
+        <div
+          className="post-container"
+/>,
       ],
-      "className": "post-container",
     },
     "ref": null,
     "rendered": Array [
@@ -44,7 +45,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "post-container",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -58,9 +70,10 @@ ShallowWrapper {
           <Connect(Post)
             addPost={[Function]}
 />,
-          undefined,
+          <div
+            className="post-container"
+/>,
         ],
-        "className": "post-container",
       },
       "ref": null,
       "rendered": Array [
@@ -75,7 +88,18 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "post-container",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
       ],
       "type": "div",
     },

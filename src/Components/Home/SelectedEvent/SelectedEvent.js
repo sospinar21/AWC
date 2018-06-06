@@ -38,7 +38,7 @@ export const mapStateToProps = (state) => {
 };
 
 SelectedEvent.propTypes = {
-  selectedEvent: PropTypes.obj
+  selectedEvent: PropTypes.object
 };
 
 export default connect(mapStateToProps)(SelectedEvent);
