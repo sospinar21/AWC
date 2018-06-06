@@ -87,6 +87,69 @@ describe('Main', () => {
     });
   });
 
+  describe('selectedLocation', () => {
+  
+    it('calls fetchGoogle with the correct params', () => {
+      
+      main.state().selectedLocation = 'Denver'
+      const expected = `https://api.awc.dance/events?city=Denver`
+
+      main.instance().selectedLocation(event);
+
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    });
+
+    it('calls this.props.location with the correct params ', () => {
+      
+      main.state().selectedLocation = 'Denver'
+
+      main.instance().selectedLocation(event);
+
+      expect(mockProps.addLocation).toHaveBeenCalledWith('Denver')
+    });
+  });
+
+  describe('makeStudiosActive', () => {
+
+    it('sets the state to studios active = true', () => {
+
+      main.state().studiosActive = false
+
+      main.instance().makeStudioActive();
+
+      expect(main.state().studiosActive).toEqual(true);
+      expect(main.state().communityActive).toEqual(false);
+      expect(main.state().eventsActive).toEqual(false);
+    });
+  });
+
+  describe('makeCommunityActive', () => {
+
+    it('sets the state to community active = true', () => {
+
+      main.state().CommunityActive = false
+
+      main.instance().makeCommunityActive();
+
+      expect(main.state().studiosActive).toEqual(false);
+      expect(main.state().communityActive).toEqual(true);
+      expect(main.state().eventsActive).toEqual(false);
+    });
+  });
+
+  describe('makeEventsActive', () => {
+
+    it('sets the state to events active = true', () => {
+
+      main.state().eventsActive = false
+
+      main.instance().makeEventsActive();
+
+      expect(main.state().eventsActive).toEqual(true);
+      expect(main.state().studiosActive).toEqual(false);
+      expect(main.state().communityActive).toEqual(false);
+    });
+  });
   
   describe('mapStateToProps', () => {
 
