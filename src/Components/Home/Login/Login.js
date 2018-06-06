@@ -72,7 +72,7 @@ export class Login extends Component {
     
     return (
       <div className='si-su'>
-        <div className='signin'>
+        <div className='signin-form'>
           <h3>LOGIN</h3>
           <div className="logo">
             <div className="logocir">AWC</div>

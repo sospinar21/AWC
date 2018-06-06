@@ -13,6 +13,19 @@
 .active {
   border-bottom: #cc1292; }
 
+.aMenu {
+  color: gainsboro;
+  font-size: 11.5px;
+  color: black;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer; }
+  .aMenu .material-icons {
+    margin: 1px 10px 0px 0px;
+    line-height: 1.7;
+    font-size: 25px; }
+
 .logo {
   font-weight: 1000;
   -ms-flex: 20 1;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Events from '../Events/Events';
-import { NavBar } from '../../Home/NavBar/NavBar';
+import NavBar from '../../Home/NavBar/NavBar';
 import Studios from '../Studios/Studios';
 import './Main.css';
 import Videos from '../Videos/Videos';
@@ -153,9 +153,10 @@ render () {
       </div>
       <div className="main">
         <div className="profile box">
-        <section class ='hidden userInfo'>
-        </section>
-          <h2 className='useremail' aria-label = "Stephanie is logged in">{this.props.user.username}</h2>
+          <NavBar makeCommunityActive={this.makeCommunityActive}
+            makeEventsActive={this.makeEventsActive}
+            makeStudioActive={this.makeStudioActive}
+          />
         </div>
         <div className="posts box">
           <div className="filters">

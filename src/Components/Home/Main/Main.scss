@@ -293,6 +293,7 @@ body{
   border: 1px solid rgba(228, 227, 227, .5);
   width: 100%;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .poster{
@@ -307,22 +308,21 @@ body{
 }
 
 #studios{
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(http://risingstardance.com.au/wp-content/uploads/2014/06/Dancer_Quote_Beenleigh_Dance.png)
+  background-image: url(https://www.rockettes.com/wp-content/uploads/sites/2/2015/06/11222652_10153290257523551_8113473589179799722_o.jpg)
 }
 
 .userInfo {
   margin-bottom: 10px;
-  height: 130px;
+  height: 120px;
   background-size: cover;
   border-bottom: 1px solid gainsboro;
   color: white;
-  margin-left: 30px;
-  margin-top: 2vh;
+  margin: 10px 30px;
   padding-bottom: 12px;
   text-align: center;
-  width: 130px;
+  width: 120px;
   border-radius: 50%;
   background-image: url(https://lh3.googleusercontent.com/-cslDDNz-2Mg/AAAAAAAAAAI/AAAAAAAAAAA/lFXEJ4GBDIg/s640/photo.jpg);  
 }
@@ -360,7 +360,7 @@ svg{
   display: block;
   margin: 0 auto;
   max-width: 80%;
-  max-height: 25vh;
+  max-height: 102px;;
   border-radius: 2%;
   box-shadow: 0px 0px 0px 1px rgba(52,40,104,0.5);
 }

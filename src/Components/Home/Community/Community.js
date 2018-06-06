@@ -32,11 +32,10 @@ export class Community extends Component {
     const user = this.props.user.username;
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
-        console.log(post);
         return (     
           <div className="post post-box" key={user + index}>
             <div className="poster">
-              <i className="flagico co">
+              <i className="flagico un">
               </i>
               <b>{post.user}</b>
               <br/>

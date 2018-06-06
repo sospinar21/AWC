@@ -1,12 +1,12 @@
-.signin {
+.signin-form {
   background-color: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 1px;
   margin: 0 0 10px;
   padding: 30px 35px; }
-  .signin button {
+  .signin-form button {
     background-color: #232b37; }
-  .signin h3 {
+  .signin-form h3 {
     color: #232b37;
     font-size: 27px;
     font-weight: 500; }

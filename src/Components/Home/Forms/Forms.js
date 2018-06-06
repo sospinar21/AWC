@@ -40,7 +40,7 @@ export class Forms extends Component {
             <div className="logocir">AWC</div>
           </NavLink>
           <div className="buffer"></div>
-          <NavLink to='/' className="signink">
+          <NavLink to='/signin' className="signink">
           <div className="txt">Sign Up / SignIn</div>
           <div className="ico">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

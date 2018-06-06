@@ -43,15 +43,14 @@ export class Post extends Component {
     const user = this.props.user;
     const {type, content} = this.state;
     const response = await api.postComment(user, content, type);
-    console.log(response)
   }
 
   validatePost = () => {
     const user = this.props.user;
-    return (
-      user === {},
-      this.state.content.length === 0
-    );
+    if ( user === {} || this.state.content.length === 0)
+      return (
+        true
+      );
   }
   
   displayPostBox = () => {

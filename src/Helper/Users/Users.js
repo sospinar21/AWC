@@ -58,48 +58,9 @@ export const logIn = (user) => {
     onFailure: function (err) {
       const incorrect = document.querySelector('.success');
       incorrect.innerText = 'Check your Password or Email';
-      return; 
+      return err; 
     }
 
-  });
-};
-
-
-export const updateUserInfo = () => {
-  var attributeList = [];
-  var attribute = {
-    Name : 'nickname',
-    Value : 'joe'
-  };
-  var attribute = new CognitoUserAttribute(attribute);
-  attributeList.push(attribute);
-
-  CognitoUser.updateAttributes(attributeList, function(err, result) {
-    if (err) {
-      alert(err);
-      return;
-    }
-    console.log('call result: ' + result);
-  });
-};
-
-export const confirmRegistration = () => {
-  CognitoUser.confirmRegistration('123456', true, function(err, result) {
-    if (err) {
-      alert(err);
-      return;
-    }
-    alert(result);
-  });
-};
-
-export const changePassword = () => {
-  CognitoUser.changePassword('oldPassword', 'newPassword', function(err, result) {
-    if (err) {
-      alert(err);
-      return;
-    }
-    console.log('call result: ' + result);
   });
 };
 
@@ -120,19 +81,10 @@ export const forgotPassword = () => {
 };
 
 export const userSignout = () => {
-  if (CognitoUser != null) {
-    CognitoUser.signOut();
-  }
-};
-
-export const rememberDevice = () => {
-  CognitoUser.setDeviceStatusRemembered({
-    onSuccess: function (result) {
-      console.log('call result: ' + result);
-    },
-    onFailure: function(err) {
-      alert(err);
-    }
-  });
-};
+  var cognitoUser = userPool.getCurrentUser();
+  console.log(cognitoUser)
+  cognitoUser.signOut();
+  console.log(cognitoUser)
+  return cognitoUser;
+}
 
