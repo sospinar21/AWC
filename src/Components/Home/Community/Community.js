@@ -35,7 +35,7 @@ export class Community extends Component {
         return (     
           <div className="post post-box" key={user + index}>
             <div className="poster">
-              <i className="flagico un">
+              <i className="flagico us">
               </i>
               <b>{post.user}</b>
               <br/>

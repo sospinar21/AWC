@@ -20,9 +20,6 @@ export class NavBar extends Component {
           <a onClick={() => this.props.makeEventsActive()} aria-label = 'CRM' className  = 'aMenu'><i className ='material-icons'>portrait</i>EVENTS</a>
           <NavLink to = '/entertainment' aria-label = 'calendar' className  = 'aMenu'><i className ='material-icons'>today</i>VIDEOS</NavLink>
           <a onClick={() => this.props.makeCommunityActive()} aria-label = 'tasks' className  = 'aMenu'><i className ='material-icons'>content_paste</i>POSTS</a>  
-        </section>
-        <section  role = 'navigation' className  ='hidden menuSection admin'>
-          <p>Admin</p>
           <a href = '' aria-label = 'settings' className  = 'aMenu'><i className ='material-icons'>settings</i>SETTINGS</a>
           <a href = '' aria-label = 'Home' className= 'aMenu'></a> 
         </section> 
