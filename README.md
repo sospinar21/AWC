@@ -7,6 +7,9 @@ Stephanie Ospina [GitHub](https://github.com/sospinar21)
 
 ### Our design:
 
+![Project Screenshot](./src/assets/main.png)
+![Project Screenshot](./src/assets/login.png)
+![Project Screenshot](./src/assets/videos.png)
 
 ## Set Up
 
