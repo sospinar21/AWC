@@ -36,12 +36,12 @@ displaySelectedVideo = (id, title) => {
 }
 
 displayVideos = () => {
-  const videos = this.props.suggestedVideos.map(video => {
+  const videos = this.props.suggestedVideos.map((video, index) => {
     const snippet = video.snippet.thumbnails.medium.url;
     const title = video.snippet.title;
     const videoId = video.id.videoId;
     return (
-      <div onClick={() => this.displaySelectedVideo(videoId, title)} key={videoId} className='video-card'>
+      <div onClick={() => this.displaySelectedVideo(videoId, title)} key={videoId+index} className='video-card'>
         <img src={snippet} />
         <div className='title-box'>
           <h4>{title} </h4>
@@ -104,7 +104,7 @@ export const mapDispatchToProps = dispatch => ({
 
 Videos.propTypes = {
   addVideos: PropTypes.func,
-  suggestedVideos: PropTypes.object
+  suggestedVideos: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Videos);
