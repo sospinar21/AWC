@@ -97,8 +97,7 @@ renderCommunityOrStudios = () => {
   }
 }
 
-
-render () {
+suggestLocation = () => {
   const suggestions = this.state.locations.map((suggestion, index) => {
     return (
       <option 
@@ -106,10 +105,16 @@ render () {
         key={index} value={suggestion}/>
     );
   });
+  return suggestions;
+}
+
+
+render () {
+  
 
   const city = this.props.selectedLocation;
   const selectedLocation = city.length ? city : 'USA';
-  const singinOut =  this.props.user.username ? <div className="txt" onClick={() => userSignout()}>Log Out</div> : <div className="txt">Sign Up/ SignIn</div>
+  const singinOut =  this.props.user.username ? <div className="txt" onClick={() => userSignout()}>Log Out</div> : <div className="txt">Sign Up/ SignIn</div>;
 
   return (
     <div className='body'>
@@ -132,7 +137,7 @@ render () {
         </form>
         <datalist 
           id='locations'>
-          {suggestions}
+          {this.suggestLocation()}
         </datalist>
         <div className='actual-location'>
           <i className="material-icons">location_on</i>
