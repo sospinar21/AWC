@@ -37,6 +37,7 @@ export const signUp = (user) => {
     var cognitoUser = result.user;
     const created = document.querySelector('.created');
     created.innerText = 'Welcome! your new user name is ' + cognitoUser.getUsername();
+    window.location.href = "http://awc.dance/";
   });
 };
 
@@ -51,8 +52,8 @@ export const logIn = (user) => {
     onSuccess: function (result) {
       const success = document.querySelector('.success');
       success.innerText = 'Welcome back! ' + cognitoUser.getUsername();
+      window.location.href = "http://awc.dance/";
       return result; 
-      // LoggedIn(cognitoUser, result);
     },
 
     onFailure: function (err) {
