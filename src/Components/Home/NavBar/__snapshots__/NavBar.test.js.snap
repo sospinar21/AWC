@@ -1,3 +1,971 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`navBar matches snapshot 1`] = `undefined`;
+exports[`navBar matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NavBar
+    user={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="hidden userInfo"
+/>,
+        <h2
+          aria-label="log in"
+          className="useremail"
+/>,
+        <section
+          className="hidden menuSection"
+          role="navigation"
+>
+          <p>
+                    Main
+          </p>
+          <NavLink
+                    activeClassName="active"
+                    aria-label="Home"
+                    ariaCurrent="true"
+                    className="aMenu"
+                    to="/"
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              home
+                    </i>
+                    HOME
+          </NavLink>
+          <a
+                    aria-label="projects"
+                    className="aMenu"
+                    onClick={[Function]}
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              folder_open
+                    </i>
+                    STUDIOS
+          </a>
+          <a
+                    aria-label="CRM"
+                    className="aMenu"
+                    onClick={[Function]}
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              portrait
+                    </i>
+                    EVENTS
+          </a>
+          <NavLink
+                    activeClassName="active"
+                    aria-label="calendar"
+                    ariaCurrent="true"
+                    className="aMenu"
+                    to="/entertainment"
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              today
+                    </i>
+                    VIDEOS
+          </NavLink>
+          <a
+                    aria-label="tasks"
+                    className="aMenu"
+                    onClick={[Function]}
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              content_paste
+                    </i>
+                    POSTS
+          </a>
+          <a
+                    aria-label="settings"
+                    className="aMenu"
+                    href=""
+          >
+                    <i
+                              className="material-icons"
+                    >
+                              settings
+                    </i>
+                    SETTINGS
+          </a>
+          <a
+                    aria-label="Home"
+                    className="aMenu"
+                    href=""
+          />
+</section>,
+      ],
+      "className": "sideMenu",
+      "role": "navigation",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "hidden userInfo",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "aria-label": "log in",
+          "children": undefined,
+          "className": "useremail",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Main
+</p>,
+            <NavLink
+              activeClassName="active"
+              aria-label="Home"
+              ariaCurrent="true"
+              className="aMenu"
+              to="/"
+>
+              <i
+                            className="material-icons"
+              >
+                            home
+              </i>
+              HOME
+</NavLink>,
+            <a
+              aria-label="projects"
+              className="aMenu"
+              onClick={[Function]}
+>
+              <i
+                            className="material-icons"
+              >
+                            folder_open
+              </i>
+              STUDIOS
+</a>,
+            <a
+              aria-label="CRM"
+              className="aMenu"
+              onClick={[Function]}
+>
+              <i
+                            className="material-icons"
+              >
+                            portrait
+              </i>
+              EVENTS
+</a>,
+            <NavLink
+              activeClassName="active"
+              aria-label="calendar"
+              ariaCurrent="true"
+              className="aMenu"
+              to="/entertainment"
+>
+              <i
+                            className="material-icons"
+              >
+                            today
+              </i>
+              VIDEOS
+</NavLink>,
+            <a
+              aria-label="tasks"
+              className="aMenu"
+              onClick={[Function]}
+>
+              <i
+                            className="material-icons"
+              >
+                            content_paste
+              </i>
+              POSTS
+</a>,
+            <a
+              aria-label="settings"
+              className="aMenu"
+              href=""
+>
+              <i
+                            className="material-icons"
+              >
+                            settings
+              </i>
+              SETTINGS
+</a>,
+            <a
+              aria-label="Home"
+              className="aMenu"
+              href=""
+/>,
+          ],
+          "className": "hidden menuSection",
+          "role": "navigation",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Main",
+            },
+            "ref": null,
+            "rendered": "Main",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-label": "Home",
+              "ariaCurrent": "true",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  home
+</i>,
+                "HOME",
+              ],
+              "className": "aMenu",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "home",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "home",
+                "type": "i",
+              },
+              "HOME",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "projects",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  folder_open
+</i>,
+                "STUDIOS",
+              ],
+              "className": "aMenu",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "folder_open",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "folder_open",
+                "type": "i",
+              },
+              "STUDIOS",
+            ],
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "CRM",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  portrait
+</i>,
+                "EVENTS",
+              ],
+              "className": "aMenu",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "portrait",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "portrait",
+                "type": "i",
+              },
+              "EVENTS",
+            ],
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-label": "calendar",
+              "ariaCurrent": "true",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  today
+</i>,
+                "VIDEOS",
+              ],
+              "className": "aMenu",
+              "to": "/entertainment",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "today",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "today",
+                "type": "i",
+              },
+              "VIDEOS",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "tasks",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  content_paste
+</i>,
+                "POSTS",
+              ],
+              "className": "aMenu",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "content_paste",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "content_paste",
+                "type": "i",
+              },
+              "POSTS",
+            ],
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "settings",
+              "children": Array [
+                <i
+                  className="material-icons"
+>
+                  settings
+</i>,
+                "SETTINGS",
+              ],
+              "className": "aMenu",
+              "href": "",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "settings",
+                  "className": "material-icons",
+                },
+                "ref": null,
+                "rendered": "settings",
+                "type": "i",
+              },
+              "SETTINGS",
+            ],
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "Home",
+              "className": "aMenu",
+              "href": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="hidden userInfo"
+/>,
+          <h2
+            aria-label="log in"
+            className="useremail"
+/>,
+          <section
+            className="hidden menuSection"
+            role="navigation"
+>
+            <p>
+                        Main
+            </p>
+            <NavLink
+                        activeClassName="active"
+                        aria-label="Home"
+                        ariaCurrent="true"
+                        className="aMenu"
+                        to="/"
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    home
+                        </i>
+                        HOME
+            </NavLink>
+            <a
+                        aria-label="projects"
+                        className="aMenu"
+                        onClick={[Function]}
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    folder_open
+                        </i>
+                        STUDIOS
+            </a>
+            <a
+                        aria-label="CRM"
+                        className="aMenu"
+                        onClick={[Function]}
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    portrait
+                        </i>
+                        EVENTS
+            </a>
+            <NavLink
+                        activeClassName="active"
+                        aria-label="calendar"
+                        ariaCurrent="true"
+                        className="aMenu"
+                        to="/entertainment"
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    today
+                        </i>
+                        VIDEOS
+            </NavLink>
+            <a
+                        aria-label="tasks"
+                        className="aMenu"
+                        onClick={[Function]}
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    content_paste
+                        </i>
+                        POSTS
+            </a>
+            <a
+                        aria-label="settings"
+                        className="aMenu"
+                        href=""
+            >
+                        <i
+                                    className="material-icons"
+                        >
+                                    settings
+                        </i>
+                        SETTINGS
+            </a>
+            <a
+                        aria-label="Home"
+                        className="aMenu"
+                        href=""
+            />
+</section>,
+        ],
+        "className": "sideMenu",
+        "role": "navigation",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "hidden userInfo",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "aria-label": "log in",
+            "children": undefined,
+            "className": "useremail",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Main
+</p>,
+              <NavLink
+                activeClassName="active"
+                aria-label="Home"
+                ariaCurrent="true"
+                className="aMenu"
+                to="/"
+>
+                <i
+                                className="material-icons"
+                >
+                                home
+                </i>
+                HOME
+</NavLink>,
+              <a
+                aria-label="projects"
+                className="aMenu"
+                onClick={[Function]}
+>
+                <i
+                                className="material-icons"
+                >
+                                folder_open
+                </i>
+                STUDIOS
+</a>,
+              <a
+                aria-label="CRM"
+                className="aMenu"
+                onClick={[Function]}
+>
+                <i
+                                className="material-icons"
+                >
+                                portrait
+                </i>
+                EVENTS
+</a>,
+              <NavLink
+                activeClassName="active"
+                aria-label="calendar"
+                ariaCurrent="true"
+                className="aMenu"
+                to="/entertainment"
+>
+                <i
+                                className="material-icons"
+                >
+                                today
+                </i>
+                VIDEOS
+</NavLink>,
+              <a
+                aria-label="tasks"
+                className="aMenu"
+                onClick={[Function]}
+>
+                <i
+                                className="material-icons"
+                >
+                                content_paste
+                </i>
+                POSTS
+</a>,
+              <a
+                aria-label="settings"
+                className="aMenu"
+                href=""
+>
+                <i
+                                className="material-icons"
+                >
+                                settings
+                </i>
+                SETTINGS
+</a>,
+              <a
+                aria-label="Home"
+                className="aMenu"
+                href=""
+/>,
+            ],
+            "className": "hidden menuSection",
+            "role": "navigation",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Main",
+              },
+              "ref": null,
+              "rendered": "Main",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-label": "Home",
+                "ariaCurrent": "true",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    home
+</i>,
+                  "HOME",
+                ],
+                "className": "aMenu",
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "home",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "home",
+                  "type": "i",
+                },
+                "HOME",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "projects",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    folder_open
+</i>,
+                  "STUDIOS",
+                ],
+                "className": "aMenu",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "folder_open",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "folder_open",
+                  "type": "i",
+                },
+                "STUDIOS",
+              ],
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "CRM",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    portrait
+</i>,
+                  "EVENTS",
+                ],
+                "className": "aMenu",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "portrait",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "portrait",
+                  "type": "i",
+                },
+                "EVENTS",
+              ],
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-label": "calendar",
+                "ariaCurrent": "true",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    today
+</i>,
+                  "VIDEOS",
+                ],
+                "className": "aMenu",
+                "to": "/entertainment",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "today",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "today",
+                  "type": "i",
+                },
+                "VIDEOS",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "tasks",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    content_paste
+</i>,
+                  "POSTS",
+                ],
+                "className": "aMenu",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "content_paste",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "content_paste",
+                  "type": "i",
+                },
+                "POSTS",
+              ],
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "settings",
+                "children": Array [
+                  <i
+                    className="material-icons"
+>
+                    settings
+</i>,
+                  "SETTINGS",
+                ],
+                "className": "aMenu",
+                "href": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "settings",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "rendered": "settings",
+                  "type": "i",
+                },
+                "SETTINGS",
+              ],
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "Home",
+                "className": "aMenu",
+                "href": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

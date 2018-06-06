@@ -9,7 +9,8 @@ describe('navBar', () => {
 
   beforeEach(() => {
 
-    navBar = mount(<NavBar /> , { disableLifecycleMethods: true })
+    const mockProps = {user: {}}
+    navBar = shallow(<NavBar {...mockProps}/> )
 
   })
 
