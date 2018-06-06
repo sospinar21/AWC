@@ -284,8 +284,12 @@ body {
   background-image: url(https://www.creativeboom.com/uploads/articles/c9/c95a02a249ed295a9c517a795115b9ab6bb3a801_1100.jpg); }
 
 .useremail {
-  font-size: 14px;
-  color: black; }
+  font-size: 13px;
+  color: black;
+  height: 23px;
+  margin-top: 26px;
+  margin: auto;
+  text-align: center; }
 
 .flagico {
   background-size: contain;

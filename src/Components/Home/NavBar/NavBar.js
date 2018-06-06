@@ -10,9 +10,8 @@ export class NavBar extends Component {
     console.log(this.props)
     return (
       <div role = 'navigation' className  = 'sideMenu'>
-        <section className  ='hidden userInfo'>
-          <h2 className Name='useremail' aria-label = 'log in'>{this.props.username}</h2>
-        </section>  
+        <section className  ='hidden userInfo'/>
+        <h2 className='useremail' aria-label = 'log in'>{this.props.user.username}</h2>
         <section className  ='hidden menuSection' role='navigation'>
           <p>Main</p>
           <NavLink to = '/' aria-label = 'Home' className  = 'aMenu'><i className ='material-icons'>home</i>HOME</NavLink>
@@ -21,7 +20,7 @@ export class NavBar extends Component {
           <NavLink to = '/entertainment' aria-label = 'calendar' className  = 'aMenu'><i className ='material-icons'>today</i>VIDEOS</NavLink>
           <a onClick={() => this.props.makeCommunityActive()} aria-label = 'tasks' className  = 'aMenu'><i className ='material-icons'>content_paste</i>POSTS</a>  
           <a href = '' aria-label = 'settings' className  = 'aMenu'><i className ='material-icons'>settings</i>SETTINGS</a>
-          <a href = '' aria-label = 'Home' className= 'aMenu'></a> 
+          <a href = '' aria-label = 'Home' className= 'aMenu'/>
         </section> 
       </div>
     );
