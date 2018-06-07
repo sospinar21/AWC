@@ -10,12 +10,16 @@ import { addUser } from '../../../Actions/actions';
 export class Post extends Component {
   constructor(props) {
     super(props); 
-
     this.state = {
       type: 'Post',
       content: '',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      picture: false,
+      video: false,
+      files: null,
+      imagePreviewUrl: null,
+      videoUrl: null
     };
   }
 
@@ -47,24 +51,67 @@ export class Post extends Component {
 
   validatePost = () => {
     const user = this.props.user;
-    const valid = user === {} || this.state.content.length === 0 ? true : false;
+    const valid = !user.username || this.state.content.length === 0 ? true : false;
     return valid;
   }
   
   displayPostBox = () => {
+    const user = this.props.user;
+    const text = !user.username ? 'LogIn to Post!' : 'Submit';
+    // const activeIcon = !user.username ? 'inactiveIcon' : 'activeIcon'
     return (
       <div className='post-area'>
         <form className='post-cont'> 
-          <label className='label' htmlFor= 'post'>Post here!</label>
-          <textarea name='post' className='post-box' value={this.state.content} onChange={(e) => this.getPost(e)}/>
-          <button disabled={this.validatePost()} type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}> Submit </button>
+          <textarea placeholder='Post here!' name='post' className='post-box' value={this.state.content} onChange={(e) => this.getPost(e)}/>
+          <div className='pic-vid'>
+            {/* {this.setInpuBox()} */}
+            {/* <i className={`material-icons ${activeIcon}`} onClick={this.uploadVideo}>videocam</i> */}
+            {/* <i className={`material-icons cam ${activeIcon}`} onClick={this.uploadPicture}>photo_camera</i> */}
+          </div>
+          <button disabled={this.validatePost()} type='submit' className='submit-post' onClick={(e) => this.sendPost(e)}>{text}</button>
         </form>
       </div>
     );
   }
 
+  // uploadPicture = () => {
+  //   this.setState({picture: true, video: false})
+  // }
+
+  // uploadVideo= () => {
+  //   this.setState({picture: false, video: true})
+  // }
+
+  // setInpuBox = () => {
+    // if (this.state.picture === true){
+    // return <input className='photoInput' onChange={(e) => this.loadImages(e)} placeholder='upload pics' type='file' />
+    // } if (this.state.video === true)
+    //   return <input className='videoInput' value={this.state.videoUrl}  onChange={(e) => this.showVideo(e)} placeholder='enter url' type='url' />
+  // }
+
+  // showVideo = (e) => {
+  //   this.setState({
+  //     videoUrl: e.target.value
+  //   })
+  // }
+
+  loadImages = (e) => {
+    e.preventDefault()
+    let reader = new FileReader();
+    let file = e.target.files[0];
+
+    reader.onloadend = () => {
+      this.setState({
+        file: file,
+        imagePreviewUrl: reader.result
+      });
+    }
+    reader.readAsDataURL(file)
+  }
+
 
   render () {
+
     return (
       <div className='form-container'>
         {this.displayPostBox()}

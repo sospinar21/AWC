@@ -115,7 +115,7 @@ render () {
 
   const city = this.props.selectedLocation;
   const selectedLocation = city.length ? city : 'USA';
-  const singinOut =  this.props.user.username ? <div className="txt" onClick={() => userSignout()}>Log Out</div> : <div className="txt">Sign Up/ SignIn</div>;
+  const singinOut =  this.props.user.username ? <div className="txt hiddenBtn" onClick={() => userSignout()}>Log Out</div> : <div className="txt hiddenBtn">Sign Up/ SignIn</div>;
 
   return (
     <div className='body'>
@@ -208,7 +208,7 @@ Main.propTypes = {
   addLocation: PropTypes.func,
   addEvents: PropTypes.func,
   addStudios: PropTypes.func,
-  selectedLocation: PropTypes.array
+  selectedLocation: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

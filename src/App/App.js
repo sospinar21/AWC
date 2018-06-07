@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import '../Components/Home/Login/Login.css';
+import '../Components/Home/Events/Events.css';
+import '../Components/Home/SignUp/SignUp.css';
+import '../Components/Home/Videos/Videos.css';
+import '../Components/Home/Forms/Forms.css';
+import '../Components/Home/SelectedEvent/SelectedEvent.css'
+import '../Components/Home/Entertainment/Entertainment.css';
 import Main from '../Components/Home/Main/Main';
 import { Route, Switch } from 'react-router-dom';
 import { Community } from '../Components/Home/Community/Community';

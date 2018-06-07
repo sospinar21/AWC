@@ -37,7 +37,7 @@ export class Events extends Component {
             <b className='event-b'>{suggEvent.name}</b>
             <br/>
           </div>
-          <div className="content content-e">
+          <div className="content-e">
             <img src={img} />
           </div>
         </div> 
@@ -83,7 +83,7 @@ Events.propTypes = {
   selectedEvent: PropTypes.object,
   addSelectedEvent: PropTypes.func,
   addEvents: PropTypes.func,
-  selectedLocation: PropTypes.string
+  selectedLocation: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Events);

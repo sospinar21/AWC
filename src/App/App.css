@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, a, li, p {
     border-radius: 50%; }
   .location-form {
     width: 60% !important;
-    margin-left: 0px !important;
+    margin-left: 70px !important;
     position: absolute;
     width: 60%; }
   .signin, .txt {
@@ -72,4 +72,15 @@ h1, h2, h3, h4, h5, a, li, p {
     margin-top: 40px !important;
     margin: auto !important; }
   .website {
-    display: none; } }
+    display: none; }
+  .hiddenBtn {
+    font-size: 11px !important;
+    margin-right: 0px; }
+  .ico {
+    display: none; }
+  .logocir {
+    margin: 0 !important; }
+  .nav {
+    padding: 5px 2px 0px 5px !important; }
+  .filters .main-btn {
+    font-size: 12px; } }

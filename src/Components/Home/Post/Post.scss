@@ -8,7 +8,7 @@
   width: 90%;
   background-color: #ffffff;
   margin: auto;
-  height: 130px;
+  height: auto;;
   margin: 20px auto;
   box-shadow: 0px 1px 2px lightgrey;
   padding: 10.5px;
@@ -136,11 +136,15 @@ button:disabled{
   padding: 11px 25px;
 }
 
+.post-box::placeholder{
+  font-size: 14px;
+  color: rgb(143, 141, 141);
+}
+
 .submit-post {
   cursor: pointer;
   outline: none;
   font-size: 14px;
-  margin-top: 13px;
   background: #b62d4c;
   border: none;
   padding: 8px 0px 8px 0px;
@@ -156,4 +160,50 @@ button:disabled{
   border: 1px solid #DDDDDD;
   margin-bottom: 20px;
   border-radius: 3px;
+
+  .material-icons {
+    line-height: 1;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+
+  .inactiveIcon{
+    display: none !important
+  }
+
+}
+
+.photoInput{
+  float: left;
+  padding: 8px;
+  width: 80%;
+  border: 1px solid gainsboro;
+}
+
+.photoInput input{
+  background-color: red
+}
+
+.videoInput {
+  float: left;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid gainsboro;
+}
+
+.videoInput::placeholder {
+  font-family: r;
+  font-size: 12px;
+  color:rgb(143, 141, 141)
+}
+
+.pic-vid{
+  height: 30px;
+  display: block;
+  padding: 0px 25px;
+  text-align: right;
+}
+
+.cam{
+  font-size: 23px;
 }

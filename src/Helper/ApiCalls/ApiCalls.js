@@ -62,16 +62,11 @@ class ApiCalls {
   }
 
   postComment = async (user, input, category) => {
-    try {
-      const userEmail = user.username;
-      const url = `https://api.awc.dance/postcomment?name=${userEmail}&content=${input}&type=${category}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      throw new Error(error.message);
-    }
-
+    const userEmail = user.username;
+    const url = `https://api.awc.dance/postcomment?name=${userEmail}&content=${input}&type=${category}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return await data;
   }
 
   getPosts = async () => {

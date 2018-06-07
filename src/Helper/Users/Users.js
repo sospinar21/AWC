@@ -29,15 +29,24 @@ export const signUp = (user) => {
   attributeList.push(attributeCity);
 
   userPool.signUp(user.email, user.password, attributeList, null, function(err, result) {
+    console.log(user.email, user.password);
     if (err) {
       const error = document.querySelector('.created');
       error.innerText = 'invalid email or password: min 6 characters';
       return;
     }
-    var cognitoUser = result.user;
-    const created = document.querySelector('.created');
-    created.innerText = 'Welcome! your new user name is ' + cognitoUser.getUsername();
-    window.location.href = "http://awc.dance/";
+    var userData = {Username: user.email, Pool: userPool};
+    var cognitoUser = new CognitoUser(userData);
+
+    var authenticationData = {Username: user.email, Password: user.password};
+    var authenticationDetails = new AuthenticationDetails(authenticationData);
+
+    cognitoUser.authenticateUser(authenticationDetails, {
+      onSuccess: function (result) {
+        window.location.href = "https://awc.dance/";
+        return result; 
+      }
+    });
   });
 };
 
@@ -52,7 +61,7 @@ export const logIn = (user) => {
     onSuccess: function (result) {
       const success = document.querySelector('.success');
       success.innerText = 'Welcome back! ' + cognitoUser.getUsername();
-      window.location.href = "http://awc.dance/";
+      window.location.href = "https://awc.dance/";
       return result; 
     },
 
@@ -83,6 +92,7 @@ export const forgotPassword = () => {
 export const userSignout = () => {
   var cognitoUser = userPool.getCurrentUser();
   cognitoUser.signOut();
+  window.location.reload(true);
   return cognitoUser;
 };
 

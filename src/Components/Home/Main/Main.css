@@ -131,9 +131,7 @@ body {
   display: block;
   height: 30px;
   margin: 0 auto;
-  /* margin-top: 1.5vh; */
-  width: 30px;
-  /* vertical-align: top; */ }
+  width: 30px; }
 
 .ico svg {
   fill: rgba(231, 19, 114, 0.85); }
@@ -315,7 +313,6 @@ svg {
   display: block;
   margin: 0 auto;
   max-width: 80%;
-  max-height: 102px;
   border-radius: 2%;
   box-shadow: 0px 0px 0px 1px rgba(52, 40, 104, 0.5); }
 
