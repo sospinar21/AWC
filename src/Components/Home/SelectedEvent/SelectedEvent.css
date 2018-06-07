@@ -13,30 +13,24 @@
   display: flex;
   -webkit-box-shadow: 0px 0px 3px lightgrey;
   box-shadow: 0px 0px 3px lightgrey;
-  background-image: url(https://i.pinimg.com/originals/80/68/6a/80686a60f0db8ac844b633a5c2c12733.jpg); }
-
-.event-desc {
-  background-color: rgba(0, 0, 0, 0.87);
-  position: absolute;
-  bottom: 20px;
-  padding: 23px;
-  border-radius: 3px;
-  width: 60%;
-  height: 185px; }
-  .event-desc h1 {
-    font-size: 23px;
-    color: #d4c9cc;
-    text-shadow: 1px 1px 1px black; }
+  background-image: url(http://www.marylandyouthballet.org/wp-content/uploads/2012/04/Lilly-Swan-Lake-Profile.jpg); }
 
 .flex {
-  display: flex; }
+  width: 100%;
+  padding: 7px 10px;
+  overflow-y: scroll;
+  margin-bottom: 20px; }
+  .flex h1 {
+    font-size: 25px;
+    color: #262834;
+    text-shadow: 1px 1px 1px #f7f7f7; }
 
 .event-description {
   padding: 0 10px;
   margin: 11px auto;
-  height: 50px;
   overflow: scroll; }
   .event-description p {
     font-size: 13px;
     line-height: 1.5;
-    color: white; }
+    color: black;
+    background-color: #ffffffa3; }

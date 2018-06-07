@@ -18,6 +18,7 @@ export class Community extends Component {
 
   async componentDidMount() {
     const api = new ApiCalls();
+    
     const posts = await api.getPosts();
 
     this.setState({posts});

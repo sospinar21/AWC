@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, a, li, p {
   }
 }
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 
 @media only screen and (max-width: 760px) {
   .userInfo {

@@ -4,6 +4,8 @@
   overflow-y: scroll;
 }
 
+.post-container:hover { overflow-y:scroll; }
+
 .post {
   width: 90%;
   background-color: #ffffff;

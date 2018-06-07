@@ -11,12 +11,10 @@ export class SelectedEvent extends Component {
       const name = selected.name ? selected.name : 'Select an Event';
       return (
         <div className='flex'>
-          <div className='event-desc'>
-            <h1> {name}</h1>
-            <div className='event-description'>
-              {/* <h2>{selected.date.local}</h2> */}
-              <p>{selected.description}</p>
-            </div>
+          <h1> {name}</h1>
+          <div className='event-description'>
+            {/* <h2>{selected.date.local}</h2> */}
+            <p>{selected.description}</p>
           </div>
         </div>
       ); 

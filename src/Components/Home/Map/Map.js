@@ -24,8 +24,11 @@ const MyMapComponent = compose(
 )(props => {
   const longitude = props.selectedStudio.id ? props.selectedStudio.coordinates.longitude : 40.730610;
   const latitude = props.selectedStudio.id ? props.selectedStudio.coordinates.latitude : -73.935242;
+
+  const defaultZoom = props.selectedStudio.id ? 12 : 2
+
   return (
-    <GoogleMap defaultZoom={12} defaultCenter={{ lat: latitude, lng: longitude }}>
+    <GoogleMap defaultZoom={defaultZoom} defaultCenter={{ lat: latitude, lng: longitude }}>
       <Marker position={{ lat: latitude, lng: longitude }} />
     </GoogleMap>
   );
