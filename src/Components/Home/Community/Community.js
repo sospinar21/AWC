@@ -33,10 +33,6 @@ export class Community extends Component {
 
     if (this.state.posts.length){
       const posts = this.state.posts.map((post, index) => {
-        // let imagePreview = null;
-        // if (post.imagePreviewUrl) {
-        //   imagePreview= (<img className='pic-preview' src={post.imagePreviewUrl} />);
-        // }
 
         const user = !post.user ? this.props.user.username : post.user;
 
